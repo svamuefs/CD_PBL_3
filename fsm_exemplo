@@ -1,0 +1,72 @@
+module fsm_processo #(
+    parameter   DESLIGADO = 0 ,
+                POSICIONAMENTO = 1 ,
+                ENCHIMENTO = 2 ,
+                VEDACAO = 3 ,
+                ERRO = 4
+) (
+    input   on , 
+            pg , 
+            ch , 
+            ro ,
+            clk ,
+            reset ,
+
+    output reg  m , 
+                a ,
+                ev ,
+                ve ,
+
+    output reg [4:0]    state ,
+                        next
+);
+
+always @(posedge clk or negedge reset) begin
+    if (!reset) state <= 5'b0;
+    else state <= next;
+end
+
+always @(posedge clk or negedge reset) begin
+    m <= 1'b0;
+    a <= 1'b0;
+    ev <= 1'b0;
+    ve <= 1'b0;
+
+    case (1'b1)
+        state[DESLIGADO] : ;
+
+        state[POSICIONAMENTO] : m <= 1'b1;
+
+        state[ENCHIMENTO] : ev <= 1'b1;
+
+        state[VEDACAO] : ve <= 1'b1;
+
+        state[ERRO] : a <= 1'b1;
+
+    endcase
+end
+
+always @* begin
+    state = 5'b0
+    next = 5'b0;
+    m = 1'b0;
+    a = 1'b0;
+    ev = 1'b0;
+    ve = 1'b0;
+
+    case (1'b1)
+        state[DESLIGADO] : ;
+
+        state[POSICIONAMENTO] : m <= 1'b1;
+
+        state[ENCHIMENTO] : ev <= 1'b1;
+
+        state[VEDACAO] : ve <= 1'b1;
+
+        state[ERRO] : a <= 1'b1;
+
+    endcase
+
+end
+    
+endmodule
