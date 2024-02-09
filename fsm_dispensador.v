@@ -5,6 +5,8 @@ module fsm_dispensador #(
 ) (
     input   MC, 
             BZ,
+            clk ,
+            reset ,
         
     output reg  AD,
                 A ,
