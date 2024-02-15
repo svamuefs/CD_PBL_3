@@ -9,7 +9,7 @@ module fsm_controle #(
             reset ,
     
     output reg  NEXT ,
-                GP ,
+        GP ,
                 
     output reg  state,
                 nextState

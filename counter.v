@@ -10,7 +10,7 @@ module counter #(
 
     input   [DATAWIDTH-1:0] load_value ,
 
-    output  [DATAWIDTH-1:0] out
+    output  reg [DATAWIDTH-1:0] out
 );
 
 always @(posedge clk or negedge rst) begin
