@@ -1,9 +1,9 @@
 module counter #(
-    parameter   DATAWIDTH   = 4 ,
-                START       = 4'b0000 ,
-                ENDING      = 4'b1111 
+    parameter   DATAWIDTH   = 4 ,                   //Quantidade de bits do contador. 
+                START       = 4'b0000 ,             //Posição de inicio do contador.
+                ENDING      = 4'b1111               //Posição final do contador.
 ) (
-    input   clk ,
+    input   clk ,                                   
             rst ,
             down ,
             load ,
@@ -20,7 +20,10 @@ always @(posedge clk or negedge rst) begin
 
     else if (load) out <= load_value;
 
-    else out <= down ? out - 1 : out + 1;
+    else if (out == ENDING) out <= START;
+
+    else out <= down ? out - 1'b1 : out + 1'b1;
+
 end
     
 endmodule

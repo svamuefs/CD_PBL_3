@@ -1,9 +1,9 @@
 module fsm_dispensador #(
-    parameter   ESPERAR = 2'b00;
-                ALARME  = 2'b01;
-                ACIONAR = 2'b10; 
+    parameter   ESPERAR = 2'b00 ,
+                ALARME  = 2'b01 ,
+                ACIONAR = 2'b10
 ) (
-    input   MC, 
+    input   CR, 
             BZ,
             clk ,
             reset ,
@@ -26,7 +26,7 @@ always @* begin
     nextState = 2'bxx;
     case (state)
         ESPERAR, ACIONAR:    if      (BZ) nextState = ALARME;
-                             else if (MC) nextState = ACIONAR;
+                             else if (CR) nextState = ACIONAR;
                              else         nextState = ESPERAR;
         ALARME : nextState = ALARME;
     endcase

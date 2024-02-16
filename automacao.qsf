@@ -58,4 +58,20 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name VERILOG_FILE fsm_producao.v
+set_global_assignment -name VERILOG_FILE t_flipflop.v
+set_global_assignment -name VERILOG_FILE sync_freq_divider.v
+set_global_assignment -name VERILOG_FILE mux4x1.v
+set_global_assignment -name VERILOG_FILE level_to_pulse.v
+set_global_assignment -name VERILOG_FILE fsm_dispensador.v
+set_global_assignment -name VERILOG_FILE d_flipflop.v
+set_global_assignment -name VERILOG_FILE duzias.v
+set_global_assignment -name VERILOG_FILE display_decoder.v
+set_global_assignment -name VERILOG_FILE dispensador.v
+set_global_assignment -name VERILOG_FILE debouncer.v
+set_global_assignment -name VERILOG_FILE counter.v
+set_global_assignment -name VERILOG_FILE bandeja.v
+set_global_assignment -name VERILOG_FILE assync_clk_enable.v
 set_global_assignment -name VERILOG_FILE automacao.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf

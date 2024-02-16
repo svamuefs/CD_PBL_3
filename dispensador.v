@@ -1,7 +1,7 @@
 module dispensador (
     input ativar , reset ,
 
-    out reabastecer 
+    output reabastecer 
 );
 
 counter #(

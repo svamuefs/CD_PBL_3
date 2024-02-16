@@ -1,0 +1,1047 @@
+Timing Analyzer report for automacao
+Thu Feb 15 20:29:26 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk50MHz'
+ 12. Setup: 'assync'
+ 13. Setup: 'duzias:duzias_1|counter:counter_unidades|out[0]'
+ 14. Setup: 'duzias:duzias_1|counter:counter_duzias|out[0]'
+ 15. Setup: 'fsm_producao:fsm_producao|GP'
+ 16. Setup: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
+ 17. Hold: 'duzias:duzias_1|counter:counter_duzias|out[0]'
+ 18. Hold: 'assync'
+ 19. Hold: 'fsm_producao:fsm_producao|GP'
+ 20. Hold: 'clk50MHz'
+ 21. Hold: 'duzias:duzias_1|counter:counter_unidades|out[0]'
+ 22. Hold: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
+ 23. Recovery: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
+ 24. Recovery: 'assync'
+ 25. Recovery: 'duzias:duzias_1|counter:counter_unidades|out[0]'
+ 26. Recovery: 'fsm_producao:fsm_producao|GP'
+ 27. Recovery: 'clk50MHz'
+ 28. Recovery: 'duzias:duzias_1|counter:counter_duzias|out[0]'
+ 29. Removal: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
+ 30. Removal: 'duzias:duzias_1|counter:counter_duzias|out[0]'
+ 31. Removal: 'assync'
+ 32. Removal: 'clk50MHz'
+ 33. Removal: 'fsm_producao:fsm_producao|GP'
+ 34. Removal: 'duzias:duzias_1|counter:counter_unidades|out[0]'
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Recovery Transfers
+ 38. Removal Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths Summary
+ 42. Clock Status Summary
+ 43. Unconstrained Input Ports
+ 44. Unconstrained Output Ports
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; automacao                                              ;
+; Device Family         ; MAX II                                                 ;
+; Device Name           ; EPM240T100C5                                           ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Slow Model                                             ;
+; Rise/Fall Delays      ; Unavailable                                            ;
++-----------------------+--------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                 ;
++------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------------------+
+; Clock Name                                                 ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                        ;
++------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------------------+
+; assync                                                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { assync }                                                     ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { bandeja:bandeja_1|counter:counter_unidades|out[0] }          ;
+; clk50MHz                                                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk50MHz }                                                   ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dispensador:dispensador_1|counter:quantidade_rolhas|out[0] } ;
+; duzias:duzias_1|counter:counter_duzias|out[0]              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { duzias:duzias_1|counter:counter_duzias|out[0] }              ;
+; duzias:duzias_1|counter:counter_unidades|out[0]            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { duzias:duzias_1|counter:counter_unidades|out[0] }            ;
+; fsm_producao:fsm_producao|GP                               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fsm_producao:fsm_producao|GP }                               ;
++------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                                                                                     ;
++------------+-----------------+---------------------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note                                                          ;
++------------+-----------------+---------------------------------------------------+---------------------------------------------------------------+
+; 157.28 MHz ; 157.28 MHz      ; clk50MHz                                          ;                                                               ;
+; 317.26 MHz ; 304.04 MHz      ; assync                                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 349.9 MHz  ; 349.9 MHz       ; duzias:duzias_1|counter:counter_unidades|out[0]   ;                                                               ;
+; 364.7 MHz  ; 364.7 MHz       ; duzias:duzias_1|counter:counter_duzias|out[0]     ;                                                               ;
+; 366.7 MHz  ; 366.7 MHz       ; fsm_producao:fsm_producao|GP                      ;                                                               ;
+; 404.37 MHz ; 404.37 MHz      ; bandeja:bandeja_1|counter:counter_unidades|out[0] ;                                                               ;
++------------+-----------------+---------------------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------------------------------------+
+; Setup Summary                                                              ;
++---------------------------------------------------+--------+---------------+
+; Clock                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------+--------+---------------+
+; clk50MHz                                          ; -5.358 ; -30.449       ;
+; assync                                            ; -3.045 ; -21.238       ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; -1.858 ; -6.384        ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; -1.742 ; -4.804        ;
+; fsm_producao:fsm_producao|GP                      ; -1.727 ; -9.486        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; -1.473 ; -2.729        ;
++---------------------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Summary                                                               ;
++---------------------------------------------------+--------+---------------+
+; Clock                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------+--------+---------------+
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; -4.380 ; -16.494       ;
+; assync                                            ; -4.271 ; -8.541        ;
+; fsm_producao:fsm_producao|GP                      ; -2.292 ; -13.440       ;
+; clk50MHz                                          ; 0.377  ; 0.000         ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; 1.658  ; 0.000         ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.702  ; 0.000         ;
++---------------------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------+
+; Recovery Summary                                                           ;
++---------------------------------------------------+--------+---------------+
+; Clock                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------+--------+---------------+
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; -6.936 ; -13.872       ;
+; assync                                            ; -4.249 ; -27.191       ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; -3.043 ; -12.172       ;
+; fsm_producao:fsm_producao|GP                      ; -2.646 ; -18.895       ;
+; clk50MHz                                          ; -2.525 ; -8.185        ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; -0.253 ; -1.012        ;
++---------------------------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------+
+; Removal Summary                                                           ;
++---------------------------------------------------+-------+---------------+
+; Clock                                             ; Slack ; End Point TNS ;
++---------------------------------------------------+-------+---------------+
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.013 ; 0.000         ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; 0.699 ; 0.000         ;
+; assync                                            ; 0.715 ; 0.000         ;
+; clk50MHz                                          ; 0.991 ; 0.000         ;
+; fsm_producao:fsm_producao|GP                      ; 2.633 ; 0.000         ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; 3.489 ; 0.000         ;
++---------------------------------------------------+-------+---------------+
+
+
++-------------------------------------------------------------------------------------+
+; Minimum Pulse Width Summary                                                         ;
++------------------------------------------------------------+--------+---------------+
+; Clock                                                      ; Slack  ; End Point TNS ;
++------------------------------------------------------------+--------+---------------+
+; assync                                                     ; -2.289 ; -2.289        ;
+; clk50MHz                                                   ; -2.289 ; -2.289        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0]          ; 0.234  ; 0.000         ;
+; duzias:duzias_1|counter:counter_duzias|out[0]              ; 0.234  ; 0.000         ;
+; duzias:duzias_1|counter:counter_unidades|out[0]            ; 0.234  ; 0.000         ;
+; fsm_producao:fsm_producao|GP                               ; 0.234  ; 0.000         ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; 0.500  ; 0.000         ;
++------------------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk50MHz'                                                                                                                                                              ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.358 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 4.350      ;
+; -5.191 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 4.183      ;
+; -4.805 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 3.797      ;
+; -4.356 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 3.348      ;
+; -4.353 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 3.345      ;
+; -4.189 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 3.181      ;
+; -4.186 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 3.178      ;
+; -3.803 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 2.795      ;
+; -3.800 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 1.000        ; -1.675     ; 2.792      ;
+; -2.858 ; level_to_pulse:level_to_pulse_1|pulse          ; t_flipflop:ON_OFF|out                          ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.525      ;
+; -2.748 ; level_to_pulse:level_to_pulse_1|state[0]       ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.415      ;
+; -2.636 ; level_to_pulse:level_to_pulse_1|state[1]       ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.303      ;
+; -2.630 ; level_to_pulse:level_to_pulse_1|state[1]       ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.297      ;
+; -2.586 ; level_to_pulse:level_to_pulse_1|state[1]       ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.253      ;
+; -2.146 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; debouncer:debouncer_start|t_flipflop:tff2|out  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.813      ;
+; -1.937 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; debouncer:debouncer_start|t_flipflop:tff1|out  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.604      ;
+; -1.934 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; debouncer:debouncer_start|t_flipflop:tff2|out  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.601      ;
+; -1.931 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; debouncer:debouncer_start|t_flipflop:tff0|out  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.598      ;
+; -1.813 ; level_to_pulse:level_to_pulse_1|state[0]       ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.480      ;
+; -1.803 ; level_to_pulse:level_to_pulse_1|state[0]       ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.470      ;
+; -1.783 ; t_flipflop:ON_OFF|out                          ; t_flipflop:ON_OFF|out                          ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.450      ;
+; -1.742 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.409      ;
+; -1.661 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; debouncer:debouncer_start|t_flipflop:tff1|out  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.328      ;
+; -1.617 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; debouncer:debouncer_start|t_flipflop:tff2|out  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.284      ;
+; -1.528 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.195      ;
+; -1.509 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff0|out ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.176      ;
+; -1.470 ; debouncer:debouncer_assync|t_flipflop:tff2|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.137      ;
+; -1.463 ; counter:counter_display|out[1]                 ; counter:counter_display|out[1]                 ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 2.130      ;
+; -1.273 ; counter:counter_display|out[0]                 ; counter:counter_display|out[1]                 ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 1.940      ;
+; -1.268 ; counter:counter_display|out[0]                 ; counter:counter_display|out[0]                 ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 1.935      ;
+; -1.236 ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 1.903      ;
+; -1.234 ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 1.901      ;
+; -0.439 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 1.000        ; 1.303      ; 2.409      ;
+; -0.225 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 1.000        ; 1.303      ; 2.195      ;
+; -0.206 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; clk50MHz    ; 1.000        ; 1.303      ; 2.176      ;
+; -0.167 ; debouncer:debouncer_assync|t_flipflop:tff2|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 1.000        ; 1.303      ; 2.137      ;
+; 0.067  ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 1.000        ; 1.303      ; 1.903      ;
+; 0.069  ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 1.000        ; 1.303      ; 1.901      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'assync'                                                                                                                                                                                                        ;
++--------+---------------------------------------------------+------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                        ; Launch Clock                                      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
+; -3.045 ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz                                          ; assync      ; 1.000        ; -1.303     ; 2.409      ;
+; -2.831 ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz                                          ; assync      ; 1.000        ; -1.303     ; 2.195      ;
+; -2.812 ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff0|out ; clk50MHz                                          ; assync      ; 1.000        ; -1.303     ; 2.176      ;
+; -2.773 ; debouncer:debouncer_assync|t_flipflop:tff2|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz                                          ; assync      ; 1.000        ; -1.303     ; 2.137      ;
+; -2.539 ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz                                          ; assync      ; 1.000        ; -1.303     ; 1.903      ;
+; -2.537 ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz                                          ; assync      ; 1.000        ; -1.303     ; 1.901      ;
+; -2.152 ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|VE                   ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.819      ;
+; -1.875 ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|M                    ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.542      ;
+; -1.875 ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|GP                   ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.542      ;
+; -1.841 ; fsm_dispensador:fsm_dispensador_1|A               ; fsm_dispensador:fsm_dispensador_1|AD           ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.508      ;
+; -1.835 ; fsm_dispensador:fsm_dispensador_1|A               ; fsm_dispensador:fsm_dispensador_1|A            ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.502      ;
+; -1.742 ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.409      ;
+; -1.738 ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|state                ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.405      ;
+; -1.528 ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.195      ;
+; -1.509 ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.176      ;
+; -1.470 ; debouncer:debouncer_assync|t_flipflop:tff2|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync                                            ; assync      ; 1.000        ; 0.000      ; 2.137      ;
+; -1.236 ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync                                            ; assync      ; 1.000        ; 0.000      ; 1.903      ;
+; -1.234 ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|EV                   ; assync                                            ; assync      ; 1.000        ; 0.000      ; 1.901      ;
+; -1.234 ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync                                            ; assync      ; 1.000        ; 0.000      ; 1.901      ;
+; -0.698 ; bandeja:bandeja_1|counter:counter_dezenas|out[0]  ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 1.000        ; 2.755      ; 4.120      ;
+; -0.695 ; bandeja:bandeja_1|counter:counter_dezenas|out[0]  ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 1.000        ; 2.755      ; 4.117      ;
+; -0.577 ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_dispensador:fsm_dispensador_1|A            ; fsm_producao:fsm_producao|GP                      ; assync      ; 1.000        ; 3.025      ; 4.269      ;
+; -0.574 ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_dispensador:fsm_dispensador_1|AD           ; fsm_producao:fsm_producao|GP                      ; assync      ; 1.000        ; 3.025      ; 4.266      ;
+; -0.474 ; bandeja:bandeja_1|counter:counter_dezenas|out[1]  ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 1.000        ; 2.755      ; 3.896      ;
+; -0.471 ; bandeja:bandeja_1|counter:counter_dezenas|out[1]  ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 1.000        ; 2.755      ; 3.893      ;
+; 0.101  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; fsm_dispensador:fsm_dispensador_1|A            ; fsm_producao:fsm_producao|GP                      ; assync      ; 1.000        ; 3.025      ; 3.591      ;
+; 0.104  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; fsm_dispensador:fsm_dispensador_1|AD           ; fsm_producao:fsm_producao|GP                      ; assync      ; 1.000        ; 3.025      ; 3.588      ;
+; 0.866  ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_dispensador:fsm_dispensador_1|A            ; fsm_producao:fsm_producao|GP                      ; assync      ; 1.000        ; 3.025      ; 2.826      ;
+; 0.870  ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_dispensador:fsm_dispensador_1|AD           ; fsm_producao:fsm_producao|GP                      ; assync      ; 1.000        ; 3.025      ; 2.822      ;
+; 4.216  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.500        ; 6.689      ; 3.016      ;
+; 4.217  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.500        ; 6.689      ; 3.015      ;
+; 4.716  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 1.000        ; 6.689      ; 3.016      ;
+; 4.717  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 1.000        ; 6.689      ; 3.015      ;
++--------+---------------------------------------------------+------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'duzias:duzias_1|counter:counter_unidades|out[0]'                                                                                                                                                                                              ;
++--------+------------------------------------------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
+; -1.858 ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.525      ;
+; -1.745 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.412      ;
+; -1.733 ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.400      ;
+; -1.532 ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.199      ;
+; -1.522 ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.189      ;
+; -1.519 ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.186      ;
+; -1.288 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 1.955      ;
+; -1.287 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 1.954      ;
+; -1.271 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 1.938      ;
+; -1.212 ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 1.879      ;
++--------+------------------------------------------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'duzias:duzias_1|counter:counter_duzias|out[0]'                                                                                                                                                                                                ;
++--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-----------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-----------------------------------------------+--------------+------------+------------+
+; -1.742 ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 0.000      ; 2.409      ;
+; -1.545 ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 0.000      ; 2.212      ;
+; -1.535 ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 0.000      ; 2.202      ;
+; -1.527 ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 0.000      ; 2.194      ;
+; -1.263 ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 0.000      ; 1.930      ;
+; -1.223 ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 0.000      ; 1.890      ;
+; 3.980  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.500        ; 5.997      ; 2.560      ;
+; 3.981  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.500        ; 5.997      ; 2.559      ;
+; 3.991  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.500        ; 5.997      ; 2.549      ;
+; 4.326  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.500        ; 5.997      ; 2.214      ;
+; 4.480  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 5.997      ; 2.560      ;
+; 4.481  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 5.997      ; 2.559      ;
+; 4.491  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 5.997      ; 2.549      ;
+; 4.826  ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 5.997      ; 2.214      ;
++--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-----------------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'fsm_producao:fsm_producao|GP'                                                                                                                                                                                                      ;
++--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                           ; Launch Clock                                      ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------------------------+--------------+------------+------------+
+; -1.727 ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.394      ;
+; -1.723 ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.390      ;
+; -1.713 ; duzias:duzias_1|counter:counter_duzias|out[3]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.380      ;
+; -1.539 ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.206      ;
+; -1.534 ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.201      ;
+; -1.521 ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[1]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.188      ;
+; -1.510 ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 2.177      ;
+; -1.279 ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 1.946      ;
+; -1.276 ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 1.943      ;
+; -1.274 ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 1.941      ;
+; -1.270 ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 1.937      ;
+; -1.268 ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.000      ; 1.935      ;
+; 1.241  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.966      ;
+; 1.241  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.966      ;
+; 1.245  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.962      ;
+; 1.647  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.560      ;
+; 1.650  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.557      ;
+; 1.659  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.548      ;
+; 1.741  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.966      ;
+; 1.741  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.966      ;
+; 1.745  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.962      ;
+; 2.087  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 2.120      ;
+; 2.147  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.560      ;
+; 2.150  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.557      ;
+; 2.159  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.548      ;
+; 2.238  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.500        ; 3.664      ; 1.969      ;
+; 2.587  ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 2.120      ;
+; 2.738  ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 1.000        ; 3.664      ; 1.969      ;
++--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'                                                                                                                                                                                                    ;
++--------+--------------------------------------------------+--------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                          ; Launch Clock                                      ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+--------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; -1.473 ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 2.140      ;
+; -1.257 ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 1.924      ;
+; -1.256 ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 0.000      ; 1.923      ;
++--------+--------------------------------------------------+--------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'duzias:duzias_1|counter:counter_duzias|out[0]'                                                                                                                                                                                                 ;
++--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-----------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-----------------------------------------------+--------------+------------+------------+
+; -4.380 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 5.997      ; 2.214      ;
+; -4.045 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 5.997      ; 2.549      ;
+; -4.035 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 5.997      ; 2.559      ;
+; -4.034 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 5.997      ; 2.560      ;
+; -3.880 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; -0.500       ; 5.997      ; 2.214      ;
+; -3.545 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; -0.500       ; 5.997      ; 2.549      ;
+; -3.535 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; -0.500       ; 5.997      ; 2.559      ;
+; -3.534 ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_duzias|out[0] ; -0.500       ; 5.997      ; 2.560      ;
+; 1.669  ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 0.000      ; 1.890      ;
+; 1.709  ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 0.000      ; 1.930      ;
+; 1.973  ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 0.000      ; 2.194      ;
+; 1.981  ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 0.000      ; 2.202      ;
+; 1.991  ; duzias:duzias_1|counter:counter_unidades|out[1] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 0.000      ; 2.212      ;
+; 2.188  ; duzias:duzias_1|counter:counter_unidades|out[2] ; duzias:duzias_1|counter:counter_unidades|out[3] ; duzias:duzias_1|counter:counter_duzias|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 0.000      ; 2.409      ;
++--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-----------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'assync'                                                                                                                                                                                                         ;
++--------+---------------------------------------------------+------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                        ; Launch Clock                                      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
+; -4.271 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.000        ; 6.689      ; 3.015      ;
+; -4.270 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.000        ; 6.689      ; 3.016      ;
+; -3.771 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; -0.500       ; 6.689      ; 3.015      ;
+; -3.770 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; -0.500       ; 6.689      ; 3.016      ;
+; -0.424 ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_dispensador:fsm_dispensador_1|AD           ; fsm_producao:fsm_producao|GP                      ; assync      ; 0.000        ; 3.025      ; 2.822      ;
+; -0.420 ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_dispensador:fsm_dispensador_1|A            ; fsm_producao:fsm_producao|GP                      ; assync      ; 0.000        ; 3.025      ; 2.826      ;
+; 0.342  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; fsm_dispensador:fsm_dispensador_1|AD           ; fsm_producao:fsm_producao|GP                      ; assync      ; 0.000        ; 3.025      ; 3.588      ;
+; 0.345  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; fsm_dispensador:fsm_dispensador_1|A            ; fsm_producao:fsm_producao|GP                      ; assync      ; 0.000        ; 3.025      ; 3.591      ;
+; 0.917  ; bandeja:bandeja_1|counter:counter_dezenas|out[1]  ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.000        ; 2.755      ; 3.893      ;
+; 0.920  ; bandeja:bandeja_1|counter:counter_dezenas|out[1]  ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.000        ; 2.755      ; 3.896      ;
+; 1.020  ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_dispensador:fsm_dispensador_1|AD           ; fsm_producao:fsm_producao|GP                      ; assync      ; 0.000        ; 3.025      ; 4.266      ;
+; 1.023  ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_dispensador:fsm_dispensador_1|A            ; fsm_producao:fsm_producao|GP                      ; assync      ; 0.000        ; 3.025      ; 4.269      ;
+; 1.141  ; bandeja:bandeja_1|counter:counter_dezenas|out[0]  ; fsm_dispensador:fsm_dispensador_1|AD           ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.000        ; 2.755      ; 4.117      ;
+; 1.144  ; bandeja:bandeja_1|counter:counter_dezenas|out[0]  ; fsm_dispensador:fsm_dispensador_1|A            ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync      ; 0.000        ; 2.755      ; 4.120      ;
+; 1.680  ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|EV                   ; assync                                            ; assync      ; 0.000        ; 0.000      ; 1.901      ;
+; 1.680  ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync                                            ; assync      ; 0.000        ; 0.000      ; 1.901      ;
+; 1.682  ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync                                            ; assync      ; 0.000        ; 0.000      ; 1.903      ;
+; 1.916  ; debouncer:debouncer_assync|t_flipflop:tff2|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.137      ;
+; 1.955  ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.176      ;
+; 1.974  ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.195      ;
+; 2.184  ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|state                ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.405      ;
+; 2.188  ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.409      ;
+; 2.281  ; fsm_dispensador:fsm_dispensador_1|A               ; fsm_dispensador:fsm_dispensador_1|A            ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.502      ;
+; 2.287  ; fsm_dispensador:fsm_dispensador_1|A               ; fsm_dispensador:fsm_dispensador_1|AD           ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.508      ;
+; 2.321  ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|M                    ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.542      ;
+; 2.321  ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|GP                   ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.542      ;
+; 2.598  ; fsm_producao:fsm_producao|state                   ; fsm_producao:fsm_producao|VE                   ; assync                                            ; assync      ; 0.000        ; 0.000      ; 2.819      ;
+; 2.983  ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz                                          ; assync      ; 0.000        ; -1.303     ; 1.901      ;
+; 2.985  ; debouncer:debouncer_assync|t_flipflop:tff1|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz                                          ; assync      ; 0.000        ; -1.303     ; 1.903      ;
+; 3.219  ; debouncer:debouncer_assync|t_flipflop:tff2|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz                                          ; assync      ; 0.000        ; -1.303     ; 2.137      ;
+; 3.258  ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff0|out ; clk50MHz                                          ; assync      ; 0.000        ; -1.303     ; 2.176      ;
+; 3.277  ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz                                          ; assync      ; 0.000        ; -1.303     ; 2.195      ;
+; 3.491  ; debouncer:debouncer_assync|t_flipflop:tff0|out    ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz                                          ; assync      ; 0.000        ; -1.303     ; 2.409      ;
++--------+---------------------------------------------------+------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'fsm_producao:fsm_producao|GP'                                                                                                                                                                                                       ;
++--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                           ; Launch Clock                                      ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------------------------+--------------+------------+------------+
+; -2.292 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 1.969      ;
+; -2.141 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.120      ;
+; -1.792 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 1.969      ;
+; -1.713 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.548      ;
+; -1.704 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.557      ;
+; -1.701 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.560      ;
+; -1.641 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.120      ;
+; -1.299 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.962      ;
+; -1.295 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.966      ;
+; -1.295 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; 0.000        ; 3.664      ; 2.966      ;
+; -1.213 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.548      ;
+; -1.204 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.557      ;
+; -1.201 ; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.560      ;
+; -0.799 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.962      ;
+; -0.795 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.966      ;
+; -0.795 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP ; -0.500       ; 3.664      ; 2.966      ;
+; 1.714  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 1.935      ;
+; 1.716  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 1.937      ;
+; 1.720  ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 1.941      ;
+; 1.722  ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 1.943      ;
+; 1.725  ; duzias:duzias_1|counter:counter_duzias|out[2]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 1.946      ;
+; 1.956  ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.177      ;
+; 1.967  ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[1]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.188      ;
+; 1.980  ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[2]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.201      ;
+; 1.985  ; duzias:duzias_1|counter:counter_duzias|out[1]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.206      ;
+; 2.159  ; duzias:duzias_1|counter:counter_duzias|out[3]     ; duzias:duzias_1|counter:counter_duzias|out[3]     ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.380      ;
+; 2.169  ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.390      ;
+; 2.173  ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.000      ; 2.394      ;
++--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk50MHz'                                                                                                                                                              ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.377 ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 0.000        ; 1.303      ; 1.901      ;
+; 0.379 ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 0.000        ; 1.303      ; 1.903      ;
+; 0.613 ; debouncer:debouncer_assync|t_flipflop:tff2|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 0.000        ; 1.303      ; 2.137      ;
+; 0.652 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; clk50MHz    ; 0.000        ; 1.303      ; 2.176      ;
+; 0.671 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 0.000        ; 1.303      ; 2.195      ;
+; 0.885 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 0.000        ; 1.303      ; 2.409      ;
+; 1.680 ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 1.901      ;
+; 1.682 ; debouncer:debouncer_assync|t_flipflop:tff1|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 1.903      ;
+; 1.714 ; counter:counter_display|out[0]                 ; counter:counter_display|out[0]                 ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 1.935      ;
+; 1.719 ; counter:counter_display|out[0]                 ; counter:counter_display|out[1]                 ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 1.940      ;
+; 1.909 ; counter:counter_display|out[1]                 ; counter:counter_display|out[1]                 ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.130      ;
+; 1.916 ; debouncer:debouncer_assync|t_flipflop:tff2|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.137      ;
+; 1.955 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff0|out ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.176      ;
+; 1.974 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff1|out ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.195      ;
+; 2.063 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; debouncer:debouncer_start|t_flipflop:tff2|out  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.284      ;
+; 2.107 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; debouncer:debouncer_start|t_flipflop:tff1|out  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.328      ;
+; 2.188 ; debouncer:debouncer_assync|t_flipflop:tff0|out ; debouncer:debouncer_assync|t_flipflop:tff2|out ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.409      ;
+; 2.229 ; t_flipflop:ON_OFF|out                          ; t_flipflop:ON_OFF|out                          ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.450      ;
+; 2.249 ; level_to_pulse:level_to_pulse_1|state[0]       ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.470      ;
+; 2.259 ; level_to_pulse:level_to_pulse_1|state[0]       ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.480      ;
+; 2.377 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; debouncer:debouncer_start|t_flipflop:tff0|out  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.598      ;
+; 2.380 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; debouncer:debouncer_start|t_flipflop:tff2|out  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.601      ;
+; 2.383 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; debouncer:debouncer_start|t_flipflop:tff1|out  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.604      ;
+; 2.592 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; debouncer:debouncer_start|t_flipflop:tff2|out  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.813      ;
+; 3.032 ; level_to_pulse:level_to_pulse_1|state[1]       ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.253      ;
+; 3.076 ; level_to_pulse:level_to_pulse_1|state[1]       ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.297      ;
+; 3.082 ; level_to_pulse:level_to_pulse_1|state[1]       ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.303      ;
+; 3.194 ; level_to_pulse:level_to_pulse_1|state[0]       ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.415      ;
+; 3.304 ; level_to_pulse:level_to_pulse_1|pulse          ; t_flipflop:ON_OFF|out                          ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.525      ;
+; 4.246 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 2.792      ;
+; 4.249 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 2.795      ;
+; 4.632 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 3.178      ;
+; 4.635 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 3.181      ;
+; 4.799 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; level_to_pulse:level_to_pulse_1|state[0]       ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 3.345      ;
+; 4.802 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; level_to_pulse:level_to_pulse_1|state[1]       ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 3.348      ;
+; 5.251 ; debouncer:debouncer_start|t_flipflop:tff0|out  ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 3.797      ;
+; 5.637 ; debouncer:debouncer_start|t_flipflop:tff2|out  ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 4.183      ;
+; 5.804 ; debouncer:debouncer_start|t_flipflop:tff1|out  ; level_to_pulse:level_to_pulse_1|pulse          ; clk50MHz     ; clk50MHz    ; 0.000        ; -1.675     ; 4.350      ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'duzias:duzias_1|counter:counter_unidades|out[0]'                                                                                                                                                                                              ;
++-------+------------------------------------------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                      ; To Node                                        ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
+; 1.658 ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 1.879      ;
+; 1.717 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 1.938      ;
+; 1.733 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 1.954      ;
+; 1.734 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 1.955      ;
+; 1.965 ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.186      ;
+; 1.968 ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.189      ;
+; 1.978 ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.199      ;
+; 2.179 ; duzias:duzias_1|counter:counter_dezenas|out[1] ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.400      ;
+; 2.191 ; duzias:duzias_1|counter:counter_dezenas|out[0] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.412      ;
+; 2.304 ; duzias:duzias_1|counter:counter_dezenas|out[2] ; duzias:duzias_1|counter:counter_dezenas|out[3] ; duzias:duzias_1|counter:counter_unidades|out[0] ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.525      ;
++-------+------------------------------------------------+------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'                                                                                                                                                                                                    ;
++-------+--------------------------------------------------+--------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                          ; Launch Clock                                      ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+--------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; 1.702 ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 1.923      ;
+; 1.703 ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 1.924      ;
+; 1.919 ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 0.000      ; 2.140      ;
++-------+--------------------------------------------------+--------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'                                                                                                                                                                                                                    ;
++--------+------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node                                          ; Launch Clock                                               ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; -6.936 ; fsm_dispensador:fsm_dispensador_1|AD                       ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; assync                                                     ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; -2.755     ; 4.848      ;
+; -6.936 ; fsm_dispensador:fsm_dispensador_1|AD                       ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; assync                                                     ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; -2.755     ; 4.848      ;
+; -3.858 ; t_flipflop:ON_OFF|out                                      ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; clk50MHz                                                   ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 0.586      ; 5.111      ;
+; -3.858 ; t_flipflop:ON_OFF|out                                      ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; clk50MHz                                                   ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 0.586      ; 5.111      ;
+; -0.067 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.500        ; 3.934      ; 4.544      ;
+; -0.067 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.500        ; 3.934      ; 4.544      ;
+; 0.433  ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 3.934      ; 4.544      ;
+; 0.433  ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 1.000        ; 3.934      ; 4.544      ;
++--------+------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'assync'                                                                                                                                                  ;
++--------+-------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.249 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|GP                   ; assync       ; assync      ; 1.000        ; 0.000      ; 4.916      ;
+; -3.840 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|EV                   ; assync       ; assync      ; 1.000        ; 0.000      ; 4.507      ;
+; -3.840 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|VE                   ; assync       ; assync      ; 1.000        ; 0.000      ; 4.507      ;
+; -3.840 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|state                ; assync       ; assync      ; 1.000        ; 0.000      ; 4.507      ;
+; -3.840 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|M                    ; assync       ; assync      ; 1.000        ; 0.000      ; 4.507      ;
+; -2.348 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; assync      ; 0.500        ; 4.262      ; 6.777      ;
+; -2.348 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; assync      ; 0.500        ; 4.262      ; 6.777      ;
+; -2.348 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; assync      ; 0.500        ; 4.262      ; 6.777      ;
+; -1.848 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; assync      ; 1.000        ; 4.262      ; 6.777      ;
+; -1.848 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; assync      ; 1.000        ; 4.262      ; 6.777      ;
+; -1.848 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; assync      ; 1.000        ; 4.262      ; 6.777      ;
+; -1.575 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|GP                   ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 5.583      ;
+; -1.166 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|EV                   ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 5.174      ;
+; -1.166 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|VE                   ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 5.174      ;
+; -1.166 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|state                ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 5.174      ;
+; -1.166 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|M                    ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 5.174      ;
+; -0.269 ; t_flipflop:ON_OFF|out               ; fsm_dispensador:fsm_dispensador_1|A            ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 4.277      ;
+; -0.269 ; t_flipflop:ON_OFF|out               ; fsm_dispensador:fsm_dispensador_1|AD           ; clk50MHz     ; assync      ; 1.000        ; 3.341      ; 4.277      ;
++--------+-------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'duzias:duzias_1|counter:counter_unidades|out[0]'                                                                                                                                               ;
++--------+---------------------------------------+------------------------------------------------+--------------+-------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                                        ; Launch Clock ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+------------------------------------------------+--------------+-------------------------------------------------+--------------+------------+------------+
+; -3.043 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[1] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; -0.141     ; 3.569      ;
+; -3.043 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[0] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; -0.141     ; 3.569      ;
+; -3.043 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[2] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; -0.141     ; 3.569      ;
+; -3.043 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[3] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 1.000        ; -0.141     ; 3.569      ;
++--------+---------------------------------------+------------------------------------------------+--------------+-------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'fsm_producao:fsm_producao|GP'                                                                                                                                                  ;
++--------+---------------------------------------+---------------------------------------------------+--------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                                           ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------------------+--------------+------------------------------+--------------+------------+------------+
+; -2.646 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.629      ;
+; -2.646 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.629      ;
+; -2.646 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.629      ;
+; -2.209 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.192      ;
+; -2.187 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[3]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.170      ;
+; -2.187 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[2]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.170      ;
+; -2.187 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[1]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.170      ;
+; -2.187 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[0]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 1.000        ; 0.316      ; 3.170      ;
++--------+---------------------------------------+---------------------------------------------------+--------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'clk50MHz'                                                                                                                                  ;
++--------+-----------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.525 ; t_flipflop:ON_OFF|out ; counter:counter_display|out[0]                 ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.192      ;
+; -2.525 ; t_flipflop:ON_OFF|out ; counter:counter_display|out[1]                 ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 3.192      ;
+; -1.045 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 0.500        ; 5.565      ; 6.777      ;
+; -1.045 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; clk50MHz    ; 0.500        ; 5.565      ; 6.777      ;
+; -1.045 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 0.500        ; 5.565      ; 6.777      ;
+; -0.545 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 1.000        ; 5.565      ; 6.777      ;
+; -0.545 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; clk50MHz    ; 1.000        ; 5.565      ; 6.777      ;
+; -0.545 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 1.000        ; 5.565      ; 6.777      ;
++--------+-----------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'duzias:duzias_1|counter:counter_duzias|out[0]'                                                                                                                                                ;
++--------+---------------------------------------+-------------------------------------------------+--------------+-----------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                                         ; Launch Clock ; Latch Clock                                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+-------------------------------------------------+--------------+-----------------------------------------------+--------------+------------+------------+
+; -0.253 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[1] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 2.649      ; 3.569      ;
+; -0.253 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[0] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 2.649      ; 3.569      ;
+; -0.253 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[2] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 2.649      ; 3.569      ;
+; -0.253 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[3] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 1.000        ; 2.649      ; 3.569      ;
++--------+---------------------------------------+-------------------------------------------------+--------------+-----------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'bandeja:bandeja_1|counter:counter_unidades|out[0]'                                                                                                                                                                                                                    ;
++-------+------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                                  ; To Node                                          ; Launch Clock                                               ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+; 0.013 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 3.934      ; 4.544      ;
+; 0.013 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 3.934      ; 4.544      ;
+; 0.513 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; -0.500       ; 3.934      ; 4.544      ;
+; 0.513 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; -0.500       ; 3.934      ; 4.544      ;
+; 4.304 ; t_flipflop:ON_OFF|out                                      ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; clk50MHz                                                   ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 0.586      ; 5.111      ;
+; 4.304 ; t_flipflop:ON_OFF|out                                      ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; clk50MHz                                                   ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; 0.586      ; 5.111      ;
+; 7.382 ; fsm_dispensador:fsm_dispensador_1|AD                       ; bandeja:bandeja_1|counter:counter_dezenas|out[0] ; assync                                                     ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; -2.755     ; 4.848      ;
+; 7.382 ; fsm_dispensador:fsm_dispensador_1|AD                       ; bandeja:bandeja_1|counter:counter_dezenas|out[1] ; assync                                                     ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 0.000        ; -2.755     ; 4.848      ;
++-------+------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'duzias:duzias_1|counter:counter_duzias|out[0]'                                                                                                                                                ;
++-------+---------------------------------------+-------------------------------------------------+--------------+-----------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                                         ; Launch Clock ; Latch Clock                                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+-------------------------------------------------+--------------+-----------------------------------------------+--------------+------------+------------+
+; 0.699 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[1] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 2.649      ; 3.569      ;
+; 0.699 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[0] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 2.649      ; 3.569      ;
+; 0.699 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[2] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 2.649      ; 3.569      ;
+; 0.699 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_unidades|out[3] ; clk50MHz     ; duzias:duzias_1|counter:counter_duzias|out[0] ; 0.000        ; 2.649      ; 3.569      ;
++-------+---------------------------------------+-------------------------------------------------+--------------+-----------------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'assync'                                                                                                                                                  ;
++-------+-------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.715 ; t_flipflop:ON_OFF|out               ; fsm_dispensador:fsm_dispensador_1|A            ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 4.277      ;
+; 0.715 ; t_flipflop:ON_OFF|out               ; fsm_dispensador:fsm_dispensador_1|AD           ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 4.277      ;
+; 1.612 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|EV                   ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 5.174      ;
+; 1.612 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|VE                   ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 5.174      ;
+; 1.612 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|state                ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 5.174      ;
+; 1.612 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|M                    ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 5.174      ;
+; 2.021 ; t_flipflop:ON_OFF|out               ; fsm_producao:fsm_producao|GP                   ; clk50MHz     ; assync      ; 0.000        ; 3.341      ; 5.583      ;
+; 2.294 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; assync      ; 0.000        ; 4.262      ; 6.777      ;
+; 2.294 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; assync      ; 0.000        ; 4.262      ; 6.777      ;
+; 2.294 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; assync      ; 0.000        ; 4.262      ; 6.777      ;
+; 2.794 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; assync      ; -0.500       ; 4.262      ; 6.777      ;
+; 2.794 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; assync      ; -0.500       ; 4.262      ; 6.777      ;
+; 2.794 ; assync                              ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; assync      ; -0.500       ; 4.262      ; 6.777      ;
+; 4.286 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|EV                   ; assync       ; assync      ; 0.000        ; 0.000      ; 4.507      ;
+; 4.286 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|VE                   ; assync       ; assync      ; 0.000        ; 0.000      ; 4.507      ;
+; 4.286 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|state                ; assync       ; assync      ; 0.000        ; 0.000      ; 4.507      ;
+; 4.286 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|M                    ; assync       ; assync      ; 0.000        ; 0.000      ; 4.507      ;
+; 4.695 ; fsm_dispensador:fsm_dispensador_1|A ; fsm_producao:fsm_producao|GP                   ; assync       ; assync      ; 0.000        ; 0.000      ; 4.916      ;
++-------+-------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'clk50MHz'                                                                                                                                  ;
++-------+-----------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.991 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; 0.000        ; 5.565      ; 6.777      ;
+; 0.991 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; clk50MHz    ; 0.000        ; 5.565      ; 6.777      ;
+; 0.991 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; 0.000        ; 5.565      ; 6.777      ;
+; 1.491 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff2|out ; assync       ; clk50MHz    ; -0.500       ; 5.565      ; 6.777      ;
+; 1.491 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff0|out ; assync       ; clk50MHz    ; -0.500       ; 5.565      ; 6.777      ;
+; 1.491 ; assync                ; debouncer:debouncer_assync|t_flipflop:tff1|out ; assync       ; clk50MHz    ; -0.500       ; 5.565      ; 6.777      ;
+; 2.971 ; t_flipflop:ON_OFF|out ; counter:counter_display|out[0]                 ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.192      ;
+; 2.971 ; t_flipflop:ON_OFF|out ; counter:counter_display|out[1]                 ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.192      ;
++-------+-----------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'fsm_producao:fsm_producao|GP'                                                                                                                                                  ;
++-------+---------------------------------------+---------------------------------------------------+--------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                                           ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------------------+--------------+------------------------------+--------------+------------+------------+
+; 2.633 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[3]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.170      ;
+; 2.633 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[2]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.170      ;
+; 2.633 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[1]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.170      ;
+; 2.633 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_duzias|out[0]     ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.170      ;
+; 2.655 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.192      ;
+; 3.092 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[3] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.629      ;
+; 3.092 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[2] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.629      ;
+; 3.092 ; t_flipflop:ON_OFF|out                 ; bandeja:bandeja_1|counter:counter_unidades|out[1] ; clk50MHz     ; fsm_producao:fsm_producao|GP ; 0.000        ; 0.316      ; 3.629      ;
++-------+---------------------------------------+---------------------------------------------------+--------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'duzias:duzias_1|counter:counter_unidades|out[0]'                                                                                                                                               ;
++-------+---------------------------------------+------------------------------------------------+--------------+-------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                                        ; Launch Clock ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+------------------------------------------------+--------------+-------------------------------------------------+--------------+------------+------------+
+; 3.489 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[1] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; -0.141     ; 3.569      ;
+; 3.489 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[0] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; -0.141     ; 3.569      ;
+; 3.489 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[2] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; -0.141     ; 3.569      ;
+; 3.489 ; level_to_pulse:level_to_pulse_1|pulse ; duzias:duzias_1|counter:counter_dezenas|out[3] ; clk50MHz     ; duzias:duzias_1|counter:counter_unidades|out[0] ; 0.000        ; -0.141     ; 3.569      ;
++-------+---------------------------------------+------------------------------------------------+--------------+-------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                   ;
++---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; assync                                            ; assync                                            ; 13       ; 0        ; 0        ; 0        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync                                            ; 6        ; 2        ; 0        ; 0        ;
+; clk50MHz                                          ; assync                                            ; 6        ; 0        ; 0        ; 0        ;
+; fsm_producao:fsm_producao|GP                      ; assync                                            ; 6        ; 0        ; 0        ; 0        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 3        ; 0        ; 0        ; 0        ;
+; assync                                            ; clk50MHz                                          ; 6        ; 0        ; 0        ; 0        ;
+; clk50MHz                                          ; clk50MHz                                          ; 32       ; 0        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; 6        ; 0        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0]     ; 4        ; 4        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; duzias:duzias_1|counter:counter_unidades|out[0]   ; 10       ; 0        ; 0        ; 0        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP                      ; 4        ; 4        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP                      ; 4        ; 4        ; 0        ; 0        ;
+; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP                      ; 12       ; 0        ; 0        ; 0        ;
++---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                    ;
++---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; assync                                            ; assync                                            ; 13       ; 0        ; 0        ; 0        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; assync                                            ; 6        ; 2        ; 0        ; 0        ;
+; clk50MHz                                          ; assync                                            ; 6        ; 0        ; 0        ; 0        ;
+; fsm_producao:fsm_producao|GP                      ; assync                                            ; 6        ; 0        ; 0        ; 0        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 3        ; 0        ; 0        ; 0        ;
+; assync                                            ; clk50MHz                                          ; 6        ; 0        ; 0        ; 0        ;
+; clk50MHz                                          ; clk50MHz                                          ; 32       ; 0        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; duzias:duzias_1|counter:counter_duzias|out[0]     ; 6        ; 0        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; duzias:duzias_1|counter:counter_duzias|out[0]     ; 4        ; 4        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_unidades|out[0]   ; duzias:duzias_1|counter:counter_unidades|out[0]   ; 10       ; 0        ; 0        ; 0        ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0] ; fsm_producao:fsm_producao|GP                      ; 4        ; 4        ; 0        ; 0        ;
+; duzias:duzias_1|counter:counter_duzias|out[0]     ; fsm_producao:fsm_producao|GP                      ; 4        ; 4        ; 0        ; 0        ;
+; fsm_producao:fsm_producao|GP                      ; fsm_producao:fsm_producao|GP                      ; 12       ; 0        ; 0        ; 0        ;
++---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                                                         ;
++------------------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                 ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; assync                                                     ; assync                                            ; 8        ; 3        ; 0        ; 0        ;
+; clk50MHz                                                   ; assync                                            ; 7        ; 0        ; 0        ; 0        ;
+; assync                                                     ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 2        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 2        ; 0        ; 0        ; 0        ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 2        ; 2        ; 0        ; 0        ;
+; assync                                                     ; clk50MHz                                          ; 3        ; 3        ; 0        ; 0        ;
+; clk50MHz                                                   ; clk50MHz                                          ; 2        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; duzias:duzias_1|counter:counter_duzias|out[0]     ; 4        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; duzias:duzias_1|counter:counter_unidades|out[0]   ; 4        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; fsm_producao:fsm_producao|GP                      ; 8        ; 0        ; 0        ; 0        ;
++------------------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                                                          ;
++------------------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                 ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+; assync                                                     ; assync                                            ; 8        ; 3        ; 0        ; 0        ;
+; clk50MHz                                                   ; assync                                            ; 7        ; 0        ; 0        ; 0        ;
+; assync                                                     ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 2        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 2        ; 0        ; 0        ; 0        ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; bandeja:bandeja_1|counter:counter_unidades|out[0] ; 2        ; 2        ; 0        ; 0        ;
+; assync                                                     ; clk50MHz                                          ; 3        ; 3        ; 0        ; 0        ;
+; clk50MHz                                                   ; clk50MHz                                          ; 2        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; duzias:duzias_1|counter:counter_duzias|out[0]     ; 4        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; duzias:duzias_1|counter:counter_unidades|out[0]   ; 4        ; 0        ; 0        ; 0        ;
+; clk50MHz                                                   ; fsm_producao:fsm_producao|GP                      ; 8        ; 0        ; 0        ; 0        ;
++------------------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 17    ; 17   ;
+; Unconstrained Output Ports      ; 23    ; 23   ;
+; Unconstrained Output Port Paths ; 144   ; 144  ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                         ;
++------------------------------------------------------------+------------------------------------------------------------+------+-------------+
+; Target                                                     ; Clock                                                      ; Type ; Status      ;
++------------------------------------------------------------+------------------------------------------------------------+------+-------------+
+; assync                                                     ; assync                                                     ; Base ; Constrained ;
+; bandeja:bandeja_1|counter:counter_unidades|out[0]          ; bandeja:bandeja_1|counter:counter_unidades|out[0]          ; Base ; Constrained ;
+; clk50MHz                                                   ; clk50MHz                                                   ; Base ; Constrained ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; Base ; Constrained ;
+; duzias:duzias_1|counter:counter_duzias|out[0]              ; duzias:duzias_1|counter:counter_duzias|out[0]              ; Base ; Constrained ;
+; duzias:duzias_1|counter:counter_unidades|out[0]            ; duzias:duzias_1|counter:counter_unidades|out[0]            ; Base ; Constrained ;
+; fsm_producao:fsm_producao|GP                               ; fsm_producao:fsm_producao|GP                               ; Base ; Constrained ;
++------------------------------------------------------------+------------------------------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; CH         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PG         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RO         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                ;
++-------------------+---------------------------------------------------------------------------------------+
+; Output Port       ; Comment                                                                               ;
++-------------------+---------------------------------------------------------------------------------------+
+; A                 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BZ_T              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; EV                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GP_T              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; M                 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MC_T              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VE                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; debouncedStart_T  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enable_T          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pulse_T           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reabastecer_T     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; CH         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PG         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RO         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                ;
++-------------------+---------------------------------------------------------------------------------------+
+; Output Port       ; Comment                                                                               ;
++-------------------+---------------------------------------------------------------------------------------+
+; A                 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BZ_T              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; EV                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GP_T              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; M                 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MC_T              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VE                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; debouncedStart_T  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_colune[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_data[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enable_T          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pulse_T           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reabastecer_T     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu Feb 15 20:29:23 2024
+Info: Command: quartus_sta automacao -c automacao
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'automacao.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name assync assync
+    Info (332105): create_clock -period 1.000 -name clk50MHz clk50MHz
+    Info (332105): create_clock -period 1.000 -name fsm_producao:fsm_producao|GP fsm_producao:fsm_producao|GP
+    Info (332105): create_clock -period 1.000 -name bandeja:bandeja_1|counter:counter_unidades|out[0] bandeja:bandeja_1|counter:counter_unidades|out[0]
+    Info (332105): create_clock -period 1.000 -name dispensador:dispensador_1|counter:quantidade_rolhas|out[0] dispensador:dispensador_1|counter:quantidade_rolhas|out[0]
+    Info (332105): create_clock -period 1.000 -name duzias:duzias_1|counter:counter_duzias|out[0] duzias:duzias_1|counter:counter_duzias|out[0]
+    Info (332105): create_clock -period 1.000 -name duzias:duzias_1|counter:counter_unidades|out[0] duzias:duzias_1|counter:counter_unidades|out[0]
+Warning (332191): Clock target dispensador:dispensador_1|counter:quantidade_rolhas|out[0] of clock dispensador:dispensador_1|counter:quantidade_rolhas|out[0] is fed by another target of the same clock.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.358
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.358             -30.449 clk50MHz 
+    Info (332119):    -3.045             -21.238 assync 
+    Info (332119):    -1.858              -6.384 duzias:duzias_1|counter:counter_unidades|out[0] 
+    Info (332119):    -1.742              -4.804 duzias:duzias_1|counter:counter_duzias|out[0] 
+    Info (332119):    -1.727              -9.486 fsm_producao:fsm_producao|GP 
+    Info (332119):    -1.473              -2.729 bandeja:bandeja_1|counter:counter_unidades|out[0] 
+Info (332146): Worst-case hold slack is -4.380
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.380             -16.494 duzias:duzias_1|counter:counter_duzias|out[0] 
+    Info (332119):    -4.271              -8.541 assync 
+    Info (332119):    -2.292             -13.440 fsm_producao:fsm_producao|GP 
+    Info (332119):     0.377               0.000 clk50MHz 
+    Info (332119):     1.658               0.000 duzias:duzias_1|counter:counter_unidades|out[0] 
+    Info (332119):     1.702               0.000 bandeja:bandeja_1|counter:counter_unidades|out[0] 
+Info (332146): Worst-case recovery slack is -6.936
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.936             -13.872 bandeja:bandeja_1|counter:counter_unidades|out[0] 
+    Info (332119):    -4.249             -27.191 assync 
+    Info (332119):    -3.043             -12.172 duzias:duzias_1|counter:counter_unidades|out[0] 
+    Info (332119):    -2.646             -18.895 fsm_producao:fsm_producao|GP 
+    Info (332119):    -2.525              -8.185 clk50MHz 
+    Info (332119):    -0.253              -1.012 duzias:duzias_1|counter:counter_duzias|out[0] 
+Info (332146): Worst-case removal slack is 0.013
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.013               0.000 bandeja:bandeja_1|counter:counter_unidades|out[0] 
+    Info (332119):     0.699               0.000 duzias:duzias_1|counter:counter_duzias|out[0] 
+    Info (332119):     0.715               0.000 assync 
+    Info (332119):     0.991               0.000 clk50MHz 
+    Info (332119):     2.633               0.000 fsm_producao:fsm_producao|GP 
+    Info (332119):     3.489               0.000 duzias:duzias_1|counter:counter_unidades|out[0] 
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 assync 
+    Info (332119):    -2.289              -2.289 clk50MHz 
+    Info (332119):     0.234               0.000 bandeja:bandeja_1|counter:counter_unidades|out[0] 
+    Info (332119):     0.234               0.000 duzias:duzias_1|counter:counter_duzias|out[0] 
+    Info (332119):     0.234               0.000 duzias:duzias_1|counter:counter_unidades|out[0] 
+    Info (332119):     0.234               0.000 fsm_producao:fsm_producao|GP 
+    Info (332119):     0.500               0.000 dispensador:dispensador_1|counter:quantidade_rolhas|out[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4670 megabytes
+    Info: Processing ended: Thu Feb 15 20:29:26 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

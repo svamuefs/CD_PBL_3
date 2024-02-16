@@ -4,7 +4,7 @@ module mux4x1 #(
     input [DATAWIDTH-1:0]   IN_A , IN_B , IN_C , IN_D ,
     input [1:0] slc ,
 
-    output [DATAWIDTH-1:0]  out
+    output reg [DATAWIDTH-1:0]  out
 );
 
 always @* begin

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/CD/CD_PBL_3/simulation/qsim
+vautomacao
+!s110 1708036567
+!i10b 1
+!s100 V>^7`Lj`GiU28;]QQQ9fF3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I3]m>M7olZm5FVSHHQo^8g3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1708036565
+8automacao.vo
+Fautomacao.vo
+!i122 50
+L0 32 2909
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1708036567.000000
+!s107 automacao.vo|
+!s90 -work|work|automacao.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vautomacao_vlg_vec_tst
+!s110 1708036568
+!i10b 1
+!s100 61BAHH3nN9QIHG]2]ziQI2
+R1
+I19_95R5IYBGj7BBC`m?B31
+R2
+R0
+w1708036563
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 51
+L0 30 98
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

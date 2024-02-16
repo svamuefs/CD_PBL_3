@@ -1,5 +1,5 @@
 Analysis & Synthesis report for automacao
-Sat Jan 20 15:24:24 2024
+Thu Feb 15 22:23:36 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -10,7 +10,43 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: level_to_pulse:level_to_pulse_1
+ 14. Parameter Settings for User Entity Instance: fsm_producao:fsm_producao
+ 15. Parameter Settings for User Entity Instance: fsm_dispensador:fsm_dispensador_1
+ 16. Parameter Settings for User Entity Instance: bandeja:bandeja_1|counter:counter_unidades
+ 17. Parameter Settings for User Entity Instance: bandeja:bandeja_1|counter:counter_dezenas
+ 18. Parameter Settings for User Entity Instance: dispensador:dispensador_1|counter:quantidade_rolhas
+ 19. Parameter Settings for User Entity Instance: duzias:duzias_1|counter:counter_duzias
+ 20. Parameter Settings for User Entity Instance: duzias:duzias_1|counter:counter_unidades
+ 21. Parameter Settings for User Entity Instance: duzias:duzias_1|counter:counter_dezenas
+ 22. Parameter Settings for User Entity Instance: counter:counter_display
+ 23. Parameter Settings for User Entity Instance: mux4x1:display_data_mux
+ 24. Parameter Settings for User Entity Instance: mux4x1:display_colune_mux
+ 25. Port Connectivity Checks: "mux4x1:display_colune_mux"
+ 26. Port Connectivity Checks: "counter:counter_display"
+ 27. Port Connectivity Checks: "duzias:duzias_1|counter:counter_dezenas"
+ 28. Port Connectivity Checks: "duzias:duzias_1|counter:counter_unidades"
+ 29. Port Connectivity Checks: "duzias:duzias_1|counter:counter_duzias"
+ 30. Port Connectivity Checks: "dispensador:dispensador_1|counter:quantidade_rolhas"
+ 31. Port Connectivity Checks: "bandeja:bandeja_1|counter:counter_dezenas"
+ 32. Port Connectivity Checks: "bandeja:bandeja_1|counter:counter_unidades"
+ 33. Port Connectivity Checks: "fsm_dispensador:fsm_dispensador_1"
+ 34. Port Connectivity Checks: "fsm_producao:fsm_producao"
+ 35. Port Connectivity Checks: "t_flipflop:ON_OFF"
+ 36. Port Connectivity Checks: "level_to_pulse:level_to_pulse_1"
+ 37. Port Connectivity Checks: "debouncer:debouncer_start|t_flipflop:tff0"
+ 38. Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0"
+ 39. Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1"
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,11 +73,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat Jan 20 15:24:24 2024              ;
+; Analysis & Synthesis Status ; Successful - Thu Feb 15 22:23:36 2024          ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; automacao                                      ;
 ; Top-level Entity Name       ; automacao                                      ;
 ; Family                      ; MAX II                                         ;
+; Total logic elements        ; 95                                             ;
+; Total pins                  ; 29                                             ;
+; Total virtual pins          ; 0                                              ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
 
 
@@ -132,21 +172,594 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+; fsm_producao.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_producao.v      ;         ;
+; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/t_flipflop.v        ;         ;
+; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/sync_freq_divider.v ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/mux4x1.v            ;         ;
+; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/level_to_pulse.v    ;         ;
+; fsm_dispensador.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_dispensador.v   ;         ;
+; duzias.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/duzias.v            ;         ;
+; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/display_decoder.v   ;         ;
+; dispensador.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/dispensador.v       ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/debouncer.v         ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/counter.v           ;         ;
+; bandeja.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/bandeja.v           ;         ;
+; automacao.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/automacao.v         ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 95                    ;
+;     -- Combinational with no register       ; 44                    ;
+;     -- Register only                        ; 0                     ;
+;     -- Combinational with a register        ; 51                    ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 41                    ;
+;     -- 3 input functions                    ; 17                    ;
+;     -- 2 input functions                    ; 27                    ;
+;     -- 1 input functions                    ; 10                    ;
+;     -- 0 input functions                    ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 95                    ;
+;     -- arithmetic mode                      ; 0                     ;
+;     -- qfbk mode                            ; 0                     ;
+;     -- register cascade mode                ; 0                     ;
+;     -- synchronous clear/load mode          ; 0                     ;
+;     -- asynchronous clear/load mode         ; 34                    ;
+;                                             ;                       ;
+; Total registers                             ; 51                    ;
+; I/O pins                                    ; 29                    ;
+; Maximum fan-out node                        ; t_flipflop:ON_OFF|out ;
+; Maximum fan-out                             ; 33                    ;
+; Total fan-out                               ; 387                   ;
+; Average fan-out                             ; 3.12                  ;
++---------------------------------------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Entity Name       ; Library Name ;
++--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
+; |automacao                                 ; 95 (5)      ; 51           ; 0          ; 29   ; 0            ; 44 (5)       ; 0 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |automacao                                                        ; automacao         ; work         ;
+;    |bandeja:bandeja_1|                     ; 12 (5)      ; 6            ; 0          ; 0    ; 0            ; 6 (5)        ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1                                      ; bandeja           ; work         ;
+;       |counter:counter_dezenas|            ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_dezenas              ; counter           ; work         ;
+;       |counter:counter_unidades|           ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_unidades             ; counter           ; work         ;
+;    |counter:counter_display|               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|counter:counter_display                                ; counter           ; work         ;
+;    |debouncer:debouncer_assync|            ; 5 (2)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_assync                             ; debouncer         ; work         ;
+;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_assync|t_flipflop:tff0             ; t_flipflop        ; work         ;
+;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_assync|t_flipflop:tff1             ; t_flipflop        ; work         ;
+;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_assync|t_flipflop:tff2             ; t_flipflop        ; work         ;
+;    |debouncer:debouncer_start|             ; 6 (3)       ; 3            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start                              ; debouncer         ; work         ;
+;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff0              ; t_flipflop        ; work         ;
+;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff1              ; t_flipflop        ; work         ;
+;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff2              ; t_flipflop        ; work         ;
+;    |dispensador:dispensador_1|             ; 2 (1)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1                              ; dispensador       ; work         ;
+;       |counter:quantidade_rolhas|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1|counter:quantidade_rolhas    ; counter           ; work         ;
+;    |display_decoder:display_decoder_1|     ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|display_decoder:display_decoder_1                      ; display_decoder   ; work         ;
+;    |duzias:duzias_1|                       ; 12 (0)      ; 12           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1                                        ; duzias            ; work         ;
+;       |counter:counter_dezenas|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_dezenas                ; counter           ; work         ;
+;       |counter:counter_duzias|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_duzias                 ; counter           ; work         ;
+;       |counter:counter_unidades|           ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_unidades               ; counter           ; work         ;
+;    |fsm_dispensador:fsm_dispensador_1|     ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_dispensador:fsm_dispensador_1                      ; fsm_dispensador   ; work         ;
+;    |fsm_producao:fsm_producao|             ; 6 (6)       ; 5            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_producao:fsm_producao                              ; fsm_producao      ; work         ;
+;    |level_to_pulse:level_to_pulse_1|       ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_1                        ; level_to_pulse    ; work         ;
+;    |mux4x1:display_colune_mux|             ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|mux4x1:display_colune_mux                              ; mux4x1            ; work         ;
+;    |mux4x1:display_data_mux|               ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|mux4x1:display_data_mux                                ; mux4x1            ; work         ;
+;    |sync_freq_divider:sync_freq_divider_1| ; 16 (3)      ; 13           ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 13 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1                  ; sync_freq_divider ; work         ;
+;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff10|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff10 ; t_flipflop        ; work         ;
+;       |t_flipflop:tff11|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff11 ; t_flipflop        ; work         ;
+;       |t_flipflop:tff12|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff12 ; t_flipflop        ; work         ;
+;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff1  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff2  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff3  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff4  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff5|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff5  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff6|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff6  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff7|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff7  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff8|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff8  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff9|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff9  ; t_flipflop        ; work         ;
+;    |t_flipflop:ON_OFF|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:ON_OFF                                      ; t_flipflop        ; work         ;
++--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++--------------------------------------------------------------+-------------------------------------------------+
+; Register name                                                ; Reason for Removal                              ;
++--------------------------------------------------------------+-------------------------------------------------+
+; fsm_dispensador:fsm_dispensador_1|state[0]                   ; Merged with fsm_dispensador:fsm_dispensador_1|A ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[1,2] ; Lost fanout                                     ;
+; Total Number of Removed Registers = 3                        ;                                                 ;
++--------------------------------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                  ;
++------------------------------------------------------------+--------------------+------------------------------------------------------------+
+; Register name                                              ; Reason for Removal ; Registers Removed due to This Register                     ;
++------------------------------------------------------------+--------------------+------------------------------------------------------------+
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[2] ; Lost Fanouts       ; dispensador:dispensador_1|counter:quantidade_rolhas|out[1] ;
++------------------------------------------------------------+--------------------+------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 51    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Inverted Register Statistics                                         ;
++------------------------------------------------------------+---------+
+; Inverted Register                                          ; Fan out ;
++------------------------------------------------------------+---------+
+; bandeja:bandeja_1|counter:counter_unidades|out[0]          ; 8       ;
+; bandeja:bandeja_1|counter:counter_unidades|out[3]          ; 7       ;
+; bandeja:bandeja_1|counter:counter_dezenas|out[1]           ; 4       ;
+; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; 3       ;
+; duzias:duzias_1|counter:counter_duzias|out[3]              ; 4       ;
+; duzias:duzias_1|counter:counter_duzias|out[2]              ; 5       ;
+; Total number of inverted registers = 6                     ;         ;
++------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |automacao|fsm_producao:fsm_producao|EV ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |automacao|mux4x1:display_data_mux|Mux1 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |automacao|mux4x1:display_data_mux|Mux3 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: level_to_pulse:level_to_pulse_1 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; IDLE           ; 00    ; Unsigned Binary                                     ;
+; PULSE          ; 01    ; Unsigned Binary                                     ;
+; PULSE_END      ; 10    ; Unsigned Binary                                     ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fsm_producao:fsm_producao ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; ENCHIMENTO     ; 0     ; Unsigned Binary                               ;
+; VEDACAO        ; 1     ; Unsigned Binary                               ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fsm_dispensador:fsm_dispensador_1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; ESPERAR        ; 00    ; Unsigned Binary                                       ;
+; ALARME         ; 01    ; Unsigned Binary                                       ;
+; ACIONAR        ; 10    ; Unsigned Binary                                       ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bandeja:bandeja_1|counter:counter_unidades ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; DATAWIDTH      ; 4     ; Signed Integer                                                 ;
+; START          ; 1001  ; Unsigned Binary                                                ;
+; ENDING         ; 0000  ; Unsigned Binary                                                ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bandeja:bandeja_1|counter:counter_dezenas ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; DATAWIDTH      ; 2     ; Signed Integer                                                ;
+; START          ; 10    ; Unsigned Binary                                               ;
+; ENDING         ; 00    ; Unsigned Binary                                               ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dispensador:dispensador_1|counter:quantidade_rolhas ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; DATAWIDTH      ; 3     ; Signed Integer                                                          ;
+; START          ; 101   ; Unsigned Binary                                                         ;
+; ENDING         ; 000   ; Unsigned Binary                                                         ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: duzias:duzias_1|counter:counter_duzias ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; DATAWIDTH      ; 4     ; Signed Integer                                             ;
+; START          ; 1100  ; Unsigned Binary                                            ;
+; ENDING         ; 0000  ; Unsigned Binary                                            ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: duzias:duzias_1|counter:counter_unidades ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; DATAWIDTH      ; 4     ; Signed Integer                                               ;
+; START          ; 0000  ; Unsigned Binary                                              ;
+; ENDING         ; 1001  ; Unsigned Binary                                              ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: duzias:duzias_1|counter:counter_dezenas ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; DATAWIDTH      ; 4     ; Signed Integer                                              ;
+; START          ; 0000  ; Unsigned Binary                                             ;
+; ENDING         ; 1001  ; Unsigned Binary                                             ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:counter_display ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; DATAWIDTH      ; 2     ; Signed Integer                              ;
+; START          ; 00    ; Unsigned Binary                             ;
+; ENDING         ; 11    ; Unsigned Binary                             ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4x1:display_data_mux ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; DATAWIDTH      ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4x1:display_colune_mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; DATAWIDTH      ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:display_colune_mux" ;
++------------+-------+----------+-----------------------+
+; Port       ; Type  ; Severity ; Details               ;
++------------+-------+----------+-----------------------+
+; IN_A[2..0] ; Input ; Info     ; Stuck at GND          ;
+; IN_A[3]    ; Input ; Info     ; Stuck at VCC          ;
+; IN_B[1..0] ; Input ; Info     ; Stuck at GND          ;
+; IN_B[3]    ; Input ; Info     ; Stuck at GND          ;
+; IN_B[2]    ; Input ; Info     ; Stuck at VCC          ;
+; IN_C[3..2] ; Input ; Info     ; Stuck at GND          ;
+; IN_C[1]    ; Input ; Info     ; Stuck at VCC          ;
+; IN_C[0]    ; Input ; Info     ; Stuck at GND          ;
+; IN_D[3..1] ; Input ; Info     ; Stuck at GND          ;
+; IN_D[0]    ; Input ; Info     ; Stuck at VCC          ;
++------------+-------+----------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:counter_display"                                                                                                                          ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load_value ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "duzias:duzias_1|counter:counter_dezenas"                                                                                                          ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; load       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load_value ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "duzias:duzias_1|counter:counter_unidades"                                                                                                         ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; load       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load_value ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "duzias:duzias_1|counter:counter_duzias"                                                                                                           ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; load       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load_value ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dispensador:dispensador_1|counter:quantidade_rolhas"                                                                                               ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; out        ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[2..1]" have no fanouts                       ;
+; load       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load_value ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bandeja:bandeja_1|counter:counter_dezenas"                                                                                                                                  ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input  ; Info     ; Stuck at VCC                                                                                                                                                          ;
+; out        ; Output ; Warning  ; Output or bidir port (2 bits) is smaller than the port expression (4 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; load       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                          ;
+; load_value ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                          ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bandeja:bandeja_1|counter:counter_unidades"                                                                                                       ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; down       ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; load       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; load_value ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fsm_dispensador:fsm_dispensador_1"                                                                            ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; state     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; nextState ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fsm_producao:fsm_producao"                                                                                ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; state ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; next  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "t_flipflop:ON_OFF" ;
++-------+-------+----------+--------------------+
+; Port  ; Type  ; Severity ; Details            ;
++-------+-------+----------+--------------------+
+; reset ; Input ; Info     ; Stuck at VCC       ;
++-------+-------+----------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "level_to_pulse:level_to_pulse_1"                                                                          ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; reset ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; state ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; next  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer_start|t_flipflop:tff0" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                ;
++------+-------+----------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                          ;
++--------+-------+----------+---------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Jan 20 15:24:13 2024
+    Info: Processing started: Thu Feb 15 22:23:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off automacao -c automacao
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Error (12007): Top-level design entity "automacao" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4693 megabytes
-    Error: Processing ended: Sat Jan 20 15:24:24 2024
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:29
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_producao.v
+    Info (12023): Found entity 1: fsm_producao File: C:/CD/CD_PBL_3/fsm_producao.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file t_flipflop.v
+    Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_3/t_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sync_freq_divider.v
+    Info (12023): Found entity 1: sync_freq_divider File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
+    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_3/mux4x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file level_to_pulse.v
+    Info (12023): Found entity 1: level_to_pulse File: C:/CD/CD_PBL_3/level_to_pulse.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_dispensador.v
+    Info (12023): Found entity 1: fsm_dispensador File: C:/CD/CD_PBL_3/fsm_dispensador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
+    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_3/d_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file duzias.v
+    Info (12023): Found entity 1: duzias File: C:/CD/CD_PBL_3/duzias.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file display_decoder.v
+    Info (12023): Found entity 1: display_decoder File: C:/CD/CD_PBL_3/display_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dispensador.v
+    Info (12023): Found entity 1: dispensador File: C:/CD/CD_PBL_3/dispensador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
+    Info (12023): Found entity 1: debouncer File: C:/CD/CD_PBL_3/debouncer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: counter File: C:/CD/CD_PBL_3/counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bandeja.v
+    Info (12023): Found entity 1: bandeja File: C:/CD/CD_PBL_3/bandeja.v Line: 1
+Warning (12019): Can't analyze file -- file assync_clk_enable.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file automacao.v
+    Info (12023): Found entity 1: automacao File: C:/CD/CD_PBL_3/automacao.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(11): created implicit net for "tff0Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(20): created implicit net for "tff1Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(23): created implicit net for "and2Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(30): created implicit net for "tff2Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(33): created implicit net for "and3Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(40): created implicit net for "tff3Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(43): created implicit net for "and4Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(50): created implicit net for "tff4Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(53): created implicit net for "and5Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 53
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(60): created implicit net for "tff5Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(63): created implicit net for "and6Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(70): created implicit net for "tff6Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(73): created implicit net for "and7Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(80): created implicit net for "tff7Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 80
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(83): created implicit net for "and8Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(90): created implicit net for "tff8Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(93): created implicit net for "and9Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(100): created implicit net for "tff9Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(103): created implicit net for "and10Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(110): created implicit net for "tff10Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(113): created implicit net for "and11Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(120): created implicit net for "tff11Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(123): created implicit net for "and12Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(22): created implicit net for "notEnable" File: C:/CD/CD_PBL_3/display_decoder.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at dispensador.v(12): created implicit net for "qt" File: C:/CD/CD_PBL_3/dispensador.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "clk_w" File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "notEnable" File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(16): created implicit net for "tff0Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(24): created implicit net for "tff1Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(27): created implicit net for "and2Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(34): created implicit net for "tff2Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(40): created implicit net for "enable" File: C:/CD/CD_PBL_3/debouncer.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(49): created implicit net for "clk" File: C:/CD/CD_PBL_3/automacao.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(63): created implicit net for "debouncedStart" File: C:/CD/CD_PBL_3/automacao.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(72): created implicit net for "debouncedAssync" File: C:/CD/CD_PBL_3/automacao.v Line: 72
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(83): created implicit net for "pulse" File: C:/CD/CD_PBL_3/automacao.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(94): created implicit net for "enable" File: C:/CD/CD_PBL_3/automacao.v Line: 94
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(97): created implicit net for "assyncClk" File: C:/CD/CD_PBL_3/automacao.v Line: 97
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(111): created implicit net for "GP" File: C:/CD/CD_PBL_3/automacao.v Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(120): created implicit net for "CR" File: C:/CD/CD_PBL_3/automacao.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(121): created implicit net for "BZ" File: C:/CD/CD_PBL_3/automacao.v Line: 121
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(126): created implicit net for "AD_w" File: C:/CD/CD_PBL_3/automacao.v Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(139): created implicit net for "reabastecer" File: C:/CD/CD_PBL_3/automacao.v Line: 139
+Info (12127): Elaborating entity "automacao" for the top level hierarchy
+Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:sync_freq_divider_1" File: C:/CD/CD_PBL_3/automacao.v Line: 50
+Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 12
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer_start" File: C:/CD/CD_PBL_3/automacao.v Line: 64
+Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:level_to_pulse_1" File: C:/CD/CD_PBL_3/automacao.v Line: 84
+Warning (10270): Verilog HDL Case Statement warning at level_to_pulse.v(22): incomplete case statement has no default case item File: C:/CD/CD_PBL_3/level_to_pulse.v Line: 22
+Info (12128): Elaborating entity "fsm_producao" for hierarchy "fsm_producao:fsm_producao" File: C:/CD/CD_PBL_3/automacao.v Line: 115
+Info (12128): Elaborating entity "fsm_dispensador" for hierarchy "fsm_dispensador:fsm_dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 128
+Warning (10270): Verilog HDL Case Statement warning at fsm_dispensador.v(27): incomplete case statement has no default case item File: C:/CD/CD_PBL_3/fsm_dispensador.v Line: 27
+Info (12128): Elaborating entity "bandeja" for hierarchy "bandeja:bandeja_1" File: C:/CD/CD_PBL_3/automacao.v Line: 147
+Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_unidades" File: C:/CD/CD_PBL_3/bandeja.v Line: 28
+Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_dezenas" File: C:/CD/CD_PBL_3/bandeja.v Line: 49
+Info (12128): Elaborating entity "dispensador" for hierarchy "dispensador:dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 158
+Info (12128): Elaborating entity "counter" for hierarchy "dispensador:dispensador_1|counter:quantidade_rolhas" File: C:/CD/CD_PBL_3/dispensador.v Line: 17
+Info (12128): Elaborating entity "duzias" for hierarchy "duzias:duzias_1" File: C:/CD/CD_PBL_3/automacao.v Line: 168
+Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_duzias" File: C:/CD/CD_PBL_3/duzias.v Line: 17
+Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_unidades" File: C:/CD/CD_PBL_3/duzias.v Line: 30
+Info (12128): Elaborating entity "counter" for hierarchy "counter:counter_display" File: C:/CD/CD_PBL_3/automacao.v Line: 185
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:display_data_mux" File: C:/CD/CD_PBL_3/automacao.v Line: 201
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:display_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 211
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (18000): Registers with preset signals will power-up high File: C:/CD/CD_PBL_3/counter.v Line: 21
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 124 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 95 logic cells
+Info (144001): Generated suppressed messages file C:/CD/CD_PBL_3/output_files/automacao.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Thu Feb 15 22:23:36 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/CD/CD_PBL_3/output_files/automacao.map.smsg.
 
 

@@ -1,5 +1,9 @@
-Analysis & Synthesis Status : Failed - Sat Jan 20 15:24:24 2024
+Analysis & Synthesis Status : Successful - Thu Feb 15 22:23:36 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : automacao
 Top-level Entity Name : automacao
 Family : MAX II
+Total logic elements : 95
+Total pins : 29
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
