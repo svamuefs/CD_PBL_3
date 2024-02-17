@@ -3,14 +3,15 @@ module counter #(
                 START       = 4'b0000 ,             //Posição de inicio do contador.
                 ENDING      = 4'b1111               //Posição final do contador.
 ) (
-    input   clk ,                                   
+    input   clk ,
             rst ,
-            down ,
-            load ,
+            down ,                                  //down: 1 = contador decrescente
+            load ,                                  //load: 1 = carregar load_value no contador
 
-    input   [DATAWIDTH-1:0] load_value ,
+    input   [DATAWIDTH-1:0] load_value ,            //quande load = 1, load_value será o novo estado 
+                                                    //do contador
 
-    output  reg [DATAWIDTH-1:0] out
+    output  reg [DATAWIDTH-1:0] out 
 );
 
 always @(posedge clk or negedge rst) begin
@@ -20,9 +21,9 @@ always @(posedge clk or negedge rst) begin
 
     else if (load) out <= load_value;
 
-    else if (out == ENDING) out <= START;
+    else if (out == ENDING) out <= START;           //loop completo
 
-    else out <= down ? out - 1'b1 : out + 1'b1;
+    else out <= down ? out - 1'b1 : out + 1'b1;     //quando down = 1: out - 1; quando down = 0: out + 1
 
 end
     

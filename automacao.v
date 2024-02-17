@@ -80,7 +80,7 @@ level_to_pulse level_to_pulse_1 (
 	.reset				(1'b1) ,
 
 	//Outputs
-	.pulse				(pulse)
+	.pulseOut			(pulse)
 );
 
 t_flipflop ON_OFF (

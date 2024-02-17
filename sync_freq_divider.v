@@ -1,4 +1,4 @@
-module sync_freq_divider (
+module sync_freq_divider (                      //divisor de frequência
     input clk , enable ,
     output final_clk
 );
