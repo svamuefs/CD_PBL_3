@@ -127,9 +127,47 @@ module sync_freq_divider (                      //divisor de frequência
         .clk (clk) ,
         .reset (enable) ,
 
-        .out (final_clk)
+        .out (tff12Out)
+    );
+	 
+	 and and13 (and13Out , tff12Out , and12Out);
+
+	 t_flipflop tff13 (
+        .t(and13Out) ,
+        .clk (clk) ,
+        .reset (enable) ,
+
+        .out (tff13Out)
+    );
+	 
+	 and and14 (and14Out , tff13Out , and13Out);
+	 
+    t_flipflop tff14 (
+        .t(and14Out) ,
+        .clk (clk) ,
+        .reset (enable) ,
+
+        .out (tff14Out)
     );
 
-    
+    and and15 (and15Out , tff14Out , and14Out);
+
+    t_flipflop tff15 (
+        .t(and15Out) ,
+        .clk (clk) ,
+        .reset (enable) ,
+
+        .out (tff15Out)
+    );
+
+    and and16 (and16Out , tff15Out , and15Out);
+
+    t_flipflop tff16 (
+        .t(and16Out) ,
+        .clk (clk) ,
+        .reset (enable) ,
+
+        .out (final_clk)
+    );
     
 endmodule

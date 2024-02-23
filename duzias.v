@@ -24,7 +24,7 @@ counter #(                                      //Contador das unidades das duzi
 ) counter_unidades (
     .clk    (duzia == 4'b1011) ,
     .rst    (reset) ,
-    .down   (1'b1) ,
+    .down   (1'b0) ,
 
     .out    (unidades_duzias)
 );
@@ -35,7 +35,7 @@ counter #(                                      //Contador das dezenas das duzia
 ) counter_dezenas (
     .clk    (unidades_duzias == 4'b0000) ,
     .rst    (reset) ,
-    .down   (1'b1) ,
+    .down   (1'b0) ,
 
     .out    (dezenas_duzias)
 );  

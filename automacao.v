@@ -1,40 +1,53 @@
 module automacao (
 	input 				start , 				//Botão on/off
-						PG ,					//Presença de Garrafa: 0 = sem garrafa
-						CH ,					//1 = Garrafa Cheia
-						RO ,					//1 = Rolha Disponível
+						PG_button ,					//Presença de Garrafa: 0 = sem garrafa
+						CH_button ,					//1 = Garrafa Cheia
+						RO_button ,					//1 = Rolha Disponível
 						clk50MHz ,				//Clock da placa
-						assync ,				//Controle assincrono das FSM		
+						//assync ,				//Controle assincrono das FSM		
 
-	output 				EV ,					//1 = Valvula de enchimento ativada
+	output			EV ,					//1 = Valvula de enchimento ativada
 						VE ,					//1 = Processo de vedação ativado
 						M  ,					//1 = Motor ativado
 						A  ,					//1 = Alarme ativado
 						AD ,					//1 = Dispensador ativado
+						PG_Out ,
+						CH_Out ,
+						RO_Out ,
+						
+						
+						//ponto_display ,   //desligar ponto no display
 
 	output [3:0]		display_colune ,		//Vetor para Ativação das colunas (1000 -> 0100 ...)
 	output [6:0] 		display_data ,	 		//Vetor para quais segmentos ativar na display
 
 //Variaveis de teste
 
-	output				debouncedStart_T ,		//Start sem bouncing
-						pulse_T ,				//Saída do level_to_pulse
-						enable_T ,				//1 = Automação iniciada
+	output				//debouncedStart_T ,		//Start sem bouncing
+						//pulse_T ,				//Saída do level_to_pulse
+						//enable_T ,				//1 = Automação iniciada
 						GP_T ,					//1 = Uma garrafa produzida
-						CR_T ,					//1 = Bandeja com 5 rolhas restantes
-						BZ_T ,					//1 = Bandeja sem rolhas
+						//CR_T ,					//1 = Bandeja com 5 rolhas restantes
+						//BZ_T ,					//1 = Bandeja sem rolhas
 						reabastecer_T			//1 = dispensador tem rolhas para reposição
+						
+	//output [1:0]	clk_T
 );
 
 //TESTE	
 
-assign debouncedStart_T = debouncedStart;
-assign pulse_T = pulse;
-assign enable_T = enable;
+//assign debouncedStart_T = debouncedStart;
+//assign pulse_T = pulse;
+//assign enable_T = enable;
 assign GP_T = GP;
-assign CR_T = CR;
-assign BZ_T = BZ;
+//assign CR_T = CR;
+//assign BZ_T = BZ;
 assign reabastecer_T = reabastecer;
+//assign clk_T = counter_displayOut;
+//assign ponto_display = 1'b0; 
+assign RO_Out = RO;
+assign PG_Out = PG;
+assign CH_Out = CH;
 
 ///////////////
 
@@ -63,16 +76,112 @@ debouncer debouncer_start (
 	.out				(debouncedStart)
 );
 
-debouncer debouncer_assync (			
-	//Inputs
-												//debouncer do controle assincrono
-	.button				(~assync) ,				//sinal do botão invertido para utilizar na lógica
-	.clk 				(clk) ,					//positiva das FSM
+debouncer debouncer_PG (
+	//Inputs					
+												//debouncer do botão start
+	.button				(~PG_button) ,				//sinal do botão invertido para utilizar na lógica	
+	.clk				(clk) ,					//positiva do TFF
+
 	//Outputs
-	.out 				(debouncedAssync)
+	.out				(debouncedPG)
 );
 
-level_to_pulse level_to_pulse_1 (
+debouncer debouncer_CH (
+	//Inputs					
+												//debouncer do botão start
+	.button				(~CH_button) ,				//sinal do botão invertido para utilizar na lógica	
+	.clk				(clk) ,					//positiva do TFF
+
+	//Outputs
+	.out				(debouncedCH)
+);
+
+debouncer debouncer_RO (
+	//Inputs					
+												//debouncer do botão start
+	.button				(~RO_button) ,				//sinal do botão invertido para utilizar na lógica	
+	.clk				(clk) ,					//positiva do TFF
+
+	//Outputs
+	.out				(debouncedRO)
+);
+
+level_to_pulse level_to_pulse_PG (
+	//Inputs
+												//transforma um level em um pulso com a mesma largura
+	.clk				(clk) ,					//do clock. Dessa maneira, mesmo pressionando o botão
+	.level				(debouncedPG) ,		//só será gerado um unico pulso positivo.
+	.reset				(1'b1) ,
+
+	//Outputs
+	.pulseOut			(pulsePG)
+);
+
+level_to_pulse level_to_pulse_CH (
+	//Inputs
+												//transforma um level em um pulso com a mesma largura
+	.clk				(clk) ,					//do clock. Dessa maneira, mesmo pressionando o botão
+	.level				(debouncedCH) ,		//só será gerado um unico pulso positivo.
+	.reset				(1'b1) ,
+
+	//Outputs
+	.pulseOut			(pulseCH)
+);
+
+level_to_pulse level_to_pulse_RO (
+	//Inputs
+												//transforma um level em um pulso com a mesma largura
+	.clk				(clk) ,					//do clock. Dessa maneira, mesmo pressionando o botão
+	.level				(debouncedRO) ,		//só será gerado um unico pulso positivo.
+	.reset				(1'b1) ,
+
+	//Outputs
+	.pulseOut			(pulseRO)
+);
+
+t_flipflop FF_PG (
+	//Inputs
+												//TFF utilizado para controlar o acionamento ou não da
+	.t 					(pulsePG) ,				//automação, pressionar o botão start desliga e liga a
+	.clk				(clk) ,					//automação, por conta do debouncer e do level_to_pulse
+	.reset				(1'b1) ,				//não há risco de race condition
+
+	//Outputs
+	.out				(PG)
+);
+
+t_flipflop FF_CH (
+	//Inputs
+												//TFF utilizado para controlar o acionamento ou não da
+	.t 					(pulseCH) ,				//automação, pressionar o botão start desliga e liga a
+	.clk				(clk) ,					//automação, por conta do debouncer e do level_to_pulse
+	.reset				(1'b1) ,				//não há risco de race condition
+
+	//Outputs
+	.out				(CH)
+);
+
+t_flipflop FF_RO (
+	//Inputs
+												//TFF utilizado para controlar o acionamento ou não da
+	.t 					(pulseRO) ,				//automação, pressionar o botão start desliga e liga a
+	.clk				(clk) ,					//automação, por conta do debouncer e do level_to_pulse
+	.reset				(1'b1) ,				//não há risco de race condition
+
+	//Outputs
+	.out				(RO)
+);
+
+//debouncer debouncer_assync (			
+	//Inputs
+												//debouncer do controle assincrono
+//	.button				(~assync) ,				//sinal do botão invertido para utilizar na lógica
+//	.clk 				(clk) ,					//positiva das FSM
+	//Outputs
+//	.out 				(debouncedAssync)
+//);
+
+level_to_pulse level_to_pulse_start (
 	//Inputs
 												//transforma um level em um pulso com a mesma largura
 	.clk				(clk) ,					//do clock. Dessa maneira, mesmo pressionando o botão
@@ -94,7 +203,7 @@ t_flipflop ON_OFF (
 	.out				(enable)
 );
     
-and assyncClk_enable (assyncClk , enable , debouncedAssync); //and enable do controle assincrono
+//and assyncClk_enable (assyncClk , enable , debouncedAssync); //and enable do controle assincrono
 
 //MÁQUINAS DE ESTADO
 
@@ -103,8 +212,8 @@ fsm_producao fsm_producao (
 												//A máquina de produção é responsável pelo controle 
 	.PG 				(PG) ,					//das etapas de produção, e do acionamento do motor,
 	.CH 				(CH) ,					//valvula de enchimento e vedação
-	.RO 				(RO) ,
-	.clk 				(assyncClk) ,
+	.RO 				(RO) , 
+	.clk 				(clk) ,
 	.reset 				(~A & enable) ,			//Condição de resete composta pelo enable e o alarme
 
 	//Outputs
@@ -119,7 +228,7 @@ fsm_dispensador fsm_dispensador_1 (
 												//A máquina do dispensador controla o acionamento do
 	.CR					(CR) ,					//do dispensador e do alarme, com duas variaveis de
 	.BZ					(BZ) ,					//transição: CR: 1 = Cinco rolhas restantes;
-	.clk 				(assyncClk) ,			//BZ: 1 = Bandeja com zero rolhas.
+	.clk 				(clk) ,			//BZ: 1 = Bandeja com zero rolhas.
 	.reset 				(enable) ,				
 
 	//Outputs
@@ -157,6 +266,7 @@ dispensador dispensador_1 (						//Módulo para contabilizar a quantidade de rol
 	.reabastecer		(reabastecer)			//reabastecer é usado como input no módulo da bandeja
 );												//Mais detalhes do funcionamento no arquivo do módulo
 
+
 duzias duzias_1 (								//Módula para contabilizar a quantidade de duzias de 
 	//Inputs									//vinhos produzidas. GP é usado como clock para os 
 	.clk				(GP) ,					//contadores dentro do módulo.
@@ -177,6 +287,7 @@ counter #(
 	.ENDING				(2'b11) 				//definidos no arquivo do módulo instanciado
 ) counter_display (
 	//Inputs
+
 	.clk 				(clk) ,
 	.rst				(enable) ,
 		
@@ -211,16 +322,24 @@ display_decoder display_decoder_1 (
 );
 
 //PERGUNTA: Algum problema em utilizar valores fixos para acionar as colunas?
-mux4x1 display_colune_mux (						
-	//Inputs									//Mux para sincronizar o acionamento das colunas com
-	.IN_A				(4'b1000) ,				//a informação mostrada no display.
-	.IN_B				(4'b0100) ,				//Cada posição no vetor representa uma coluna.
-	.IN_C				(4'b0010) ,
-	.IN_D				(4'b0001) ,
-	.slc				(counter_displayOut) ,	//Seleção feita pelo contador
+// mux4x1 display_colune_mux (						
+// 	//Inputs									//Mux para sincronizar o acionamento das colunas com
+// 	.IN_A				(4'b0111) ,				//a informação mostrada no display.
+// 	.IN_B				(4'b1011) ,				//Cada posição no vetor representa uma coluna.
+// 	.IN_C				(4'b1101) ,
+// 	.IN_D				(4'b1110) ,
+// 	.slc				(counter_displayOut) ,	//Seleção feita pelo contador
 	
+// 	//Outputs
+// 	.out				(display_colune)
+// );
+
+colune_decoder colune_decoder_1(
+	//Inputs
+	.code				(counter_displayOut) ,
+
 	//Outputs
-	.out				(display_colune)
+	.display_colune		(display_colune)
 );
 
 endmodule

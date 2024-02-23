@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Feb 15 20:29:18 2024
+Fitter Status : Successful - Thu Feb 22 21:42:27 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : automacao
 Top-level Entity Name : automacao
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 76 / 240 ( 32 % )
-Total pins : 29 / 80 ( 36 % )
+Total logic elements : 129 / 240 ( 54 % )
+Total pins : 27 / 80 ( 34 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

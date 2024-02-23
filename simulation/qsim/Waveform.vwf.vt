@@ -1,4 +1,4 @@
-// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
 // and other software and tools, and any partner logic 
 // functions, and any output files from any of the foregoing 
@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/15/2024 19:36:03"
+// Generated on "02/17/2024 08:57:48"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          automacao
 // 
@@ -40,10 +40,10 @@ reg start;
 wire A;
 wire AD;
 wire BZ_T;
+wire CR_T;
 wire EV;
 wire GP_T;
 wire M;
-wire MC_T;
 wire VE;
 wire debouncedStart_T;
 wire [3:0] display_colune;
@@ -59,10 +59,10 @@ automacao i1 (
 	.AD(AD),
 	.BZ_T(BZ_T),
 	.CH(CH),
+	.CR_T(CR_T),
 	.EV(EV),
 	.GP_T(GP_T),
 	.M(M),
-	.MC_T(MC_T),
 	.PG(PG),
 	.RO(RO),
 	.VE(VE),

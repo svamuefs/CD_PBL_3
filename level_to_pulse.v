@@ -9,7 +9,7 @@ module level_to_pulse #(                                        //Máquina que t
             level ,                                             //Input level, no caso um botão
             reset ,
 
-    output  reg pulseOut ,
+    output  pulseOut ,
 
     output  reg [1:0]   state ,
                          next 
@@ -34,15 +34,17 @@ module level_to_pulse #(                                        //Máquina que t
         endcase
     end
 
-    always @(posedge clk or negedge reset) begin                //always sequencial para registrar as saídas
-        if (!reset) pulseOut <= 1'b0;
-        else begin
-            pulseOut <= 1'b0;                                   //Valor de saída padrão: 0(pulseOut)
-            case (next)
-                IDLE,PULSE_END: ;
-                PULSE: pulseOut <= 1'b1;                        //PulseOut será 1 apenas no estado PULSE
-            endcase
-        end
-    end
+//    always @(posedge clk or negedge reset) begin                //always sequencial para registrar as saídas
+//        if (!reset) pulseOut <= 1'b0;
+//        else begin
+//            pulseOut <= 1'b0;                                   //Valor de saída padrão: 0(pulseOut)
+//           case (next)
+//                IDLE,PULSE_END: ;
+//                PULSE: pulseOut <= 1'b1;                        //PulseOut será 1 apenas no estado PULSE
+//            endcase
+//        end
+//    end
+
+assign pulseOut = ~state[1] & state[0];
 
 endmodule

@@ -16,6 +16,8 @@ counter #(                                      //modulo da bandeja. Para que a 
     .out        (qt)
 );
 
+wire [2:0] qt;
+
 assign reabastecer = ativar & (qt != 3'b000);   //Reabastecer é 1 quando: o dispensador for acionado pela
                                                 //fsm_dispensador e houverem rolhas para reposição
 

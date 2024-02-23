@@ -32,7 +32,7 @@ counter #(                                  //Contador das unidades, decrementa 
                                             //Começa em 2(10) e termina em 0(00).
     //Parametros
     .DATAWIDTH  (2) ,
-    .START      (2'b10) ,
+    .START      (2'b01) ,
     .ENDING     (2'b00)
 
 ) counter_dezenas (
@@ -50,10 +50,10 @@ counter #(                                  //Contador das unidades, decrementa 
 
 //PERGUNTA: Deveria ser refeito em estrutural?
 
-assign CR = (unidades_bandeja == 4'b0101) & ~dezenas_bandeja[1] & ~dezenas_bandeja[0]; 
+assign CR = ((unidades_bandeja == 4'b0101) & ~dezenas_bandeja[1] & ~dezenas_bandeja[0]) & reset; 
 //CR é 1 quando: Há cinco unidades de rolhas e 0 dezenas de rolhas
 
-assign BZ = (unidades_bandeja == 4'b0000) & ~dezenas_bandeja[1] & ~dezenas_bandeja[0];
+assign BZ = ((unidades_bandeja == 4'b0000) & ~dezenas_bandeja[1] & ~dezenas_bandeja[0]) & reset;
 //BZ é 1 quando: Há zero unidades de rolhas e 0 dezenas de rolhas
 
 endmodule

@@ -33,11 +33,31 @@ module debouncer (
 
         .out (tff2Out)
     );
+	 
+	 and and3 (and3Out , tff2Out , and2Out);
+
+    t_flipflop tff3 (
+        .t(and3Out) ,
+        .clk (clk_w) ,
+        .reset (button) ,
+
+        .out (tff3Out)
+    );
+	 
+	 and and4 (and4Out , tff3Out , and3Out);
+
+    t_flipflop tff4 (
+        .t(and4Out) ,
+        .clk (clk_w) ,
+        .reset (button) ,
+
+        .out (tff4Out)
+    );
 
     //Ao final da contagem: 111; O enable mantem o clock do contador em nivel alto, parando o contador 
     //e permitindo a passagem do sinal para a saída.
 
-    and and0 (enable , tff0Out , tff1Out , tff2Out);
+    and and0 (enable , tff0Out , tff1Out , tff2Out , tff3Out , tff4Out);
     not not0 (notEnable , enable);
 
     and andOut (out , button , enable);

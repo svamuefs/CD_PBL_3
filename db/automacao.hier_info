@@ -1,19 +1,21 @@
 |automacao
 start => _.IN1
-PG => PG.IN1
-CH => CH.IN1
-RO => RO.IN1
+PG_button => _.IN1
+CH_button => _.IN1
+RO_button => _.IN1
 clk50MHz => clk50MHz.IN1
-assync => _.IN1
 EV <= fsm_producao:fsm_producao.EV
 VE <= fsm_producao:fsm_producao.VE
 M <= fsm_producao:fsm_producao.M
 A <= fsm_dispensador:fsm_dispensador_1.A
 AD <= AD_w.DB_MAX_OUTPUT_PORT_TYPE
-display_colune[0] <= mux4x1:display_colune_mux.out
-display_colune[1] <= mux4x1:display_colune_mux.out
-display_colune[2] <= mux4x1:display_colune_mux.out
-display_colune[3] <= mux4x1:display_colune_mux.out
+PG_Out <= PG.DB_MAX_OUTPUT_PORT_TYPE
+CH_Out <= CH.DB_MAX_OUTPUT_PORT_TYPE
+RO_Out <= RO.DB_MAX_OUTPUT_PORT_TYPE
+display_colune[0] <= colune_decoder:colune_decoder_1.display_colune
+display_colune[1] <= colune_decoder:colune_decoder_1.display_colune
+display_colune[2] <= colune_decoder:colune_decoder_1.display_colune
+display_colune[3] <= colune_decoder:colune_decoder_1.display_colune
 display_data[0] <= display_decoder:display_decoder_1.digitOut
 display_data[1] <= display_decoder:display_decoder_1.digitOut
 display_data[2] <= display_decoder:display_decoder_1.digitOut
@@ -21,19 +23,14 @@ display_data[3] <= display_decoder:display_decoder_1.digitOut
 display_data[4] <= display_decoder:display_decoder_1.digitOut
 display_data[5] <= display_decoder:display_decoder_1.digitOut
 display_data[6] <= display_decoder:display_decoder_1.digitOut
-debouncedStart_T <= debouncedStart.DB_MAX_OUTPUT_PORT_TYPE
-pulse_T <= pulse.DB_MAX_OUTPUT_PORT_TYPE
-enable_T <= enable.DB_MAX_OUTPUT_PORT_TYPE
 GP_T <= GP.DB_MAX_OUTPUT_PORT_TYPE
-CR_T <= CR.DB_MAX_OUTPUT_PORT_TYPE
-BZ_T <= BZ.DB_MAX_OUTPUT_PORT_TYPE
 reabastecer_T <= reabastecer.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |automacao|sync_freq_divider:sync_freq_divider_1
-clk => clk.IN13
-enable => enable.IN13
-final_clk <= t_flipflop:tff12.out
+clk => clk.IN17
+enable => enable.IN17
+final_clk <= t_flipflop:tff16.out
 
 
 |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0
@@ -127,8 +124,36 @@ reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff13
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff14
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff15
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |automacao|debouncer:debouncer_start
-button => button.IN3
+button => button.IN5
 clk => andClk.IN1
 out <= andOut.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -154,44 +179,218 @@ reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|automacao|debouncer:debouncer_assync
-button => button.IN3
+|automacao|debouncer:debouncer_start|t_flipflop:tff3
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_start|t_flipflop:tff4
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_PG
+button => button.IN5
 clk => andClk.IN1
 out <= andOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|automacao|debouncer:debouncer_assync|t_flipflop:tff0
+|automacao|debouncer:debouncer_PG|t_flipflop:tff0
 t => out~reg0.ENA
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|automacao|debouncer:debouncer_assync|t_flipflop:tff1
+|automacao|debouncer:debouncer_PG|t_flipflop:tff1
 t => out~reg0.ENA
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|automacao|debouncer:debouncer_assync|t_flipflop:tff2
+|automacao|debouncer:debouncer_PG|t_flipflop:tff2
 t => out~reg0.ENA
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|automacao|level_to_pulse:level_to_pulse_1
-clk => pulse~reg0.CLK
+|automacao|debouncer:debouncer_PG|t_flipflop:tff3
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_PG|t_flipflop:tff4
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_CH
+button => button.IN5
+clk => andClk.IN1
+out <= andOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_CH|t_flipflop:tff0
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_CH|t_flipflop:tff1
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_CH|t_flipflop:tff2
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_CH|t_flipflop:tff3
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_CH|t_flipflop:tff4
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_RO
+button => button.IN5
+clk => andClk.IN1
+out <= andOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_RO|t_flipflop:tff0
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_RO|t_flipflop:tff1
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_RO|t_flipflop:tff2
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_RO|t_flipflop:tff3
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|debouncer:debouncer_RO|t_flipflop:tff4
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|level_to_pulse:level_to_pulse_PG
 clk => state[0]~reg0.CLK
 clk => state[1]~reg0.CLK
 level => next.DATAB
 level => Mux0.IN2
 level => Mux0.IN3
-reset => pulse~reg0.ACLR
 reset => state[0]~reg0.ACLR
 reset => state[1]~reg0.ACLR
-pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pulseOut <= pulseOut.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next[0] <= next.DB_MAX_OUTPUT_PORT_TYPE
+next[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|level_to_pulse:level_to_pulse_CH
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+level => next.DATAB
+level => Mux0.IN2
+level => Mux0.IN3
+reset => state[0]~reg0.ACLR
+reset => state[1]~reg0.ACLR
+pulseOut <= pulseOut.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next[0] <= next.DB_MAX_OUTPUT_PORT_TYPE
+next[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|level_to_pulse:level_to_pulse_RO
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+level => next.DATAB
+level => Mux0.IN2
+level => Mux0.IN3
+reset => state[0]~reg0.ACLR
+reset => state[1]~reg0.ACLR
+pulseOut <= pulseOut.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next[0] <= next.DB_MAX_OUTPUT_PORT_TYPE
+next[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|t_flipflop:FF_PG
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|t_flipflop:FF_CH
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|t_flipflop:FF_RO
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|automacao|level_to_pulse:level_to_pulse_start
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+level => next.DATAB
+level => Mux0.IN2
+level => Mux0.IN3
+reset => state[0]~reg0.ACLR
+reset => state[1]~reg0.ACLR
+pulseOut <= pulseOut.DB_MAX_OUTPUT_PORT_TYPE
 state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 next[0] <= next.DB_MAX_OUTPUT_PORT_TYPE
@@ -206,46 +405,48 @@ out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |automacao|fsm_producao:fsm_producao
-PG => EV.DATAA
-PG => M.DATAA
+PG => EV.IN1
+PG => GP.IN1
+PG => next.DATAB
+PG => M.IN1
+CH => VE.IN1
 CH => next.DATAA
-RO => next.DATAB
-clk => VE~reg0.CLK
-clk => EV~reg0.CLK
-clk => M~reg0.CLK
-clk => GP~reg0.CLK
+CH => EV.IN1
+RO => M.IN1
+RO => GP.IN1
+RO => VE.IN1
 clk => state~reg0.CLK
-reset => VE~reg0.ACLR
-reset => EV~reg0.ACLR
-reset => M~reg0.ACLR
-reset => GP~reg0.ACLR
+reset => M.IN1
+reset => EV.IN1
+reset => VE.IN1
+reset => GP.IN1
 reset => state~reg0.ACLR
-GP <= GP~reg0.DB_MAX_OUTPUT_PORT_TYPE
-M <= M~reg0.DB_MAX_OUTPUT_PORT_TYPE
-EV <= EV~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VE <= VE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+GP <= GP.DB_MAX_OUTPUT_PORT_TYPE
+M <= M.DB_MAX_OUTPUT_PORT_TYPE
+EV <= EV.DB_MAX_OUTPUT_PORT_TYPE
+VE <= VE.DB_MAX_OUTPUT_PORT_TYPE
 state <= state~reg0.DB_MAX_OUTPUT_PORT_TYPE
 next <= next.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |automacao|fsm_dispensador:fsm_dispensador_1
-CR => nextState.DATAA
-BZ => nextState.OUTPUTSELECT
-BZ => nextState.DATAA
-clk => A~reg0.CLK
-clk => AD~reg0.CLK
+CR => next.DATAA
+BZ => next.OUTPUTSELECT
+BZ => Mux0.IN1
+BZ => Mux0.IN2
+BZ => Mux0.IN3
 clk => state[0]~reg0.CLK
 clk => state[1]~reg0.CLK
-reset => A~reg0.ACLR
-reset => AD~reg0.ACLR
+reset => AD.IN1
+reset => A.IN1
 reset => state[0]~reg0.ACLR
 reset => state[1]~reg0.ACLR
-AD <= AD~reg0.DB_MAX_OUTPUT_PORT_TYPE
-A <= A~reg0.DB_MAX_OUTPUT_PORT_TYPE
+AD <= AD.DB_MAX_OUTPUT_PORT_TYPE
+A <= A.DB_MAX_OUTPUT_PORT_TYPE
 state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextState[0] <= nextState.DB_MAX_OUTPUT_PORT_TYPE
-nextState[1] <= nextState.DB_MAX_OUTPUT_PORT_TYPE
+next[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+next[1] <= next.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |automacao|bandeja:bandeja_1
@@ -277,14 +478,6 @@ down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
-load_value[2] => out.DATAB
-load_value[3] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -294,20 +487,15 @@ out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |automacao|bandeja:bandeja_1|counter:counter_dezenas
 clk => out[0]~reg0.CLK
 clk => out[1]~reg0.CLK
-rst => out[0]~reg0.ACLR
-rst => out[1]~reg0.PRESET
+rst => out[0]~reg0.PRESET
+rst => out[1]~reg0.ACLR
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |automacao|dispensador:dispensador_1
-ativar => comb.IN1
 ativar => reabastecer.IN1
 reset => reset.IN1
 reabastecer <= reabastecer.DB_MAX_OUTPUT_PORT_TYPE
@@ -323,12 +511,6 @@ rst => out[2]~reg0.PRESET
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
-load_value[2] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -352,22 +534,14 @@ clk => out[0]~reg0.CLK
 clk => out[1]~reg0.CLK
 clk => out[2]~reg0.CLK
 clk => out[3]~reg0.CLK
-rst => out[0]~reg0.ACLR
-rst => out[1]~reg0.ACLR
-rst => out[2]~reg0.PRESET
+rst => out[0]~reg0.PRESET
+rst => out[1]~reg0.PRESET
+rst => out[2]~reg0.ACLR
 rst => out[3]~reg0.PRESET
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
-load_value[2] => out.DATAB
-load_value[3] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -387,14 +561,6 @@ down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
-load_value[2] => out.DATAB
-load_value[3] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -414,14 +580,6 @@ down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
-load_value[2] => out.DATAB
-load_value[3] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -435,10 +593,6 @@ rst => out[0]~reg0.ACLR
 rst => out[1]~reg0.ACLR
 down => out.OUTPUTSELECT
 down => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load => out.OUTPUTSELECT
-load_value[0] => out.DATAB
-load_value[1] => out.DATAB
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -533,34 +687,18 @@ digitOut[5] <= orEnable[5].DB_MAX_OUTPUT_PORT_TYPE
 digitOut[6] <= orEnable[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|automacao|mux4x1:display_colune_mux
-IN_A[0] => Mux3.IN0
-IN_A[1] => Mux2.IN0
-IN_A[2] => Mux1.IN0
-IN_A[3] => Mux0.IN0
-IN_B[0] => Mux3.IN1
-IN_B[1] => Mux2.IN1
-IN_B[2] => Mux1.IN1
-IN_B[3] => Mux0.IN1
-IN_C[0] => Mux3.IN2
-IN_C[1] => Mux2.IN2
-IN_C[2] => Mux1.IN2
-IN_C[3] => Mux0.IN2
-IN_D[0] => Mux3.IN3
-IN_D[1] => Mux2.IN3
-IN_D[2] => Mux1.IN3
-IN_D[3] => Mux0.IN3
-slc[0] => Mux0.IN5
-slc[0] => Mux1.IN5
-slc[0] => Mux2.IN5
-slc[0] => Mux3.IN5
-slc[1] => Mux0.IN4
-slc[1] => Mux1.IN4
-slc[1] => Mux2.IN4
-slc[1] => Mux3.IN4
-out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+|automacao|colune_decoder:colune_decoder_1
+code[0] => display_colune.IN0
+code[0] => display_colune.IN0
+code[0] => display_colune.IN0
+code[0] => display_colune.IN0
+code[1] => display_colune.IN1
+code[1] => display_colune.IN1
+code[1] => display_colune.IN1
+code[1] => display_colune.IN1
+display_colune[0] <= display_colune.DB_MAX_OUTPUT_PORT_TYPE
+display_colune[1] <= display_colune.DB_MAX_OUTPUT_PORT_TYPE
+display_colune[2] <= display_colune.DB_MAX_OUTPUT_PORT_TYPE
+display_colune[3] <= display_colune.DB_MAX_OUTPUT_PORT_TYPE
 
 

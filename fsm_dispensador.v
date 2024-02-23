@@ -10,7 +10,7 @@ module fsm_dispensador #(
             clk ,
             reset ,
         
-    output reg  AD,                                //Acionar Dispensador
+    output      AD,                                //Acionar Dispensador
                 A ,                                //Acionar Alarme
 
     output reg [1:0]    state ,
@@ -39,21 +39,24 @@ always @* begin                                     //always combinacional para 
     endcase
 end
 
-always @(posedge clk or negedge reset) begin        //always sequencial para registrar as saídas
-    if (!reset) begin
-        AD <= 1'b0;
-        A  <= 1'b0;
-    end
-    else begin  
-        AD <= 1'b0;                                 //Valores de saída padrão: 00 (AD , A)
-        A  <= 1'b0;
-        case (next)                                 //next é usado no case para sincronizar as saidas
-                                                    //com a mudança de estado
-            ESPERAR: ;                              //00
-            ACIONAR_DISPENSADOR: AD <= 1'b1;        //10
-            ALARME:  A <=  1'b1;                    //01
-        endcase
-    end
-end
+//always @(posedge clk or negedge reset) begin        //always sequencial para registrar as saídas
+//    if (!reset) begin
+//        AD <= 1'b0;
+//        A  <= 1'b0;
+//    end
+//    else begin  
+//        AD <= 1'b0;                                 //Valores de saída padrão: 00 (AD , A)
+//       A  <= 1'b0;
+//        case (next)                                 //next é usado no case para sincronizar as saidas
+                                                      //com a mudança de estado
+//            ESPERAR: ;                              //00
+//            ACIONAR_DISPENSADOR: AD <= 1'b1;        //10
+//            ALARME:  A <=  1'b1;                    //01
+//        endcase
+//    end
+//end
+
+assign AD = (state[1] & ~state[0]) & reset;
+assign A  = state[0] & reset; 
 
 endmodule

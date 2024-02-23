@@ -51,7 +51,7 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
-set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_SIMULATION_TOOL "QuestaSim (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
@@ -59,6 +59,35 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_location_assignment PIN_71 -to A
+set_location_assignment PIN_67 -to AD
+set_location_assignment PIN_75 -to EV
+set_location_assignment PIN_69 -to GP_T
+set_location_assignment PIN_76 -to M
+set_location_assignment PIN_73 -to VE
+set_location_assignment PIN_12 -to clk50MHz
+set_location_assignment PIN_88 -to display_colune[3]
+set_location_assignment PIN_66 -to display_colune[2]
+set_location_assignment PIN_68 -to display_colune[1]
+set_location_assignment PIN_37 -to display_colune[0]
+set_location_assignment PIN_90 -to display_data[0]
+set_location_assignment PIN_70 -to display_data[1]
+set_location_assignment PIN_41 -to display_data[2]
+set_location_assignment PIN_98 -to display_data[3]
+set_location_assignment PIN_100 -to display_data[4]
+set_location_assignment PIN_92 -to display_data[5]
+set_location_assignment PIN_39 -to display_data[6]
+set_location_assignment PIN_61 -to reabastecer_T
+set_location_assignment PIN_44 -to start
+set_location_assignment PIN_96 -to ponto
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_VCC -to ponto
+set_location_assignment PIN_48 -to PG_button
+set_location_assignment PIN_52 -to RO_button
+set_location_assignment PIN_50 -to CH_button
+set_location_assignment PIN_55 -to CH_Out
+set_location_assignment PIN_57 -to PG_Out
+set_location_assignment PIN_54 -to RO_Out
+set_global_assignment -name VERILOG_FILE colune_decoder.v
 set_global_assignment -name VERILOG_FILE fsm_producao.v
 set_global_assignment -name VERILOG_FILE t_flipflop.v
 set_global_assignment -name VERILOG_FILE sync_freq_divider.v
@@ -72,6 +101,6 @@ set_global_assignment -name VERILOG_FILE dispensador.v
 set_global_assignment -name VERILOG_FILE debouncer.v
 set_global_assignment -name VERILOG_FILE counter.v
 set_global_assignment -name VERILOG_FILE bandeja.v
-set_global_assignment -name VERILOG_FILE assync_clk_enable.v
 set_global_assignment -name VERILOG_FILE automacao.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf

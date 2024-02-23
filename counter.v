@@ -6,10 +6,6 @@ module counter #(
     input   clk ,
             rst ,
             down ,                                  //down: 1 = contador decrescente
-            load ,                                  //load: 1 = carregar load_value no contador
-
-    input   [DATAWIDTH-1:0] load_value ,            //quande load = 1, load_value será o novo estado 
-                                                    //do contador
 
     output  reg [DATAWIDTH-1:0] out 
 );
@@ -18,8 +14,6 @@ always @(posedge clk or negedge rst) begin
     if (!rst) begin
         out <= START;
     end
-
-    else if (load) out <= load_value;
 
     else if (out == ENDING) out <= START;           //loop completo
 
