@@ -1,5 +1,5 @@
 Analysis & Synthesis report for automacao
-Thu Feb 22 21:42:21 2024
+Thu Feb 22 21:46:59 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Feb 22 21:42:21 2024          ;
+; Analysis & Synthesis Status ; Successful - Thu Feb 22 21:46:59 2024          ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; automacao                                      ;
 ; Top-level Entity Name       ; automacao                                      ;
@@ -177,26 +177,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
-; colune_decoder.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/colune_decoder.v    ;         ;
-; fsm_producao.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/fsm_producao.v      ;         ;
-; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/t_flipflop.v        ;         ;
-; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v ;         ;
-; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/mux4x1.v            ;         ;
-; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/level_to_pulse.v    ;         ;
-; fsm_dispensador.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/fsm_dispensador.v   ;         ;
-; duzias.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/duzias.v            ;         ;
-; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/display_decoder.v   ;         ;
-; dispensador.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/dispensador.v       ;         ;
-; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v         ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/counter.v           ;         ;
-; bandeja.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/bandeja.v           ;         ;
-; automacao.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v         ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+; colune_decoder.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/colune_decoder.v    ;         ;
+; fsm_producao.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_producao.v      ;         ;
+; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/t_flipflop.v        ;         ;
+; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/sync_freq_divider.v ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/mux4x1.v            ;         ;
+; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/level_to_pulse.v    ;         ;
+; fsm_dispensador.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_dispensador.v   ;         ;
+; duzias.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/duzias.v            ;         ;
+; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/display_decoder.v   ;         ;
+; dispensador.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/dispensador.v       ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/debouncer.v         ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/counter.v           ;         ;
+; bandeja.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/bandeja.v           ;         ;
+; automacao.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/automacao.v         ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -722,132 +722,132 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Feb 22 21:42:09 2024
+    Info: Processing started: Thu Feb 22 21:46:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off automacao -c automacao
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file colune_decoder.v
-    Info (12023): Found entity 1: colune_decoder File: C:/CD/CD_PBL_3_v3/CD_PBL_3/colune_decoder.v Line: 1
+    Info (12023): Found entity 1: colune_decoder File: C:/CD/CD_PBL_3/colune_decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_producao.v
-    Info (12023): Found entity 1: fsm_producao File: C:/CD/CD_PBL_3_v3/CD_PBL_3/fsm_producao.v Line: 1
+    Info (12023): Found entity 1: fsm_producao File: C:/CD/CD_PBL_3/fsm_producao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file t_flipflop.v
-    Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_3_v3/CD_PBL_3/t_flipflop.v Line: 1
+    Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_3/t_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sync_freq_divider.v
-    Info (12023): Found entity 1: sync_freq_divider File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 1
+    Info (12023): Found entity 1: sync_freq_divider File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
-    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_3_v3/CD_PBL_3/mux4x1.v Line: 1
+    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_3/mux4x1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file level_to_pulse.v
-    Info (12023): Found entity 1: level_to_pulse File: C:/CD/CD_PBL_3_v3/CD_PBL_3/level_to_pulse.v Line: 1
+    Info (12023): Found entity 1: level_to_pulse File: C:/CD/CD_PBL_3/level_to_pulse.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_dispensador.v
-    Info (12023): Found entity 1: fsm_dispensador File: C:/CD/CD_PBL_3_v3/CD_PBL_3/fsm_dispensador.v Line: 1
+    Info (12023): Found entity 1: fsm_dispensador File: C:/CD/CD_PBL_3/fsm_dispensador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
-    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_3_v3/CD_PBL_3/d_flipflop.v Line: 1
+    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_3/d_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file duzias.v
-    Info (12023): Found entity 1: duzias File: C:/CD/CD_PBL_3_v3/CD_PBL_3/duzias.v Line: 1
+    Info (12023): Found entity 1: duzias File: C:/CD/CD_PBL_3/duzias.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file display_decoder.v
-    Info (12023): Found entity 1: display_decoder File: C:/CD/CD_PBL_3_v3/CD_PBL_3/display_decoder.v Line: 1
+    Info (12023): Found entity 1: display_decoder File: C:/CD/CD_PBL_3/display_decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dispensador.v
-    Info (12023): Found entity 1: dispensador File: C:/CD/CD_PBL_3_v3/CD_PBL_3/dispensador.v Line: 1
+    Info (12023): Found entity 1: dispensador File: C:/CD/CD_PBL_3/dispensador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
-    Info (12023): Found entity 1: debouncer File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 1
+    Info (12023): Found entity 1: debouncer File: C:/CD/CD_PBL_3/debouncer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
-    Info (12023): Found entity 1: counter File: C:/CD/CD_PBL_3_v3/CD_PBL_3/counter.v Line: 1
+    Info (12023): Found entity 1: counter File: C:/CD/CD_PBL_3/counter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bandeja.v
-    Info (12023): Found entity 1: bandeja File: C:/CD/CD_PBL_3_v3/CD_PBL_3/bandeja.v Line: 1
+    Info (12023): Found entity 1: bandeja File: C:/CD/CD_PBL_3/bandeja.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file automacao.v
-    Info (12023): Found entity 1: automacao File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(11): created implicit net for "tff0Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(20): created implicit net for "tff1Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(23): created implicit net for "and2Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(30): created implicit net for "tff2Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 30
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(33): created implicit net for "and3Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(40): created implicit net for "tff3Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(43): created implicit net for "and4Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 43
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(50): created implicit net for "tff4Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(53): created implicit net for "and5Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(60): created implicit net for "tff5Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(63): created implicit net for "and6Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 63
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(70): created implicit net for "tff6Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 70
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(73): created implicit net for "and7Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 73
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(80): created implicit net for "tff7Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 80
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(83): created implicit net for "and8Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 83
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(90): created implicit net for "tff8Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 90
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(93): created implicit net for "and9Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 93
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(100): created implicit net for "tff9Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 100
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(103): created implicit net for "and10Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 103
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(110): created implicit net for "tff10Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 110
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(113): created implicit net for "and11Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 113
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(120): created implicit net for "tff11Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 120
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(123): created implicit net for "and12Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 123
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(130): created implicit net for "tff12Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 130
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(133): created implicit net for "and13Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 133
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(140): created implicit net for "tff13Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(143): created implicit net for "and14Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 143
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(150): created implicit net for "tff14Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 150
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(153): created implicit net for "and15Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 153
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(160): created implicit net for "tff15Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 160
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(163): created implicit net for "and16Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 163
-Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(22): created implicit net for "notEnable" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/display_decoder.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "clk_w" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "notEnable" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(16): created implicit net for "tff0Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(24): created implicit net for "tff1Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(27): created implicit net for "and2Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(34): created implicit net for "tff2Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(37): created implicit net for "and3Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(44): created implicit net for "tff3Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 44
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(47): created implicit net for "and4Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(54): created implicit net for "tff4Out" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(60): created implicit net for "enable" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(62): created implicit net for "clk" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 62
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(76): created implicit net for "debouncedStart" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 76
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(86): created implicit net for "debouncedPG" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 86
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(96): created implicit net for "debouncedCH" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 96
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(106): created implicit net for "debouncedRO" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 106
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(117): created implicit net for "pulsePG" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 117
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(128): created implicit net for "pulseCH" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 128
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(139): created implicit net for "pulseRO" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 139
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(150): created implicit net for "PG" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 150
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(161): created implicit net for "CH" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 161
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(172): created implicit net for "RO" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 172
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(192): created implicit net for "pulse" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 192
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(203): created implicit net for "enable" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 203
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(220): created implicit net for "GP" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 220
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(229): created implicit net for "CR" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 229
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(230): created implicit net for "BZ" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 230
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(235): created implicit net for "AD_w" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 235
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(248): created implicit net for "reabastecer" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 248
+    Info (12023): Found entity 1: automacao File: C:/CD/CD_PBL_3/automacao.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(11): created implicit net for "tff0Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(20): created implicit net for "tff1Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(23): created implicit net for "and2Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(30): created implicit net for "tff2Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(33): created implicit net for "and3Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(40): created implicit net for "tff3Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(43): created implicit net for "and4Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(50): created implicit net for "tff4Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(53): created implicit net for "and5Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 53
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(60): created implicit net for "tff5Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(63): created implicit net for "and6Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(70): created implicit net for "tff6Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(73): created implicit net for "and7Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(80): created implicit net for "tff7Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 80
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(83): created implicit net for "and8Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(90): created implicit net for "tff8Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(93): created implicit net for "and9Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(100): created implicit net for "tff9Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(103): created implicit net for "and10Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(110): created implicit net for "tff10Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(113): created implicit net for "and11Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(120): created implicit net for "tff11Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(123): created implicit net for "and12Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(130): created implicit net for "tff12Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 130
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(133): created implicit net for "and13Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 133
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(140): created implicit net for "tff13Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(143): created implicit net for "and14Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 143
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(150): created implicit net for "tff14Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 150
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(153): created implicit net for "and15Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 153
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(160): created implicit net for "tff15Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 160
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(163): created implicit net for "and16Out" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 163
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(22): created implicit net for "notEnable" File: C:/CD/CD_PBL_3/display_decoder.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "clk_w" File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "notEnable" File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(16): created implicit net for "tff0Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(24): created implicit net for "tff1Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(27): created implicit net for "and2Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(34): created implicit net for "tff2Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(37): created implicit net for "and3Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(44): created implicit net for "tff3Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(47): created implicit net for "and4Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(54): created implicit net for "tff4Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(60): created implicit net for "enable" File: C:/CD/CD_PBL_3/debouncer.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(62): created implicit net for "clk" File: C:/CD/CD_PBL_3/automacao.v Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(76): created implicit net for "debouncedStart" File: C:/CD/CD_PBL_3/automacao.v Line: 76
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(86): created implicit net for "debouncedPG" File: C:/CD/CD_PBL_3/automacao.v Line: 86
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(96): created implicit net for "debouncedCH" File: C:/CD/CD_PBL_3/automacao.v Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(106): created implicit net for "debouncedRO" File: C:/CD/CD_PBL_3/automacao.v Line: 106
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(117): created implicit net for "pulsePG" File: C:/CD/CD_PBL_3/automacao.v Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(128): created implicit net for "pulseCH" File: C:/CD/CD_PBL_3/automacao.v Line: 128
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(139): created implicit net for "pulseRO" File: C:/CD/CD_PBL_3/automacao.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(150): created implicit net for "PG" File: C:/CD/CD_PBL_3/automacao.v Line: 150
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(161): created implicit net for "CH" File: C:/CD/CD_PBL_3/automacao.v Line: 161
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(172): created implicit net for "RO" File: C:/CD/CD_PBL_3/automacao.v Line: 172
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(192): created implicit net for "pulse" File: C:/CD/CD_PBL_3/automacao.v Line: 192
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(203): created implicit net for "enable" File: C:/CD/CD_PBL_3/automacao.v Line: 203
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(220): created implicit net for "GP" File: C:/CD/CD_PBL_3/automacao.v Line: 220
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(229): created implicit net for "CR" File: C:/CD/CD_PBL_3/automacao.v Line: 229
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(230): created implicit net for "BZ" File: C:/CD/CD_PBL_3/automacao.v Line: 230
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(235): created implicit net for "AD_w" File: C:/CD/CD_PBL_3/automacao.v Line: 235
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(248): created implicit net for "reabastecer" File: C:/CD/CD_PBL_3/automacao.v Line: 248
 Info (12127): Elaborating entity "automacao" for the top level hierarchy
-Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:sync_freq_divider_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 63
-Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/sync_freq_divider.v Line: 12
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer_start" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 77
-Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:level_to_pulse_PG" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 118
-Warning (10270): Verilog HDL Case Statement warning at level_to_pulse.v(24): incomplete case statement has no default case item File: C:/CD/CD_PBL_3_v3/CD_PBL_3/level_to_pulse.v Line: 24
-Info (12128): Elaborating entity "fsm_producao" for hierarchy "fsm_producao:fsm_producao" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 224
-Info (12128): Elaborating entity "fsm_dispensador" for hierarchy "fsm_dispensador:fsm_dispensador_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 237
-Warning (10270): Verilog HDL Case Statement warning at fsm_dispensador.v(30): incomplete case statement has no default case item File: C:/CD/CD_PBL_3_v3/CD_PBL_3/fsm_dispensador.v Line: 30
-Info (12128): Elaborating entity "bandeja" for hierarchy "bandeja:bandeja_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 256
-Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_unidades" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/bandeja.v Line: 28
-Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_dezenas" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/bandeja.v Line: 49
-Info (12128): Elaborating entity "dispensador" for hierarchy "dispensador:dispensador_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 267
-Info (12128): Elaborating entity "counter" for hierarchy "dispensador:dispensador_1|counter:quantidade_rolhas" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/dispensador.v Line: 17
-Info (12128): Elaborating entity "duzias" for hierarchy "duzias:duzias_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 278
-Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_duzias" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/duzias.v Line: 17
-Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_unidades" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/duzias.v Line: 30
-Info (12128): Elaborating entity "counter" for hierarchy "counter:counter_display" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 296
-Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:display_data_mux" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 312
-Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:display_decoder_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 322
-Info (12128): Elaborating entity "colune_decoder" for hierarchy "colune_decoder:colune_decoder_1" File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 343
+Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:sync_freq_divider_1" File: C:/CD/CD_PBL_3/automacao.v Line: 63
+Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 12
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer_start" File: C:/CD/CD_PBL_3/automacao.v Line: 77
+Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:level_to_pulse_PG" File: C:/CD/CD_PBL_3/automacao.v Line: 118
+Warning (10270): Verilog HDL Case Statement warning at level_to_pulse.v(24): incomplete case statement has no default case item File: C:/CD/CD_PBL_3/level_to_pulse.v Line: 24
+Info (12128): Elaborating entity "fsm_producao" for hierarchy "fsm_producao:fsm_producao" File: C:/CD/CD_PBL_3/automacao.v Line: 224
+Info (12128): Elaborating entity "fsm_dispensador" for hierarchy "fsm_dispensador:fsm_dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 237
+Warning (10270): Verilog HDL Case Statement warning at fsm_dispensador.v(30): incomplete case statement has no default case item File: C:/CD/CD_PBL_3/fsm_dispensador.v Line: 30
+Info (12128): Elaborating entity "bandeja" for hierarchy "bandeja:bandeja_1" File: C:/CD/CD_PBL_3/automacao.v Line: 256
+Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_unidades" File: C:/CD/CD_PBL_3/bandeja.v Line: 28
+Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_dezenas" File: C:/CD/CD_PBL_3/bandeja.v Line: 49
+Info (12128): Elaborating entity "dispensador" for hierarchy "dispensador:dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 267
+Info (12128): Elaborating entity "counter" for hierarchy "dispensador:dispensador_1|counter:quantidade_rolhas" File: C:/CD/CD_PBL_3/dispensador.v Line: 17
+Info (12128): Elaborating entity "duzias" for hierarchy "duzias:duzias_1" File: C:/CD/CD_PBL_3/automacao.v Line: 278
+Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_duzias" File: C:/CD/CD_PBL_3/duzias.v Line: 17
+Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_unidades" File: C:/CD/CD_PBL_3/duzias.v Line: 30
+Info (12128): Elaborating entity "counter" for hierarchy "counter:counter_display" File: C:/CD/CD_PBL_3/automacao.v Line: 296
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:display_data_mux" File: C:/CD/CD_PBL_3/automacao.v Line: 312
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:display_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 322
+Info (12128): Elaborating entity "colune_decoder" for hierarchy "colune_decoder:colune_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 343
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (18000): Registers with preset signals will power-up high File: C:/CD/CD_PBL_3_v3/CD_PBL_3/counter.v Line: 18
+Info (18000): Registers with preset signals will power-up high File: C:/CD/CD_PBL_3/counter.v Line: 18
 Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 21 output pins
     Info (21061): Implemented 129 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 4693 megabytes
-    Info: Processing ended: Thu Feb 22 21:42:21 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4701 megabytes
+    Info: Processing ended: Thu Feb 22 21:46:59 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:31
 
 

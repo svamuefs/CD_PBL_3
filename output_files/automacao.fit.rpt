@@ -1,5 +1,5 @@
 Fitter report for automacao
-Thu Feb 22 21:42:27 2024
+Thu Feb 22 21:47:02 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------+
 ; Fitter Summary                                                         ;
 +-----------------------+------------------------------------------------+
-; Fitter Status         ; Successful - Thu Feb 22 21:42:27 2024          ;
+; Fitter Status         ; Successful - Thu Feb 22 21:47:02 2024          ;
 ; Quartus Prime Version ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name         ; automacao                                      ;
 ; Top-level Entity Name ; automacao                                      ;
@@ -129,20 +129,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
-;     Processors 3-8         ;   1.1%      ;
+;     Processor 2            ;   1.6%      ;
+;     Processors 3-8         ;   1.4%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/CD/CD_PBL_3_v3/CD_PBL_3/output_files/automacao.pin.
+The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 
 
 +-------------------------------------------------------------------+
@@ -185,8 +185,8 @@ The pin-out file can be found in C:/CD/CD_PBL_3_v3/CD_PBL_3/output_files/automac
 ; Global signals                              ; 4                   ;
 ;     -- Global clocks                        ; 4 / 4 ( 100 % )     ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 8.4% / 10.1% / 6.7% ;
-; Peak interconnect usage (total/H/V)         ; 8.4% / 10.1% / 6.7% ;
+; Average interconnect usage (total/H/V)      ; 8.6% / 10.4% / 6.7% ;
+; Peak interconnect usage (total/H/V)         ; 8.6% / 10.4% / 6.7% ;
 ; Maximum fan-out                             ; 36                  ;
 ; Highest non-global fan-out                  ; 36                  ;
 ; Total fan-out                               ; 540                 ;
@@ -492,18 +492,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bandeja:bandeja_1|comb~0                                   ; LC_X5_Y2_N6 ; 1       ; Async. clear ; no     ; --                   ; --               ;
 ; clk50MHz                                                   ; PIN_12      ; 17      ; Clock        ; yes    ; Global Clock         ; GCLK0            ;
 ; debouncer:debouncer_CH|andClk                              ; LC_X2_Y3_N8 ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK2            ;
-; debouncer:debouncer_PG|andClk                              ; LC_X5_Y3_N2 ; 5       ; Clock        ; no     ; --                   ; --               ;
-; debouncer:debouncer_RO|andClk                              ; LC_X7_Y3_N2 ; 5       ; Clock        ; no     ; --                   ; --               ;
+; debouncer:debouncer_PG|andClk                              ; LC_X5_Y3_N1 ; 5       ; Clock        ; no     ; --                   ; --               ;
+; debouncer:debouncer_RO|andClk                              ; LC_X7_Y3_N3 ; 5       ; Clock        ; no     ; --                   ; --               ;
 ; debouncer:debouncer_start|andClk                           ; LC_X3_Y4_N8 ; 5       ; Clock        ; no     ; --                   ; --               ;
 ; dispensador:dispensador_1|reabastecer                      ; LC_X5_Y2_N5 ; 5       ; Clock        ; no     ; --                   ; --               ;
-; fsm_dispensador:fsm_dispensador_1|AD~0                     ; LC_X7_Y2_N9 ; 2       ; Async. clear ; no     ; --                   ; --               ;
-; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N6 ; 9       ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
+; fsm_dispensador:fsm_dispensador_1|AD~0                     ; LC_X7_Y2_N8 ; 2       ; Async. clear ; no     ; --                   ; --               ;
+; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N1 ; 9       ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
 ; rtl~0                                                      ; LC_X6_Y2_N7 ; 1       ; Clock        ; no     ; --                   ; --               ;
 ; rtl~1                                                      ; LC_X3_Y2_N3 ; 4       ; Clock        ; no     ; --                   ; --               ;
 ; rtl~2                                                      ; LC_X3_Y2_N8 ; 4       ; Clock        ; no     ; --                   ; --               ;
 ; start                                                      ; PIN_44      ; 8       ; Async. clear ; no     ; --                   ; --               ;
-; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y3_N0 ; 22      ; Clock        ; yes    ; Global Clock         ; GCLK1            ;
-; t_flipflop:ON_OFF|out                                      ; LC_X4_Y2_N3 ; 36      ; Async. clear ; no     ; --                   ; --               ;
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y3_N5 ; 22      ; Clock        ; yes    ; Global Clock         ; GCLK1            ;
+; t_flipflop:ON_OFF|out                                      ; LC_X4_Y2_N7 ; 36      ; Async. clear ; no     ; --                   ; --               ;
 +------------------------------------------------------------+-------------+---------+--------------+--------+----------------------+------------------+
 
 
@@ -514,8 +514,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+-------------+---------+----------------------+------------------+
 ; clk50MHz                                                   ; PIN_12      ; 17      ; Global Clock         ; GCLK0            ;
 ; debouncer:debouncer_CH|andClk                              ; LC_X2_Y3_N8 ; 5       ; Global Clock         ; GCLK2            ;
-; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N6 ; 9       ; Global Clock         ; GCLK3            ;
-; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y3_N0 ; 22      ; Global Clock         ; GCLK1            ;
+; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N1 ; 9       ; Global Clock         ; GCLK3            ;
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y3_N5 ; 22      ; Global Clock         ; GCLK1            ;
 +------------------------------------------------------------+-------------+---------+----------------------+------------------+
 
 
@@ -525,12 +525,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Routing Resource Type ; Usage              ;
 +-----------------------+--------------------+
 ; C4s                   ; 42 / 784 ( 5 % )   ;
-; Direct links          ; 56 / 888 ( 6 % )   ;
+; Direct links          ; 49 / 888 ( 6 % )   ;
 ; Global clocks         ; 4 / 4 ( 100 % )    ;
 ; LAB clocks            ; 11 / 32 ( 34 % )   ;
-; LUT chains            ; 16 / 216 ( 7 % )   ;
-; Local interconnects   ; 136 / 888 ( 15 % ) ;
-; R4s                   ; 58 / 704 ( 8 % )   ;
+; LUT chains            ; 17 / 216 ( 8 % )   ;
+; Local interconnects   ; 129 / 888 ( 15 % ) ;
+; R4s                   ; 59 / 704 ( 8 % )   ;
 +-----------------------+--------------------+
 
 
@@ -638,26 +638,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+------------------------------------------------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s)                                       ; Delay Added in ns ;
 +-----------------+------------------------------------------------------------+-------------------+
-; clk50MHz        ; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; 4.8               ;
+; clk50MHz        ; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; 5.1               ;
 +-----------------+------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                               ;
-+------------------------------------------------------------+--------------------------------------------+-------------------+
-; Source Register                                            ; Destination Register                       ; Delay Added in ns ;
-+------------------------------------------------------------+--------------------------------------------+-------------------+
-; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; level_to_pulse:level_to_pulse_RO|state[0]  ; 0.997             ;
-; debouncer:debouncer_PG|t_flipflop:tff1|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff0|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff2|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff3|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff4|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out ; 0.216             ;
-; PG_button                                                  ; debouncer:debouncer_PG|t_flipflop:tff0|out ; 0.216             ;
-+------------------------------------------------------------+--------------------------------------------+-------------------+
-Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                  ;
++------------------------------------------------------------+-----------------------------------------------+-------------------+
+; Source Register                                            ; Destination Register                          ; Delay Added in ns ;
++------------------------------------------------------------+-----------------------------------------------+-------------------+
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; level_to_pulse:level_to_pulse_RO|state[0]     ; 0.997             ;
+; debouncer:debouncer_RO|t_flipflop:tff1|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
+; debouncer:debouncer_RO|t_flipflop:tff0|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
+; debouncer:debouncer_RO|t_flipflop:tff2|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
+; debouncer:debouncer_RO|t_flipflop:tff3|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
+; debouncer:debouncer_RO|t_flipflop:tff4|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
+; RO_button                                                  ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
+; debouncer:debouncer_PG|t_flipflop:tff1|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
+; debouncer:debouncer_PG|t_flipflop:tff0|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
+; debouncer:debouncer_PG|t_flipflop:tff2|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
+; debouncer:debouncer_PG|t_flipflop:tff3|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
+; debouncer:debouncer_PG|t_flipflop:tff4|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
+; PG_button                                                  ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
+; debouncer:debouncer_start|t_flipflop:tff1|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
+; debouncer:debouncer_start|t_flipflop:tff0|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
+; debouncer:debouncer_start|t_flipflop:tff2|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
+; debouncer:debouncer_start|t_flipflop:tff3|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
+; debouncer:debouncer_start|t_flipflop:tff4|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
+; start                                                      ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
++------------------------------------------------------------+-----------------------------------------------+-------------------+
+Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -690,22 +702,22 @@ Info (332111): Found 6 clocks
     Info (332111):    1.000 fsm_dispensador:fsm_dispensador_1|state[0]
     Info (332111):    1.000 sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "clk50MHz" to use Global clock in PIN 12 File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 6
-Info (186216): Automatically promoted some destinations of signal "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out" to use Global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/t_flipflop.v Line: 4
-    Info (186217): Destination "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out" may be non-global or may not use global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/t_flipflop.v Line: 4
-    Info (186217): Destination "debouncer:debouncer_PG|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
-    Info (186217): Destination "debouncer:debouncer_start|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
-    Info (186217): Destination "debouncer:debouncer_CH|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
-    Info (186217): Destination "debouncer:debouncer_RO|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
-Info (186216): Automatically promoted some destinations of signal "fsm_producao:fsm_producao|GP" to use Global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/fsm_producao.v Line: 14
-    Info (186217): Destination "GP_T" may be non-global or may not use global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/automacao.v Line: 29
-Info (186215): Automatically promoted signal "debouncer:debouncer_CH|andClk" to use Global clock File: C:/CD/CD_PBL_3_v3/CD_PBL_3/debouncer.v Line: 8
+Info (186215): Automatically promoted signal "clk50MHz" to use Global clock in PIN 12 File: C:/CD/CD_PBL_3/automacao.v Line: 6
+Info (186216): Automatically promoted some destinations of signal "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out" to use Global clock File: C:/CD/CD_PBL_3/t_flipflop.v Line: 4
+    Info (186217): Destination "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/t_flipflop.v Line: 4
+    Info (186217): Destination "debouncer:debouncer_PG|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+    Info (186217): Destination "debouncer:debouncer_start|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+    Info (186217): Destination "debouncer:debouncer_CH|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+    Info (186217): Destination "debouncer:debouncer_RO|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
+Info (186216): Automatically promoted some destinations of signal "fsm_producao:fsm_producao|GP" to use Global clock File: C:/CD/CD_PBL_3/fsm_producao.v Line: 14
+    Info (186217): Destination "GP_T" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/automacao.v Line: 29
+Info (186215): Automatically promoted signal "debouncer:debouncer_CH|andClk" to use Global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -721,17 +733,17 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/CD/CD_PBL_3_v3/CD_PBL_3/output_files/automacao.fit.smsg
+Info (144001): Generated suppressed messages file C:/CD/CD_PBL_3/output_files/automacao.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5713 megabytes
-    Info: Processing ended: Thu Feb 22 21:42:27 2024
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 5719 megabytes
+    Info: Processing ended: Thu Feb 22 21:47:02 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/CD/CD_PBL_3_v3/CD_PBL_3/output_files/automacao.fit.smsg.
+The suppressed messages can be found in C:/CD/CD_PBL_3/output_files/automacao.fit.smsg.
 
 

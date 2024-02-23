@@ -3,10 +3,9 @@ module automacao (
 						PG_button ,					//Presença de Garrafa: 0 = sem garrafa
 						CH_button ,					//1 = Garrafa Cheia
 						RO_button ,					//1 = Rolha Disponível
-						clk50MHz ,				//Clock da placa
-						//assync ,				//Controle assincrono das FSM		
+						clk50MHz ,				//Clock da placa	
 
-	output			EV ,					//1 = Valvula de enchimento ativada
+	output				EV ,					//1 = Valvula de enchimento ativada
 						VE ,					//1 = Processo de vedação ativado
 						M  ,					//1 = Motor ativado
 						A  ,					//1 = Alarme ativado
@@ -15,36 +14,17 @@ module automacao (
 						CH_Out ,
 						RO_Out ,
 						
-						
-						//ponto_display ,   //desligar ponto no display
 
 	output [3:0]		display_colune ,		//Vetor para Ativação das colunas (1000 -> 0100 ...)
 	output [6:0] 		display_data ,	 		//Vetor para quais segmentos ativar na display
 
-//Variaveis de teste
+	output				GP_led ,					//1 = Uma garrafa produzida
+						reabastecer_led			//1 = dispensador tem rolhas para reposição
 
-	output				//debouncedStart_T ,		//Start sem bouncing
-						//pulse_T ,				//Saída do level_to_pulse
-						//enable_T ,				//1 = Automação iniciada
-						GP_T ,					//1 = Uma garrafa produzida
-						//CR_T ,					//1 = Bandeja com 5 rolhas restantes
-						//BZ_T ,					//1 = Bandeja sem rolhas
-						reabastecer_T			//1 = dispensador tem rolhas para reposição
-						
-	//output [1:0]	clk_T
 );
 
-//TESTE	
-
-//assign debouncedStart_T = debouncedStart;
-//assign pulse_T = pulse;
-//assign enable_T = enable;
-assign GP_T = GP;
-//assign CR_T = CR;
-//assign BZ_T = BZ;
-assign reabastecer_T = reabastecer;
-//assign clk_T = counter_displayOut;
-//assign ponto_display = 1'b0; 
+assign GP_led = GP;
+assign reabastecer_led = reabastecer;
 assign RO_Out = RO;
 assign PG_Out = PG;
 assign CH_Out = CH;
