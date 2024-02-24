@@ -10,17 +10,14 @@ module automacao (
 						M  ,					//1 = Motor ativado
 						A  ,					//1 = Alarme ativado
 						AD ,					//1 = Dispensador ativado
+						GP_led ,				//1 = Uma garrafa produzida
+						reabastecer_led	,		//1 = dispensador tem rolhas para reposição		
 						PG_Out ,
 						CH_Out ,
 						RO_Out ,
 						
-
 	output [3:0]		display_colune ,		//Vetor para Ativação das colunas (1000 -> 0100 ...)
-	output [6:0] 		display_data ,	 		//Vetor para quais segmentos ativar na display
-
-	output				GP_led ,					//1 = Uma garrafa produzida
-						reabastecer_led			//1 = dispensador tem rolhas para reposição
-
+	output [6:0] 		display_data	 		//Vetor para quais segmentos ativar na display
 );
 
 assign GP_led = GP;
@@ -29,9 +26,7 @@ assign RO_Out = RO;
 assign PG_Out = PG;
 assign CH_Out = CH;
 
-///////////////
-
-//ON/OFF , CLOCK E CONTROLE ASSINCRONO	
+//Botões e Clock
 
 sync_freq_divider sync_freq_divider_1 (			//Divisor de frequência, f/2^13.
 	//Inputs									//50MHz -> 6KHz
@@ -41,10 +36,6 @@ sync_freq_divider sync_freq_divider_1 (			//Divisor de frequência, f/2^13.
 	//Outputs
 	.final_clk			(clk)
 );
-
-//Comente o modulo acima e retire do comentario a linha abaixo, antes de testar no waveform
-
-//assign clk = clk50MHz;
 
 debouncer debouncer_start (
 	//Inputs					
@@ -152,15 +143,6 @@ t_flipflop FF_RO (
 	.out				(RO)
 );
 
-//debouncer debouncer_assync (			
-	//Inputs
-												//debouncer do controle assincrono
-//	.button				(~assync) ,				//sinal do botão invertido para utilizar na lógica
-//	.clk 				(clk) ,					//positiva das FSM
-	//Outputs
-//	.out 				(debouncedAssync)
-//);
-
 level_to_pulse level_to_pulse_start (
 	//Inputs
 												//transforma um level em um pulso com a mesma largura
@@ -182,8 +164,6 @@ t_flipflop ON_OFF (
 	//Outputs
 	.out				(enable)
 );
-    
-//and assyncClk_enable (assyncClk , enable , debouncedAssync); //and enable do controle assincrono
 
 //MÁQUINAS DE ESTADO
 
@@ -247,7 +227,7 @@ dispensador dispensador_1 (						//Módulo para contabilizar a quantidade de rol
 );												//Mais detalhes do funcionamento no arquivo do módulo
 
 
-duzias duzias_1 (								//Módula para contabilizar a quantidade de duzias de 
+duzias duzias_1 (								//Módulo para contabilizar a quantidade de duzias de 
 	//Inputs									//vinhos produzidas. GP é usado como clock para os 
 	.clk				(GP) ,					//contadores dentro do módulo.
 	.reset				(enable) ,				
@@ -301,21 +281,8 @@ display_decoder display_decoder_1 (
 	.digitOut			(display_data)
 );
 
-//PERGUNTA: Algum problema em utilizar valores fixos para acionar as colunas?
-// mux4x1 display_colune_mux (						
-// 	//Inputs									//Mux para sincronizar o acionamento das colunas com
-// 	.IN_A				(4'b0111) ,				//a informação mostrada no display.
-// 	.IN_B				(4'b1011) ,				//Cada posição no vetor representa uma coluna.
-// 	.IN_C				(4'b1101) ,
-// 	.IN_D				(4'b1110) ,
-// 	.slc				(counter_displayOut) ,	//Seleção feita pelo contador
-	
-// 	//Outputs
-// 	.out				(display_colune)
-// );
-
-colune_decoder colune_decoder_1(
-	//Inputs
+colune_decoder colune_decoder_1(				//Decodificador para ativação das colunas
+	//Inputs									//00 -> 0111 ; 01 -> 1011 ; 10 -> 1101 ; 11 -> 1110
 	.code				(counter_displayOut) ,
 
 	//Outputs

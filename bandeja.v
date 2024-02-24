@@ -31,9 +31,8 @@ counter #(                                  //Contador das unidades, decrementa 
                                             //o contador de unidades passa de 0 para 9. 
                                             //Começa em 2(10) e termina em 0(00).
     //Parametros
-    .DATAWIDTH  (2) ,
-    .START      (2'b01) ,
-    .ENDING     (2'b00)
+    .START      (4'b0010) ,
+    .ENDING     (4'b0000)
 
 ) counter_dezenas (
 

@@ -2,7 +2,7 @@ module fsm_dispensador #(
     //Codificação dos estados
                                                    //fsm_dispensador controla a ativação do alarme e
     parameter   ESPERAR = 2'b00 ,                  //do dispensador
-                ALARME  = 2'b01 ,
+                ALARME  = 2'b01 ,                  //Máquina de Moore
                 ACIONAR_DISPENSADOR = 2'b10
 ) (
     input   CR,                                    //CR: 1 = Cinco rolhas restantes na bandeja
@@ -39,24 +39,8 @@ always @* begin                                     //always combinacional para 
     endcase
 end
 
-//always @(posedge clk or negedge reset) begin        //always sequencial para registrar as saídas
-//    if (!reset) begin
-//        AD <= 1'b0;
-//        A  <= 1'b0;
-//    end
-//    else begin  
-//        AD <= 1'b0;                                 //Valores de saída padrão: 00 (AD , A)
-//       A  <= 1'b0;
-//        case (next)                                 //next é usado no case para sincronizar as saidas
-                                                      //com a mudança de estado
-//            ESPERAR: ;                              //00
-//            ACIONAR_DISPENSADOR: AD <= 1'b1;        //10
-//            ALARME:  A <=  1'b1;                    //01
-//        endcase
-//    end
-//end
-
-assign AD = (state[1] & ~state[0]) & reset;
-assign A  = state[0] & reset; 
+assign AD = (state[1] & ~state[0]) & reset;         // AD = 1 quando state: 10
+assign A  = state[0] & reset;                       // A = 1 sempre que state: X1(BZ: 1)
+                                                    //state: 00 -> Saídas: 00
 
 endmodule

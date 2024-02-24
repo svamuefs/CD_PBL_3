@@ -1,5 +1,5 @@
 Fitter report for automacao
-Thu Feb 22 21:47:02 2024
+Sat Feb 24 11:00:43 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -10,28 +10,30 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Pin-Out File
-  6. Fitter Resource Usage Summary
-  7. Input Pins
-  8. Output Pins
-  9. I/O Bank Usage
- 10. All Package Pins
- 11. Output Pin Default Load For Reported TCO
- 12. Fitter Resource Utilization by Entity
- 13. Delay Chain Summary
- 14. Control Signals
- 15. Global & Other Fast Signals
- 16. Routing Usage Summary
- 17. LAB Logic Elements
- 18. LAB-wide Signals
- 19. LAB Signals Sourced
- 20. LAB Signals Sourced Out
- 21. LAB Distinct Inputs
- 22. Fitter Device Options
- 23. Estimated Delay Added for Hold Timing Summary
- 24. Estimated Delay Added for Hold Timing Details
- 25. Fitter Messages
- 26. Fitter Suppressed Messages
+  5. Ignored Assignments
+  6. Pin-Out File
+  7. Fitter Resource Usage Summary
+  8. Input Pins
+  9. Output Pins
+ 10. I/O Bank Usage
+ 11. All Package Pins
+ 12. Output Pin Default Load For Reported TCO
+ 13. I/O Assignment Warnings
+ 14. Fitter Resource Utilization by Entity
+ 15. Delay Chain Summary
+ 16. Control Signals
+ 17. Global & Other Fast Signals
+ 18. Routing Usage Summary
+ 19. LAB Logic Elements
+ 20. LAB-wide Signals
+ 21. LAB Signals Sourced
+ 22. LAB Signals Sourced Out
+ 23. LAB Distinct Inputs
+ 24. Fitter Device Options
+ 25. Estimated Delay Added for Hold Timing Summary
+ 26. Estimated Delay Added for Hold Timing Details
+ 27. Fitter Messages
+ 28. Fitter Suppressed Messages
 
 
 
@@ -58,14 +60,14 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------+
 ; Fitter Summary                                                         ;
 +-----------------------+------------------------------------------------+
-; Fitter Status         ; Successful - Thu Feb 22 21:47:02 2024          ;
+; Fitter Status         ; Successful - Sat Feb 24 11:00:43 2024          ;
 ; Quartus Prime Version ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name         ; automacao                                      ;
 ; Top-level Entity Name ; automacao                                      ;
 ; Family                ; MAX II                                         ;
 ; Device                ; EPM240T100C5                                   ;
 ; Timing Models         ; Final                                          ;
-; Total logic elements  ; 129 / 240 ( 54 % )                             ;
+; Total logic elements  ; 133 / 240 ( 55 % )                             ;
 ; Total pins            ; 27 / 80 ( 34 % )                               ;
 ; Total virtual pins    ; 0                                              ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                                  ;
@@ -129,14 +131,24 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.6%      ;
-;     Processors 3-8         ;   1.4%      ;
+;     Processor 2            ;   1.4%      ;
+;     Processors 3-8         ;   1.3%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                       ;
++----------+----------------+--------------+---------------+---------------+----------------+
+; Name     ; Ignored Entity ; Ignored From ; Ignored To    ; Ignored Value ; Ignored Source ;
++----------+----------------+--------------+---------------+---------------+----------------+
+; Location ;                ;              ; GP_T          ; PIN_69        ; QSF Assignment ;
+; Location ;                ;              ; reabastecer_T ; PIN_61        ; QSF Assignment ;
++----------+----------------+--------------+---------------+---------------+----------------+
 
 
 +--------------+
@@ -145,53 +157,53 @@ https://fpgasoftware.intel.com/eula.
 The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 
 
-+-------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                     ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Total logic elements                        ; 129 / 240 ( 54 % )  ;
-;     -- Combinational with no register       ; 55                  ;
-;     -- Register only                        ; 0                   ;
-;     -- Combinational with a register        ; 74                  ;
-;                                             ;                     ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 61                  ;
-;     -- 3 input functions                    ; 32                  ;
-;     -- 2 input functions                    ; 24                  ;
-;     -- 1 input functions                    ; 12                  ;
-;     -- 0 input functions                    ; 0                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 129                 ;
-;     -- arithmetic mode                      ; 0                   ;
-;     -- qfbk mode                            ; 0                   ;
-;     -- register cascade mode                ; 0                   ;
-;     -- synchronous clear/load mode          ; 0                   ;
-;     -- asynchronous clear/load mode         ; 45                  ;
-;                                             ;                     ;
-; Total registers                             ; 74 / 240 ( 31 % )   ;
-; Total LABs                                  ; 15 / 24 ( 63 % )    ;
-; Logic elements in carry chains              ; 0                   ;
-; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 27 / 80 ( 34 % )    ;
-;     -- Clock pins                           ; 1 / 4 ( 25 % )      ;
-;                                             ;                     ;
-; UFM blocks                                  ; 0 / 1 ( 0 % )       ;
-;                                             ;                     ;
-;     -- Total Fixed Point DSP Blocks         ; 0                   ;
-;     -- Total Floating Point DSP Blocks      ; 0                   ;
-;                                             ;                     ;
-; Global signals                              ; 4                   ;
-;     -- Global clocks                        ; 4 / 4 ( 100 % )     ;
-; JTAGs                                       ; 0 / 1 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 8.6% / 10.4% / 6.7% ;
-; Peak interconnect usage (total/H/V)         ; 8.6% / 10.4% / 6.7% ;
-; Maximum fan-out                             ; 36                  ;
-; Highest non-global fan-out                  ; 36                  ;
-; Total fan-out                               ; 540                 ;
-; Average fan-out                             ; 3.46                ;
-+---------------------------------------------+---------------------+
++------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                    ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Total logic elements                        ; 133 / 240 ( 55 % ) ;
+;     -- Combinational with no register       ; 56                 ;
+;     -- Register only                        ; 0                  ;
+;     -- Combinational with a register        ; 77                 ;
+;                                             ;                    ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 65                 ;
+;     -- 3 input functions                    ; 29                 ;
+;     -- 2 input functions                    ; 28                 ;
+;     -- 1 input functions                    ; 11                 ;
+;     -- 0 input functions                    ; 0                  ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 133                ;
+;     -- arithmetic mode                      ; 0                  ;
+;     -- qfbk mode                            ; 0                  ;
+;     -- register cascade mode                ; 0                  ;
+;     -- synchronous clear/load mode          ; 0                  ;
+;     -- asynchronous clear/load mode         ; 48                 ;
+;                                             ;                    ;
+; Total registers                             ; 77 / 240 ( 32 % )  ;
+; Total LABs                                  ; 16 / 24 ( 67 % )   ;
+; Logic elements in carry chains              ; 0                  ;
+; Virtual pins                                ; 0                  ;
+; I/O pins                                    ; 27 / 80 ( 34 % )   ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )     ;
+;                                             ;                    ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
+;                                             ;                    ;
+;     -- Total Fixed Point DSP Blocks         ; 0                  ;
+;     -- Total Floating Point DSP Blocks      ; 0                  ;
+;                                             ;                    ;
+; Global signals                              ; 4                  ;
+;     -- Global clocks                        ; 4 / 4 ( 100 % )    ;
+; JTAGs                                       ; 0 / 1 ( 0 % )      ;
+; Average interconnect usage (total/H/V)      ; 8.7% / 9.7% / 7.7% ;
+; Peak interconnect usage (total/H/V)         ; 8.7% / 9.7% / 7.7% ;
+; Maximum fan-out                             ; 36                 ;
+; Highest non-global fan-out                  ; 36                 ;
+; Total fan-out                               ; 560                ;
+; Average fan-out                             ; 3.50               ;
++---------------------------------------------+--------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,7 +228,7 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 ; AD                ; 67    ; 2        ; 8            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; CH_Out            ; 55    ; 2        ; 8            ; 1            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; EV                ; 75    ; 2        ; 7            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; GP_T              ; 69    ; 2        ; 8            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; GP_led            ; 8     ; 1        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; M                 ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; PG_Out            ; 57    ; 2        ; 8            ; 2            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RO_Out            ; 54    ; 2        ; 8            ; 1            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -224,16 +236,16 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 ; display_colune[0] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_colune[1] ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_colune[2] ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; display_colune[3] ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; display_colune[3] ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_data[0]   ; 90    ; 2        ; 4            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_data[1]   ; 70    ; 2        ; 8            ; 4            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_data[2]   ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; display_data[3]   ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; display_data[3]   ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_data[4]   ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_data[5]   ; 92    ; 2        ; 3            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_data[6]   ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; ponto             ; 96    ; 2        ; 3            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; reabastecer_T     ; 61    ; 2        ; 8            ; 2            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; reabastecer_led   ; 85    ; 2        ; 5            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -242,8 +254,8 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 7 / 38 ( 18 % )  ; 3.3V          ; --           ;
-; 2        ; 20 / 42 ( 48 % ) ; 3.3V          ; --           ;
+; 1        ; 8 / 38 ( 21 % )  ; 3.3V          ; --           ;
+; 2        ; 19 / 42 ( 45 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -259,7 +271,7 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 ; 5        ; 3          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 6        ; 4          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 7        ; 5          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 8        ; 6          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 8        ; 6          ; 1        ; GP_led            ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 9        ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 10       ;            ;          ; GNDIO             ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 11       ;            ;          ; GNDINT            ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
@@ -312,7 +324,7 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 ; 58       ; 48         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 59       ;            ; 2        ; VCCIO2            ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 60       ;            ;          ; GNDIO             ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 61       ; 49         ; 2        ; reabastecer_T     ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 61       ; 49         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 62       ; 50         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 63       ;            ;          ; VCCINT            ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 64       ; 51         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -320,7 +332,7 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 ; 66       ; 52         ; 2        ; display_colune[2] ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 67       ; 53         ; 2        ; AD                ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 68       ; 54         ; 2        ; display_colune[1] ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 69       ; 55         ; 2        ; GP_T              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 69       ; 55         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 70       ; 56         ; 2        ; display_data[1]   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 71       ; 57         ; 2        ; A                 ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 72       ; 58         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -336,7 +348,7 @@ The pin-out file can be found in C:/CD/CD_PBL_3/output_files/automacao.pin.
 ; 82       ; 66         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 83       ; 67         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 84       ; 68         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 85       ; 69         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 85       ; 69         ; 2        ; reabastecer_led   ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 86       ; 70         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 87       ; 71         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 88       ; 72         ; 2        ; display_colune[3] ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -372,14 +384,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
++-----------------------------------------------+
+; I/O Assignment Warnings                       ;
++-----------------+-----------------------------+
+; Pin Name        ; Reason                      ;
++-----------------+-----------------------------+
+; GP_led          ; Missing location assignment ;
+; reabastecer_led ; Missing location assignment ;
++-----------------+-----------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
 +--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Entity Name       ; Library Name ;
 +--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
-; |automacao                                 ; 129 (3)     ; 74           ; 0          ; 27   ; 0            ; 55 (3)       ; 0 (0)             ; 74 (0)           ; 0 (0)           ; 0 (0)      ; |automacao                                                        ; automacao         ; work         ;
-;    |bandeja:bandeja_1|                     ; 7 (1)       ; 5            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1                                      ; bandeja           ; work         ;
-;       |counter:counter_dezenas|            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_dezenas              ; counter           ; work         ;
+; |automacao                                 ; 133 (3)     ; 77           ; 0          ; 27   ; 0            ; 56 (3)       ; 0 (0)             ; 77 (0)           ; 0 (0)           ; 0 (0)      ; |automacao                                                        ; automacao         ; work         ;
+;    |bandeja:bandeja_1|                     ; 10 (1)      ; 8            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1                                      ; bandeja           ; work         ;
+;       |counter:counter_dezenas|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_dezenas              ; counter           ; work         ;
 ;       |counter:counter_unidades|           ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_unidades             ; counter           ; work         ;
 ;    |colune_decoder:colune_decoder_1|       ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|colune_decoder:colune_decoder_1                        ; colune_decoder    ; work         ;
 ;    |counter:counter_display|               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|counter:counter_display                                ; counter           ; work         ;
@@ -409,18 +431,18 @@ Note: User assignments will override these defaults. The user specified values a
 ;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff4              ; t_flipflop        ; work         ;
 ;    |dispensador:dispensador_1|             ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1                              ; dispensador       ; work         ;
 ;       |counter:quantidade_rolhas|          ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1|counter:quantidade_rolhas    ; counter           ; work         ;
-;    |display_decoder:display_decoder_1|     ; 12 (12)     ; 0            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|display_decoder:display_decoder_1                      ; display_decoder   ; work         ;
+;    |display_decoder:display_decoder_1|     ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|display_decoder:display_decoder_1                      ; display_decoder   ; work         ;
 ;    |duzias:duzias_1|                       ; 12 (0)      ; 12           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1                                        ; duzias            ; work         ;
 ;       |counter:counter_dezenas|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_dezenas                ; counter           ; work         ;
 ;       |counter:counter_duzias|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_duzias                 ; counter           ; work         ;
 ;       |counter:counter_unidades|           ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_unidades               ; counter           ; work         ;
-;    |fsm_dispensador:fsm_dispensador_1|     ; 6 (6)       ; 2            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_dispensador:fsm_dispensador_1                      ; fsm_dispensador   ; work         ;
+;    |fsm_dispensador:fsm_dispensador_1|     ; 7 (7)       ; 2            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_dispensador:fsm_dispensador_1                      ; fsm_dispensador   ; work         ;
 ;    |fsm_producao:fsm_producao|             ; 6 (6)       ; 1            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_producao:fsm_producao                              ; fsm_producao      ; work         ;
 ;    |level_to_pulse:level_to_pulse_CH|      ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_CH                       ; level_to_pulse    ; work         ;
 ;    |level_to_pulse:level_to_pulse_PG|      ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_PG                       ; level_to_pulse    ; work         ;
 ;    |level_to_pulse:level_to_pulse_RO|      ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_RO                       ; level_to_pulse    ; work         ;
 ;    |level_to_pulse:level_to_pulse_start|   ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_start                    ; level_to_pulse    ; work         ;
-;    |mux4x1:display_data_mux|               ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|mux4x1:display_data_mux                                ; mux4x1            ; work         ;
+;    |mux4x1:display_data_mux|               ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|mux4x1:display_data_mux                                ; mux4x1            ; work         ;
 ;    |sync_freq_divider:sync_freq_divider_1| ; 22 (5)      ; 17           ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 17 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1                  ; sync_freq_divider ; work         ;
 ;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0  ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff10|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff10 ; t_flipflop        ; work         ;
@@ -457,6 +479,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; M                 ; Output   ; --            ;
 ; A                 ; Output   ; --            ;
 ; AD                ; Output   ; --            ;
+; GP_led            ; Output   ; --            ;
+; reabastecer_led   ; Output   ; --            ;
 ; PG_Out            ; Output   ; --            ;
 ; CH_Out            ; Output   ; --            ;
 ; RO_Out            ; Output   ; --            ;
@@ -471,8 +495,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_data[4]   ; Output   ; --            ;
 ; display_data[5]   ; Output   ; --            ;
 ; display_data[6]   ; Output   ; --            ;
-; GP_T              ; Output   ; --            ;
-; reabastecer_T     ; Output   ; --            ;
 ; PG_button         ; Input    ; (1)           ;
 ; clk50MHz          ; Input    ; (0)           ;
 ; start             ; Input    ; (1)           ;
@@ -489,21 +511,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CH_button                                                  ; PIN_50      ; 8       ; Async. clear ; no     ; --                   ; --               ;
 ; PG_button                                                  ; PIN_48      ; 8       ; Async. clear ; no     ; --                   ; --               ;
 ; RO_button                                                  ; PIN_52      ; 8       ; Async. clear ; no     ; --                   ; --               ;
-; bandeja:bandeja_1|comb~0                                   ; LC_X5_Y2_N6 ; 1       ; Async. clear ; no     ; --                   ; --               ;
+; bandeja:bandeja_1|comb~0                                   ; LC_X5_Y3_N5 ; 4       ; Async. clear ; no     ; --                   ; --               ;
 ; clk50MHz                                                   ; PIN_12      ; 17      ; Clock        ; yes    ; Global Clock         ; GCLK0            ;
-; debouncer:debouncer_CH|andClk                              ; LC_X2_Y3_N8 ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK2            ;
-; debouncer:debouncer_PG|andClk                              ; LC_X5_Y3_N1 ; 5       ; Clock        ; no     ; --                   ; --               ;
-; debouncer:debouncer_RO|andClk                              ; LC_X7_Y3_N3 ; 5       ; Clock        ; no     ; --                   ; --               ;
+; debouncer:debouncer_CH|andClk                              ; LC_X2_Y3_N2 ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK1            ;
+; debouncer:debouncer_PG|andClk                              ; LC_X6_Y2_N0 ; 5       ; Clock        ; no     ; --                   ; --               ;
+; debouncer:debouncer_RO|andClk                              ; LC_X7_Y2_N5 ; 5       ; Clock        ; no     ; --                   ; --               ;
 ; debouncer:debouncer_start|andClk                           ; LC_X3_Y4_N8 ; 5       ; Clock        ; no     ; --                   ; --               ;
-; dispensador:dispensador_1|reabastecer                      ; LC_X5_Y2_N5 ; 5       ; Clock        ; no     ; --                   ; --               ;
-; fsm_dispensador:fsm_dispensador_1|AD~0                     ; LC_X7_Y2_N8 ; 2       ; Async. clear ; no     ; --                   ; --               ;
-; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N1 ; 9       ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
-; rtl~0                                                      ; LC_X6_Y2_N7 ; 1       ; Clock        ; no     ; --                   ; --               ;
-; rtl~1                                                      ; LC_X3_Y2_N3 ; 4       ; Clock        ; no     ; --                   ; --               ;
-; rtl~2                                                      ; LC_X3_Y2_N8 ; 4       ; Clock        ; no     ; --                   ; --               ;
+; dispensador:dispensador_1|reabastecer                      ; LC_X5_Y3_N4 ; 5       ; Clock        ; no     ; --                   ; --               ;
+; fsm_dispensador:fsm_dispensador_1|AD~0                     ; LC_X7_Y3_N1 ; 2       ; Async. clear ; no     ; --                   ; --               ;
+; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N4 ; 9       ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
+; rtl~0                                                      ; LC_X6_Y3_N6 ; 4       ; Clock        ; no     ; --                   ; --               ;
+; rtl~1                                                      ; LC_X3_Y3_N2 ; 4       ; Clock        ; no     ; --                   ; --               ;
+; rtl~2                                                      ; LC_X3_Y3_N5 ; 4       ; Clock        ; no     ; --                   ; --               ;
 ; start                                                      ; PIN_44      ; 8       ; Async. clear ; no     ; --                   ; --               ;
-; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y3_N5 ; 22      ; Clock        ; yes    ; Global Clock         ; GCLK1            ;
-; t_flipflop:ON_OFF|out                                      ; LC_X4_Y2_N7 ; 36      ; Async. clear ; no     ; --                   ; --               ;
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y2_N7 ; 22      ; Clock        ; yes    ; Global Clock         ; GCLK2            ;
+; t_flipflop:ON_OFF|out                                      ; LC_X4_Y3_N8 ; 36      ; Async. clear ; no     ; --                   ; --               ;
 +------------------------------------------------------------+-------------+---------+--------------+--------+----------------------+------------------+
 
 
@@ -513,9 +535,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                       ; Location    ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +------------------------------------------------------------+-------------+---------+----------------------+------------------+
 ; clk50MHz                                                   ; PIN_12      ; 17      ; Global Clock         ; GCLK0            ;
-; debouncer:debouncer_CH|andClk                              ; LC_X2_Y3_N8 ; 5       ; Global Clock         ; GCLK2            ;
-; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N1 ; 9       ; Global Clock         ; GCLK3            ;
-; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y3_N5 ; 22      ; Global Clock         ; GCLK1            ;
+; debouncer:debouncer_CH|andClk                              ; LC_X2_Y3_N2 ; 5       ; Global Clock         ; GCLK1            ;
+; fsm_producao:fsm_producao|GP                               ; LC_X2_Y3_N4 ; 9       ; Global Clock         ; GCLK3            ;
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; LC_X2_Y2_N7 ; 22      ; Global Clock         ; GCLK2            ;
 +------------------------------------------------------------+-------------+---------+----------------------+------------------+
 
 
@@ -524,38 +546,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+--------------------+
 ; Routing Resource Type ; Usage              ;
 +-----------------------+--------------------+
-; C4s                   ; 42 / 784 ( 5 % )   ;
-; Direct links          ; 49 / 888 ( 6 % )   ;
+; C4s                   ; 51 / 784 ( 7 % )   ;
+; Direct links          ; 56 / 888 ( 6 % )   ;
 ; Global clocks         ; 4 / 4 ( 100 % )    ;
-; LAB clocks            ; 11 / 32 ( 34 % )   ;
-; LUT chains            ; 17 / 216 ( 8 % )   ;
-; Local interconnects   ; 129 / 888 ( 15 % ) ;
-; R4s                   ; 59 / 704 ( 8 % )   ;
+; LAB clocks            ; 10 / 32 ( 31 % )   ;
+; LUT chains            ; 18 / 216 ( 8 % )   ;
+; Local interconnects   ; 139 / 888 ( 16 % ) ;
+; R4s                   ; 55 / 704 ( 8 % )   ;
 +-----------------------+--------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.60) ; Number of LABs  (Total = 15) ;
+; Number of Logic Elements  (Average = 8.31) ; Number of LABs  (Total = 16) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 1                            ;
-; 2                                          ; 0                            ;
+; 2                                          ; 1                            ;
 ; 3                                          ; 0                            ;
 ; 4                                          ; 1                            ;
 ; 5                                          ; 0                            ;
 ; 6                                          ; 0                            ;
 ; 7                                          ; 0                            ;
 ; 8                                          ; 2                            ;
-; 9                                          ; 2                            ;
-; 10                                         ; 9                            ;
+; 9                                          ; 0                            ;
+; 10                                         ; 11                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 15) ;
+; LAB-wide Signals  (Average = 0.94) ; Number of LABs  (Total = 16) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 2                            ;
 ; 1 Clock                            ; 10                           ;
@@ -566,56 +588,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 8.60) ; Number of LABs  (Total = 15) ;
+; Number of Signals Sourced  (Average = 8.31) ; Number of LABs  (Total = 16) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 1                            ;
-; 2                                           ; 0                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 2                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 9                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 11                           ;
 +---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.67) ; Number of LABs  (Total = 15) ;
+; Number of Signals Sourced Out  (Average = 4.56) ; Number of LABs  (Total = 16) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 4                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 5                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 2                            ;
+; 4                                               ; 0                            ;
 ; 5                                               ; 1                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 6                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 4                            ;
+; 8                                               ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 5.33) ; Number of LABs  (Total = 15) ;
+; Number of Distinct Inputs  (Average = 5.06) ; Number of LABs  (Total = 16) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 5                            ;
-; 3                                           ; 1                            ;
+; 2                                           ; 4                            ;
+; 3                                           ; 3                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 2                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 3                            ;
-; 8                                           ; 0                            ;
+; 5                                           ; 3                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
 ; 9                                           ; 1                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -633,13 +659,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                                    ;
-+-----------------+------------------------------------------------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s)                                       ; Delay Added in ns ;
-+-----------------+------------------------------------------------------------+-------------------+
-; clk50MHz        ; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; 5.1               ;
-+-----------------+------------------------------------------------------------+-------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                            ;
++-------------------------------------------------------------------------+------------------------------------------------------------+-------------------+
+; Source Clock(s)                                                         ; Destination Clock(s)                                       ; Delay Added in ns ;
++-------------------------------------------------------------------------+------------------------------------------------------------+-------------------+
+; clk50MHz                                                                ; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; 7.5               ;
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out,clk50MHz,I/O ; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; 1.0               ;
++-------------------------------------------------------------------------+------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -649,25 +676,25 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------------------------------------+-----------------------------------------------+-------------------+
 ; Source Register                                            ; Destination Register                          ; Delay Added in ns ;
 +------------------------------------------------------------+-----------------------------------------------+-------------------+
-; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; level_to_pulse:level_to_pulse_RO|state[0]     ; 0.997             ;
-; debouncer:debouncer_RO|t_flipflop:tff1|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
-; debouncer:debouncer_RO|t_flipflop:tff0|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
-; debouncer:debouncer_RO|t_flipflop:tff2|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
-; debouncer:debouncer_RO|t_flipflop:tff3|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
-; debouncer:debouncer_RO|t_flipflop:tff4|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
-; RO_button                                                  ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.227             ;
-; debouncer:debouncer_PG|t_flipflop:tff1|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff0|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff2|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff3|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
-; debouncer:debouncer_PG|t_flipflop:tff4|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
-; PG_button                                                  ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.216             ;
-; debouncer:debouncer_start|t_flipflop:tff1|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
-; debouncer:debouncer_start|t_flipflop:tff0|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
-; debouncer:debouncer_start|t_flipflop:tff2|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
-; debouncer:debouncer_start|t_flipflop:tff3|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
-; debouncer:debouncer_start|t_flipflop:tff4|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
-; start                                                      ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.010             ;
+; sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out ; t_flipflop:FF_RO|out                          ; 1.447             ;
+; debouncer:debouncer_PG|t_flipflop:tff1|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.497             ;
+; debouncer:debouncer_PG|t_flipflop:tff0|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.497             ;
+; debouncer:debouncer_PG|t_flipflop:tff2|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.497             ;
+; debouncer:debouncer_PG|t_flipflop:tff3|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.497             ;
+; debouncer:debouncer_PG|t_flipflop:tff4|out                 ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.497             ;
+; PG_button                                                  ; debouncer:debouncer_PG|t_flipflop:tff0|out    ; 0.497             ;
+; debouncer:debouncer_RO|t_flipflop:tff1|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.424             ;
+; debouncer:debouncer_RO|t_flipflop:tff0|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.424             ;
+; debouncer:debouncer_RO|t_flipflop:tff2|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.424             ;
+; debouncer:debouncer_RO|t_flipflop:tff3|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.424             ;
+; debouncer:debouncer_RO|t_flipflop:tff4|out                 ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.424             ;
+; RO_button                                                  ; debouncer:debouncer_RO|t_flipflop:tff0|out    ; 0.424             ;
+; debouncer:debouncer_start|t_flipflop:tff1|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.123             ;
+; debouncer:debouncer_start|t_flipflop:tff0|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.123             ;
+; debouncer:debouncer_start|t_flipflop:tff2|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.123             ;
+; debouncer:debouncer_start|t_flipflop:tff3|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.123             ;
+; debouncer:debouncer_start|t_flipflop:tff4|out              ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.123             ;
+; start                                                      ; debouncer:debouncer_start|t_flipflop:tff0|out ; 0.123             ;
 +------------------------------------------------------------+-----------------------------------------------+-------------------+
 Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
 
@@ -688,6 +715,7 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device EPM570T100C5 is compatible
     Info (176445): Device EPM570T100I5 is compatible
     Info (176445): Device EPM570T100A5 is compatible
+Critical Warning (169085): No exact pin location assignment(s) for 2 pins of 27 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'automacao.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
@@ -710,13 +738,23 @@ Info (186216): Automatically promoted some destinations of signal "sync_freq_div
     Info (186217): Destination "debouncer:debouncer_CH|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
     Info (186217): Destination "debouncer:debouncer_RO|andClk" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
 Info (186216): Automatically promoted some destinations of signal "fsm_producao:fsm_producao|GP" to use Global clock File: C:/CD/CD_PBL_3/fsm_producao.v Line: 14
-    Info (186217): Destination "GP_T" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/automacao.v Line: 29
+    Info (186217): Destination "GP_led" may be non-global or may not use global clock File: C:/CD/CD_PBL_3/automacao.v Line: 13
 Info (186215): Automatically promoted signal "debouncer:debouncer_CH|andClk" to use Global clock File: C:/CD/CD_PBL_3/debouncer.v Line: 8
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 2 (unused VREF, 3.3V VCCIO, 0 input, 2 output, 0 bidirectional)
+        Info (176212): I/O standards used: 3.3-V LVTTL.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 7 total pin(s) used --  31 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 18 total pin(s) used --  24 pins available
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "GP_T" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "reabastecer_T" is assigned to location or region, but does not exist in design
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
@@ -729,16 +767,17 @@ Info (170195): Router estimated average interconnect usage is 5% of the availabl
     Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.94 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/CD/CD_PBL_3/output_files/automacao.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5719 megabytes
-    Info: Processing ended: Thu Feb 22 21:47:02 2024
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 5720 megabytes
+    Info: Processing ended: Sat Feb 24 11:00:43 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+

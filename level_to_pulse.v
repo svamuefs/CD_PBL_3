@@ -1,7 +1,7 @@
 module level_to_pulse #(                                        //Máquina que transforma um sinal positivo
                                                                 //em level, para um único pulso positivo
     //Codificação dos estados
-    parameter   IDLE        = 2'b00 ,
+    parameter   IDLE        = 2'b00 ,                           //Máquina de Moore
                 PULSE       = 2'b01 ,
                 PULSE_END   = 2'b10
 ) (
@@ -34,17 +34,7 @@ module level_to_pulse #(                                        //Máquina que t
         endcase
     end
 
-//    always @(posedge clk or negedge reset) begin                //always sequencial para registrar as saídas
-//        if (!reset) pulseOut <= 1'b0;
-//        else begin
-//            pulseOut <= 1'b0;                                   //Valor de saída padrão: 0(pulseOut)
-//           case (next)
-//                IDLE,PULSE_END: ;
-//                PULSE: pulseOut <= 1'b1;                        //PulseOut será 1 apenas no estado PULSE
-//            endcase
-//        end
-//    end
-
-assign pulseOut = ~state[1] & state[0];
+assign pulseOut = ~state[1] & state[0];             //pulse = 1 apenas quando state: 01
+                                                    //quando state: 00 ou 10 -> pulse = 0
 
 endmodule

@@ -1,4 +1,4 @@
-module mux4x1 #(                                            //isto é de fato, na realidade, um mux4x1
+module mux4x1 #(                                            //isto é de fato, realmente, um mux4x1
     parameter   DATAWIDTH   = 4
 ) (
     input [DATAWIDTH-1:0]   IN_A , IN_B , IN_C , IN_D ,

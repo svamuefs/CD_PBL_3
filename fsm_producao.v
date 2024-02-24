@@ -39,6 +39,9 @@ always @* begin                                 //always combinacional para deci
     endcase
 end
     
+//Vou deixar esse terceiro always comentado, ele demonstra bem como as saídas se relacionam com os
+//estados
+
 //always @(posedge clk or negedge reset) begin    //always sequencial para registrar as saídas
 //    if (!reset) begin
 //        GP <= 1'b0;
@@ -79,11 +82,6 @@ end
 //    end
     
 //end
-
-//assign M  = ((~state & ~PG) | (state & RO)) & reset;
-//assign EV = ((~state & PG & ~CH)) & reset;
-//assign VE = ((~state & PG & CH) | (state & ~RO)) & reset;
-//assign GP = (state & RO) & reset;
 
 assign M = ((~PG) | (state & RO)) & reset;
 assign EV = ((~state & PG & ~CH)) & reset;
