@@ -2,92 +2,92 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'clk50MHz'
-Slack : -6.580
-TNS   : -73.120
-
 Type  : Setup 'sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out'
-Slack : -6.144
-TNS   : -97.109
+Slack : -6.896
+TNS   : -94.532
 
-Type  : Setup 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
-Slack : -2.244
-TNS   : -7.844
+Type  : Setup 'clk50MHz'
+Slack : -6.231
+TNS   : -73.052
 
 Type  : Setup 'fsm_dispensador:fsm_dispensador_1|state[0]'
-Slack : -1.862
-TNS   : -15.503
+Slack : -1.877
+TNS   : -15.136
 
-Type  : Setup 'duzias:duzias_1|counter:counter_duzias|out[0]'
-Slack : -1.844
-TNS   : -5.235
+Type  : Setup 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
+Slack : -1.870
+TNS   : -7.124
 
 Type  : Setup 'duzias:duzias_1|counter:counter_unidades|out[0]'
-Slack : -1.810
-TNS   : -6.637
+Slack : -1.828
+TNS   : -6.675
+
+Type  : Setup 'duzias:duzias_1|counter:counter_duzias|out[0]'
+Slack : -1.746
+TNS   : -4.989
 
 Type  : Hold 'fsm_dispensador:fsm_dispensador_1|state[0]'
-Slack : -5.959
-TNS   : -38.978
-
-Type  : Hold 'duzias:duzias_1|counter:counter_duzias|out[0]'
-Slack : -2.044
-TNS   : -7.481
+Slack : -6.703
+TNS   : -48.715
 
 Type  : Hold 'sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out'
-Slack : -1.737
-TNS   : -3.237
+Slack : -2.419
+TNS   : -4.655
+
+Type  : Hold 'duzias:duzias_1|counter:counter_duzias|out[0]'
+Slack : -1.600
+TNS   : -5.356
 
 Type  : Hold 'clk50MHz'
-Slack : -1.616
-TNS   : -1.616
+Slack : -1.484
+TNS   : -1.484
 
 Type  : Hold 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
-Slack : 1.688
+Slack : 1.726
 TNS   : 0.000
 
 Type  : Hold 'duzias:duzias_1|counter:counter_unidades|out[0]'
-Slack : 1.730
+Slack : 1.740
 TNS   : 0.000
 
 Type  : Recovery 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
-Slack : -6.371
-TNS   : -25.484
+Slack : -6.235
+TNS   : -24.940
 
 Type  : Recovery 'sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out'
-Slack : -4.759
-TNS   : -16.679
-
-Type  : Recovery 'fsm_dispensador:fsm_dispensador_1|state[0]'
-Slack : -4.519
-TNS   : -14.965
+Slack : -4.608
+TNS   : -16.984
 
 Type  : Recovery 'duzias:duzias_1|counter:counter_duzias|out[0]'
-Slack : -3.710
-TNS   : -14.840
+Slack : -3.985
+TNS   : -15.940
 
 Type  : Recovery 'duzias:duzias_1|counter:counter_unidades|out[0]'
-Slack : -3.358
-TNS   : -13.432
+Slack : -3.176
+TNS   : -12.704
 
-Type  : Removal 'sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out'
-Slack : -0.455
-TNS   : -0.455
+Type  : Recovery 'fsm_dispensador:fsm_dispensador_1|state[0]'
+Slack : -3.061
+TNS   : -9.183
 
 Type  : Removal 'fsm_dispensador:fsm_dispensador_1|state[0]'
-Slack : 0.307
+Slack : -0.411
+TNS   : -1.644
+
+Type  : Removal 'sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16|out'
+Slack : 0.248
 TNS   : 0.000
 
 Type  : Removal 'bandeja:bandeja_1|counter:counter_unidades|out[0]'
-Slack : 1.498
+Slack : 1.866
 TNS   : 0.000
 
 Type  : Removal 'duzias:duzias_1|counter:counter_unidades|out[0]'
-Slack : 3.804
+Slack : 3.622
 TNS   : 0.000
 
 Type  : Removal 'duzias:duzias_1|counter:counter_duzias|out[0]'
-Slack : 4.156
+Slack : 4.431
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk50MHz'
