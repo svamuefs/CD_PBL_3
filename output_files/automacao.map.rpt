@@ -1,5 +1,5 @@
 Analysis & Synthesis report for automacao
-Sat Feb 24 12:29:35 2024
+Sun Feb 25 20:49:48 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -48,9 +48,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  40. Port Connectivity Checks: "level_to_pulse:level_to_pulse_CH"
  41. Port Connectivity Checks: "level_to_pulse:level_to_pulse_PG"
  42. Port Connectivity Checks: "debouncer:debouncer_start|t_flipflop:tff0"
- 43. Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0"
- 44. Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1"
- 45. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Messages
 
 
 
@@ -77,12 +75,12 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Feb 24 12:29:35 2024          ;
+; Analysis & Synthesis Status ; Successful - Sun Feb 25 20:49:48 2024          ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; automacao                                      ;
 ; Top-level Entity Name       ; automacao                                      ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 133                                            ;
+; Total logic elements        ; 111                                            ;
 ; Total pins                  ; 26                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
@@ -176,26 +174,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-; colune_decoder.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/colune_decoder.v    ;         ;
-; fsm_producao.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_producao.v      ;         ;
-; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/t_flipflop.v        ;         ;
-; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/sync_freq_divider.v ;         ;
-; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/mux4x1.v            ;         ;
-; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/level_to_pulse.v    ;         ;
-; fsm_dispensador.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_dispensador.v   ;         ;
-; duzias.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/duzias.v            ;         ;
-; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/display_decoder.v   ;         ;
-; dispensador.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/dispensador.v       ;         ;
-; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/debouncer.v         ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/counter.v           ;         ;
-; bandeja.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/bandeja.v           ;         ;
-; automacao.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/automacao.v         ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path     ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; colune_decoder.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/colune_decoder.v  ;         ;
+; fsm_producao.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_producao.v    ;         ;
+; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/t_flipflop.v      ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/mux4x1.v          ;         ;
+; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/level_to_pulse.v  ;         ;
+; fsm_dispensador.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/fsm_dispensador.v ;         ;
+; duzias.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/duzias.v          ;         ;
+; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/display_decoder.v ;         ;
+; dispensador.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/dispensador.v     ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/debouncer.v       ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/counter.v         ;         ;
+; bandeja.v                        ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/bandeja.v         ;         ;
+; automacao.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_3/automacao.v       ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -203,107 +200,89 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 133                   ;
-;     -- Combinational with no register       ; 56                    ;
+; Total logic elements                        ; 111                   ;
+;     -- Combinational with no register       ; 51                    ;
 ;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 77                    ;
+;     -- Combinational with a register        ; 60                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 65                    ;
-;     -- 3 input functions                    ; 29                    ;
-;     -- 2 input functions                    ; 28                    ;
-;     -- 1 input functions                    ; 11                    ;
+;     -- 4 input functions                    ; 57                    ;
+;     -- 3 input functions                    ; 22                    ;
+;     -- 2 input functions                    ; 22                    ;
+;     -- 1 input functions                    ; 10                    ;
 ;     -- 0 input functions                    ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 133                   ;
+;     -- normal mode                          ; 111                   ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;     -- qfbk mode                            ; 0                     ;
 ;     -- register cascade mode                ; 0                     ;
 ;     -- synchronous clear/load mode          ; 0                     ;
 ;     -- asynchronous clear/load mode         ; 48                    ;
 ;                                             ;                       ;
-; Total registers                             ; 77                    ;
+; Total registers                             ; 60                    ;
 ; I/O pins                                    ; 26                    ;
 ; Maximum fan-out node                        ; t_flipflop:ON_OFF|out ;
-; Maximum fan-out                             ; 36                    ;
-; Total fan-out                               ; 560                   ;
-; Average fan-out                             ; 3.52                  ;
+; Maximum fan-out                             ; 35                    ;
+; Total fan-out                               ; 477                   ;
+; Average fan-out                             ; 3.48                  ;
 +---------------------------------------------+-----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
-+--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Entity Name       ; Library Name ;
-+--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
-; |automacao                                 ; 133 (3)     ; 77           ; 0          ; 26   ; 0            ; 56 (3)       ; 0 (0)             ; 77 (0)           ; 0 (0)           ; 0 (0)      ; |automacao                                                        ; automacao         ; work         ;
-;    |bandeja:bandeja_1|                     ; 10 (1)      ; 8            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1                                      ; bandeja           ; work         ;
-;       |counter:counter_dezenas|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_dezenas              ; counter           ; work         ;
-;       |counter:counter_unidades|           ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_unidades             ; counter           ; work         ;
-;    |colune_decoder:colune_decoder_1|       ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|colune_decoder:colune_decoder_1                        ; colune_decoder    ; work         ;
-;    |counter:counter_display|               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|counter:counter_display                                ; counter           ; work         ;
-;    |debouncer:debouncer_CH|                ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH                                 ; debouncer         ; work         ;
-;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff0                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff1                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff2                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff3                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff4                 ; t_flipflop        ; work         ;
-;    |debouncer:debouncer_PG|                ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG                                 ; debouncer         ; work         ;
-;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff0                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff1                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff2                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff3                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff4                 ; t_flipflop        ; work         ;
-;    |debouncer:debouncer_RO|                ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO                                 ; debouncer         ; work         ;
-;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff0                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff1                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff2                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff3                 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff4                 ; t_flipflop        ; work         ;
-;    |debouncer:debouncer_start|             ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start                              ; debouncer         ; work         ;
-;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff0              ; t_flipflop        ; work         ;
-;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff1              ; t_flipflop        ; work         ;
-;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff2              ; t_flipflop        ; work         ;
-;       |t_flipflop:tff3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff3              ; t_flipflop        ; work         ;
-;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff4              ; t_flipflop        ; work         ;
-;    |dispensador:dispensador_1|             ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1                              ; dispensador       ; work         ;
-;       |counter:quantidade_rolhas|          ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1|counter:quantidade_rolhas    ; counter           ; work         ;
-;    |display_decoder:display_decoder_1|     ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|display_decoder:display_decoder_1                      ; display_decoder   ; work         ;
-;    |duzias:duzias_1|                       ; 12 (0)      ; 12           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1                                        ; duzias            ; work         ;
-;       |counter:counter_dezenas|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_dezenas                ; counter           ; work         ;
-;       |counter:counter_duzias|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_duzias                 ; counter           ; work         ;
-;       |counter:counter_unidades|           ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_unidades               ; counter           ; work         ;
-;    |fsm_dispensador:fsm_dispensador_1|     ; 7 (7)       ; 2            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_dispensador:fsm_dispensador_1                      ; fsm_dispensador   ; work         ;
-;    |fsm_producao:fsm_producao|             ; 6 (6)       ; 1            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_producao:fsm_producao                              ; fsm_producao      ; work         ;
-;    |level_to_pulse:level_to_pulse_CH|      ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_CH                       ; level_to_pulse    ; work         ;
-;    |level_to_pulse:level_to_pulse_PG|      ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_PG                       ; level_to_pulse    ; work         ;
-;    |level_to_pulse:level_to_pulse_RO|      ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_RO                       ; level_to_pulse    ; work         ;
-;    |level_to_pulse:level_to_pulse_start|   ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_start                    ; level_to_pulse    ; work         ;
-;    |mux4x1:display_data_mux|               ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|mux4x1:display_data_mux                                ; mux4x1            ; work         ;
-;    |sync_freq_divider:sync_freq_divider_1| ; 22 (5)      ; 17           ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 17 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1                  ; sync_freq_divider ; work         ;
-;       |t_flipflop:tff0|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff10|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff10 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff11|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff11 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff12|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff12 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff13|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff13 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff14|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff14 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff15|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff15 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff16|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16 ; t_flipflop        ; work         ;
-;       |t_flipflop:tff1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff1  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff2  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff3  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff4  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff5|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff5  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff6|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff6  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff7|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff7  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff8|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff8  ; t_flipflop        ; work         ;
-;       |t_flipflop:tff9|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff9  ; t_flipflop        ; work         ;
-;    |t_flipflop:FF_CH|                      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:FF_CH                                       ; t_flipflop        ; work         ;
-;    |t_flipflop:FF_PG|                      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:FF_PG                                       ; t_flipflop        ; work         ;
-;    |t_flipflop:FF_RO|                      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:FF_RO                                       ; t_flipflop        ; work         ;
-;    |t_flipflop:ON_OFF|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:ON_OFF                                      ; t_flipflop        ; work         ;
-+--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+-------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node               ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                            ; Entity Name     ; Library Name ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------+-----------------+--------------+
+; |automacao                               ; 111 (3)     ; 60           ; 0          ; 26   ; 0            ; 51 (3)       ; 0 (0)             ; 60 (0)           ; 0 (0)           ; 0 (0)      ; |automacao                                                     ; automacao       ; work         ;
+;    |bandeja:bandeja_1|                   ; 10 (1)      ; 8            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1                                   ; bandeja         ; work         ;
+;       |counter:counter_dezenas|          ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_dezenas           ; counter         ; work         ;
+;       |counter:counter_unidades|         ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|bandeja:bandeja_1|counter:counter_unidades          ; counter         ; work         ;
+;    |colune_decoder:colune_decoder_1|     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|colune_decoder:colune_decoder_1                     ; colune_decoder  ; work         ;
+;    |counter:counter_display|             ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|counter:counter_display                             ; counter         ; work         ;
+;    |debouncer:debouncer_CH|              ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH                              ; debouncer       ; work         ;
+;       |t_flipflop:tff0|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff0              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff1|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff1              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff2|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff2              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff3              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_CH|t_flipflop:tff4              ; t_flipflop      ; work         ;
+;    |debouncer:debouncer_PG|              ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG                              ; debouncer       ; work         ;
+;       |t_flipflop:tff0|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff0              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff1|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff1              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff2|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff2              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff3              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_PG|t_flipflop:tff4              ; t_flipflop      ; work         ;
+;    |debouncer:debouncer_RO|              ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO                              ; debouncer       ; work         ;
+;       |t_flipflop:tff0|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff0              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff1|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff1              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff2|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff2              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff3              ; t_flipflop      ; work         ;
+;       |t_flipflop:tff4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_RO|t_flipflop:tff4              ; t_flipflop      ; work         ;
+;    |debouncer:debouncer_start|           ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start                           ; debouncer       ; work         ;
+;       |t_flipflop:tff0|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff0           ; t_flipflop      ; work         ;
+;       |t_flipflop:tff1|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff1           ; t_flipflop      ; work         ;
+;       |t_flipflop:tff2|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff2           ; t_flipflop      ; work         ;
+;       |t_flipflop:tff3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff3           ; t_flipflop      ; work         ;
+;       |t_flipflop:tff4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|debouncer:debouncer_start|t_flipflop:tff4           ; t_flipflop      ; work         ;
+;    |dispensador:dispensador_1|           ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1                           ; dispensador     ; work         ;
+;       |counter:quantidade_rolhas|        ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |automacao|dispensador:dispensador_1|counter:quantidade_rolhas ; counter         ; work         ;
+;    |display_decoder:display_decoder_1|   ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|display_decoder:display_decoder_1                   ; display_decoder ; work         ;
+;    |duzias:duzias_1|                     ; 12 (0)      ; 12           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1                                     ; duzias          ; work         ;
+;       |counter:counter_dezenas|          ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_dezenas             ; counter         ; work         ;
+;       |counter:counter_duzias|           ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_duzias              ; counter         ; work         ;
+;       |counter:counter_unidades|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |automacao|duzias:duzias_1|counter:counter_unidades            ; counter         ; work         ;
+;    |fsm_dispensador:fsm_dispensador_1|   ; 7 (7)       ; 2            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_dispensador:fsm_dispensador_1                   ; fsm_dispensador ; work         ;
+;    |fsm_producao:fsm_producao|           ; 6 (6)       ; 1            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|fsm_producao:fsm_producao                           ; fsm_producao    ; work         ;
+;    |level_to_pulse:level_to_pulse_CH|    ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_CH                    ; level_to_pulse  ; work         ;
+;    |level_to_pulse:level_to_pulse_PG|    ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_PG                    ; level_to_pulse  ; work         ;
+;    |level_to_pulse:level_to_pulse_RO|    ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_RO                    ; level_to_pulse  ; work         ;
+;    |level_to_pulse:level_to_pulse_start| ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |automacao|level_to_pulse:level_to_pulse_start                 ; level_to_pulse  ; work         ;
+;    |mux4x1:display_data_mux|             ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |automacao|mux4x1:display_data_mux                             ; mux4x1          ; work         ;
+;    |t_flipflop:FF_CH|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:FF_CH                                    ; t_flipflop      ; work         ;
+;    |t_flipflop:FF_PG|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:FF_PG                                    ; t_flipflop      ; work         ;
+;    |t_flipflop:FF_RO|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:FF_RO                                    ; t_flipflop      ; work         ;
+;    |t_flipflop:ON_OFF|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |automacao|t_flipflop:ON_OFF                                   ; t_flipflop      ; work         ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -312,7 +291,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 77    ;
+; Total registers                              ; 60    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 48    ;
@@ -327,9 +306,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+---------+
 ; Inverted Register                                          ; Fan out ;
 +------------------------------------------------------------+---------+
-; bandeja:bandeja_1|counter:counter_unidades|out[3]          ; 7       ;
 ; bandeja:bandeja_1|counter:counter_unidades|out[0]          ; 8       ;
 ; bandeja:bandeja_1|counter:counter_dezenas|out[1]           ; 6       ;
+; bandeja:bandeja_1|counter:counter_unidades|out[3]          ; 7       ;
 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[0] ; 4       ;
 ; dispensador:dispensador_1|counter:quantidade_rolhas|out[2] ; 3       ;
 ; duzias:duzias_1|counter:counter_duzias|out[0]              ; 5       ;
@@ -685,31 +664,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0" ;
-+------+-------+----------+---------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                 ;
-+------+-------+----------+---------------------------------------------------------+
-; t    ; Input ; Info     ; Stuck at VCC                                            ;
-+------+-------+----------+---------------------------------------------------------+
-
-
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "sync_freq_divider:sync_freq_divider_1" ;
-+--------+-------+----------+---------------------------------------+
-; Port   ; Type  ; Severity ; Details                               ;
-+--------+-------+----------+---------------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                          ;
-+--------+-------+----------+---------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Feb 24 12:29:23 2024
+    Info: Processing started: Sun Feb 25 20:49:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off automacao -c automacao
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -786,55 +747,54 @@ Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(44): created im
 Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(47): created implicit net for "and4Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 47
 Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(54): created implicit net for "tff4Out" File: C:/CD/CD_PBL_3/debouncer.v Line: 54
 Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(60): created implicit net for "enable" File: C:/CD/CD_PBL_3/debouncer.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(37): created implicit net for "clk" File: C:/CD/CD_PBL_3/automacao.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(47): created implicit net for "debouncedStart" File: C:/CD/CD_PBL_3/automacao.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(57): created implicit net for "debouncedPG" File: C:/CD/CD_PBL_3/automacao.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(67): created implicit net for "debouncedCH" File: C:/CD/CD_PBL_3/automacao.v Line: 67
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(77): created implicit net for "debouncedRO" File: C:/CD/CD_PBL_3/automacao.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(88): created implicit net for "pulsePG" File: C:/CD/CD_PBL_3/automacao.v Line: 88
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(99): created implicit net for "pulseCH" File: C:/CD/CD_PBL_3/automacao.v Line: 99
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(110): created implicit net for "pulseRO" File: C:/CD/CD_PBL_3/automacao.v Line: 110
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(121): created implicit net for "PG" File: C:/CD/CD_PBL_3/automacao.v Line: 121
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(132): created implicit net for "CH" File: C:/CD/CD_PBL_3/automacao.v Line: 132
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(143): created implicit net for "RO" File: C:/CD/CD_PBL_3/automacao.v Line: 143
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(154): created implicit net for "pulse" File: C:/CD/CD_PBL_3/automacao.v Line: 154
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(165): created implicit net for "enable" File: C:/CD/CD_PBL_3/automacao.v Line: 165
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(180): created implicit net for "GP" File: C:/CD/CD_PBL_3/automacao.v Line: 180
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(189): created implicit net for "CR" File: C:/CD/CD_PBL_3/automacao.v Line: 189
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(190): created implicit net for "BZ" File: C:/CD/CD_PBL_3/automacao.v Line: 190
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(195): created implicit net for "AD_w" File: C:/CD/CD_PBL_3/automacao.v Line: 195
-Warning (10236): Verilog HDL Implicit Net warning at automacao.v(208): created implicit net for "reabastecer" File: C:/CD/CD_PBL_3/automacao.v Line: 208
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(40): created implicit net for "clk" File: C:/CD/CD_PBL_3/automacao.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(49): created implicit net for "debouncedStart" File: C:/CD/CD_PBL_3/automacao.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(59): created implicit net for "debouncedPG" File: C:/CD/CD_PBL_3/automacao.v Line: 59
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(69): created implicit net for "debouncedCH" File: C:/CD/CD_PBL_3/automacao.v Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(79): created implicit net for "debouncedRO" File: C:/CD/CD_PBL_3/automacao.v Line: 79
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(90): created implicit net for "pulsePG" File: C:/CD/CD_PBL_3/automacao.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(101): created implicit net for "pulseCH" File: C:/CD/CD_PBL_3/automacao.v Line: 101
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(112): created implicit net for "pulseRO" File: C:/CD/CD_PBL_3/automacao.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(123): created implicit net for "PG" File: C:/CD/CD_PBL_3/automacao.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(134): created implicit net for "CH" File: C:/CD/CD_PBL_3/automacao.v Line: 134
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(145): created implicit net for "RO" File: C:/CD/CD_PBL_3/automacao.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(156): created implicit net for "pulse" File: C:/CD/CD_PBL_3/automacao.v Line: 156
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(167): created implicit net for "enable" File: C:/CD/CD_PBL_3/automacao.v Line: 167
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(182): created implicit net for "GP" File: C:/CD/CD_PBL_3/automacao.v Line: 182
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(191): created implicit net for "CR" File: C:/CD/CD_PBL_3/automacao.v Line: 191
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(192): created implicit net for "BZ" File: C:/CD/CD_PBL_3/automacao.v Line: 192
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(197): created implicit net for "AD_w" File: C:/CD/CD_PBL_3/automacao.v Line: 197
+Warning (10236): Verilog HDL Implicit Net warning at automacao.v(210): created implicit net for "reabastecer" File: C:/CD/CD_PBL_3/automacao.v Line: 210
 Info (12127): Elaborating entity "automacao" for the top level hierarchy
-Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:sync_freq_divider_1" File: C:/CD/CD_PBL_3/automacao.v Line: 38
-Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0" File: C:/CD/CD_PBL_3/sync_freq_divider.v Line: 12
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer_start" File: C:/CD/CD_PBL_3/automacao.v Line: 48
-Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:level_to_pulse_PG" File: C:/CD/CD_PBL_3/automacao.v Line: 89
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer_start" File: C:/CD/CD_PBL_3/automacao.v Line: 50
+Info (12128): Elaborating entity "t_flipflop" for hierarchy "debouncer:debouncer_start|t_flipflop:tff0" File: C:/CD/CD_PBL_3/debouncer.v Line: 17
+Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:level_to_pulse_PG" File: C:/CD/CD_PBL_3/automacao.v Line: 91
 Warning (10270): Verilog HDL Case Statement warning at level_to_pulse.v(24): incomplete case statement has no default case item File: C:/CD/CD_PBL_3/level_to_pulse.v Line: 24
-Info (12128): Elaborating entity "fsm_producao" for hierarchy "fsm_producao:fsm_producao" File: C:/CD/CD_PBL_3/automacao.v Line: 184
-Info (12128): Elaborating entity "fsm_dispensador" for hierarchy "fsm_dispensador:fsm_dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 197
+Info (12128): Elaborating entity "fsm_producao" for hierarchy "fsm_producao:fsm_producao" File: C:/CD/CD_PBL_3/automacao.v Line: 186
+Info (12128): Elaborating entity "fsm_dispensador" for hierarchy "fsm_dispensador:fsm_dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 199
 Warning (10270): Verilog HDL Case Statement warning at fsm_dispensador.v(30): incomplete case statement has no default case item File: C:/CD/CD_PBL_3/fsm_dispensador.v Line: 30
-Info (12128): Elaborating entity "bandeja" for hierarchy "bandeja:bandeja_1" File: C:/CD/CD_PBL_3/automacao.v Line: 216
+Info (12128): Elaborating entity "bandeja" for hierarchy "bandeja:bandeja_1" File: C:/CD/CD_PBL_3/automacao.v Line: 218
 Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_unidades" File: C:/CD/CD_PBL_3/bandeja.v Line: 28
 Info (12128): Elaborating entity "counter" for hierarchy "bandeja:bandeja_1|counter:counter_dezenas" File: C:/CD/CD_PBL_3/bandeja.v Line: 48
-Info (12128): Elaborating entity "dispensador" for hierarchy "dispensador:dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 227
+Info (12128): Elaborating entity "dispensador" for hierarchy "dispensador:dispensador_1" File: C:/CD/CD_PBL_3/automacao.v Line: 229
 Info (12128): Elaborating entity "counter" for hierarchy "dispensador:dispensador_1|counter:quantidade_rolhas" File: C:/CD/CD_PBL_3/dispensador.v Line: 17
-Info (12128): Elaborating entity "duzias" for hierarchy "duzias:duzias_1" File: C:/CD/CD_PBL_3/automacao.v Line: 238
+Info (12128): Elaborating entity "duzias" for hierarchy "duzias:duzias_1" File: C:/CD/CD_PBL_3/automacao.v Line: 240
 Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_duzias" File: C:/CD/CD_PBL_3/duzias.v Line: 17
 Info (12128): Elaborating entity "counter" for hierarchy "duzias:duzias_1|counter:counter_unidades" File: C:/CD/CD_PBL_3/duzias.v Line: 30
-Info (12128): Elaborating entity "counter" for hierarchy "counter:counter_display" File: C:/CD/CD_PBL_3/automacao.v Line: 256
-Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:display_data_mux" File: C:/CD/CD_PBL_3/automacao.v Line: 272
-Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:display_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 282
-Info (12128): Elaborating entity "colune_decoder" for hierarchy "colune_decoder:colune_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 290
+Info (12128): Elaborating entity "counter" for hierarchy "counter:counter_display" File: C:/CD/CD_PBL_3/automacao.v Line: 258
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:display_data_mux" File: C:/CD/CD_PBL_3/automacao.v Line: 274
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:display_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 284
+Info (12128): Elaborating entity "colune_decoder" for hierarchy "colune_decoder:colune_decoder_1" File: C:/CD/CD_PBL_3/automacao.v Line: 292
 Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (18000): Registers with preset signals will power-up high File: C:/CD/CD_PBL_3/counter.v Line: 18
-Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 133 logic cells
+    Info (21061): Implemented 111 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
     Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Sat Feb 24 12:29:35 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Processing ended: Sun Feb 25 20:49:48 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:48
 
 

@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off automacao -c automacao --vector_source="C:/CD/CD_PBL_3/Waveform.vwf" --testbench_file="C:/CD/CD_PBL_3/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off automacao -c automacao --vector_source="C:/CD/CD_PBL_3/Waveform2.vwf" --testbench_file="C:/CD/CD_PBL_3/simulation/qsim/Waveform2.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,12 +26,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Feb 15 19:36:02 2024
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off automacao -c automacao --vector_source=C:/CD/CD_PBL_3/Waveform.vwf --testbench_file=C:/CD/CD_PBL_3/simulation/qsim/Waveform.vwf.vt
-Info (119006): Selected device EPM240T100C5 for design "automacao"
+    Info: Processing started: Sun Feb 25 20:50:15 2024
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off automacao -c automacao --vector_source=C:/CD/CD_PBL_3/Waveform2.vwf --testbench_file=C:/CD/CD_PBL_3/simulation/qsim/Waveform2.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-iting test bench files
+ench File C:/CD/CD_PBL_3/simulation/qsim/Waveform2.vwf.vt for simulation
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Sun Feb 25 20:50:17 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -58,15 +62,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Feb 15 19:36:04 2024
+    Info: Processing started: Sun Feb 25 20:50:17 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/CD/CD_PBL_3/simulation/qsim/ automacao -c automacao
-Info (119006): Selected device EPM240T100C5 for design "automacao"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file automacao.vo in folder "C:/CD/CD_PBL_3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4619 megabytes
-    Info: Processing ended: Thu Feb 15 19:36:05 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Sun Feb 25 20:50:19 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -93,7 +96,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 19:36:07 on Feb 15,2024
+# Start time: 20:50:21 on Feb 25,2024
 # vlog -work work automacao.vo 
 
 # -- Compiling module automacao
@@ -103,15 +106,14 @@ Reading pref.tcl
 # Top level modules:
 # 	automacao
 
-# End time: 19:36:07 on Feb 15,2024, Elapsed time: 0:00:00
+# End time: 20:50:21 on Feb 25,2024, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 19:36:07 on Feb 15,2024
-
-# vlog -work work Waveform.vwf.vt 
+# Start time: 20:50:21 on Feb 25,2024
+# vlog -work work Waveform2.vwf.vt 
 
 # -- Compiling module automacao_vlg_vec_tst
 
@@ -120,12 +122,12 @@ Reading pref.tcl
 # Top level modules:
 # 	automacao_vlg_vec_tst
 
-# End time: 19:36:08 on Feb 15,2024, Elapsed time: 0:00:01
+# End time: 20:50:21 on Feb 25,2024, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.automacao_vlg_vec_tst 
-# Start time: 19:36:08 on Feb 15,2024
+# Start time: 20:50:21 on Feb 25,2024
 # Loading work.automacao_vlg_vec_tst
 # Loading work.automacao
 # Loading maxii_ver.maxii_io
@@ -135,23 +137,23 @@ Reading pref.tcl
 
 # after#25
 
-# ** Note: $finish    : Waveform.vwf.vt(81)
+# ** Note: $finish    : Waveform2.vwf.vt(75)
 #    Time: 1 us  Iteration: 0  Instance: /automacao_vlg_vec_tst
 
-# End time: 19:36:08 on Feb 15,2024, Elapsed time: 0:00:00
+# End time: 20:50:22 on Feb 25,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/CD/CD_PBL_3/Waveform.vwf...
+Reading C:/CD/CD_PBL_3/Waveform2.vwf...
 
 Reading C:/CD/CD_PBL_3/simulation/qsim/automacao.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/CD/CD_PBL_3/simulation/qsim/automacao_20240215193609.sim.vwf
+Writing the resulting VWF to C:/CD/CD_PBL_3/simulation/qsim/automacao_20240225205022.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -104,3 +104,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_location_assignment PIN_69 -to GP_led
 set_location_assignment PIN_61 -to reabastecer_led
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf

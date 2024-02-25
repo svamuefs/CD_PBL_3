@@ -10,48 +10,48 @@ z2
 cModel Technology
 Z0 dC:/CD/CD_PBL_3/simulation/qsim
 vautomacao
-!s110 1708036567
+Z1 !s110 1708905021
 !i10b 1
-!s100 V>^7`Lj`GiU28;]QQQ9fF3
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I3]m>M7olZm5FVSHHQo^8g3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 _Fo8hi:IB[NE9f;0eOI>R2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ii=;[MoeXQ2ACEImSKd9M51
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1708036565
+w1708905018
 8automacao.vo
 Fautomacao.vo
-!i122 50
-L0 32 2909
-Z3 OV;L;2020.1;71
+!i122 54
+L0 32 4428
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1708036567.000000
+Z5 !s108 1708905021.000000
 !s107 automacao.vo|
 !s90 -work|work|automacao.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 vautomacao_vlg_vec_tst
-!s110 1708036568
-!i10b 1
-!s100 61BAHH3nN9QIHG]2]ziQI2
 R1
-I19_95R5IYBGj7BBC`m?B31
+!i10b 1
+!s100 XiN<X3`DHjNQCUN9ag:2b2
 R2
-R0
-w1708036563
-8Waveform.vwf.vt
-FWaveform.vwf.vt
-!i122 51
-L0 30 98
+IFhDmD]>]XnfVNdXY>SMK_0
 R3
+R0
+w1708905017
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 55
+L0 30 82
+R4
 r1
 !s85 0
 31
-R4
-!s107 Waveform.vwf.vt|
-!s90 -work|work|Waveform.vwf.vt|
-!i113 1
 R5
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
 R6
+R7

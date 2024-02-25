@@ -3,153 +3,28 @@ start => _.IN1
 PG_button => _.IN1
 CH_button => _.IN1
 RO_button => _.IN1
-clk50MHz => clk50MHz.IN1
-EV << fsm_producao:fsm_producao.EV
-VE << fsm_producao:fsm_producao.VE
-M << fsm_producao:fsm_producao.M
-A << fsm_dispensador:fsm_dispensador_1.A
-AD << AD_w.DB_MAX_OUTPUT_PORT_TYPE
-GP_led << GP.DB_MAX_OUTPUT_PORT_TYPE
-reabastecer_led << reabastecer.DB_MAX_OUTPUT_PORT_TYPE
-PG_Out << PG.DB_MAX_OUTPUT_PORT_TYPE
-CH_Out << CH.DB_MAX_OUTPUT_PORT_TYPE
-RO_Out << RO.DB_MAX_OUTPUT_PORT_TYPE
-display_colune[0] << colune_decoder:colune_decoder_1.display_colune
-display_colune[1] << colune_decoder:colune_decoder_1.display_colune
-display_colune[2] << colune_decoder:colune_decoder_1.display_colune
-display_colune[3] << colune_decoder:colune_decoder_1.display_colune
-display_data[0] << display_decoder:display_decoder_1.digitOut
-display_data[1] << display_decoder:display_decoder_1.digitOut
-display_data[2] << display_decoder:display_decoder_1.digitOut
-display_data[3] << display_decoder:display_decoder_1.digitOut
-display_data[4] << display_decoder:display_decoder_1.digitOut
-display_data[5] << display_decoder:display_decoder_1.digitOut
-display_data[6] << display_decoder:display_decoder_1.digitOut
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1
-clk => clk.IN17
-enable => enable.IN17
-final_clk <= t_flipflop:tff16.out
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff0
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff1
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff2
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff3
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff4
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff5
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff6
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff7
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff8
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff9
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff10
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff11
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff12
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff13
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff14
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff15
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|automacao|sync_freq_divider:sync_freq_divider_1|t_flipflop:tff16
-t => out~reg0.ENA
-clk => out~reg0.CLK
-reset => out~reg0.ACLR
-out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk50MHz => clk.IN15
+EV <= fsm_producao:fsm_producao.EV
+VE <= fsm_producao:fsm_producao.VE
+M <= fsm_producao:fsm_producao.M
+A <= fsm_dispensador:fsm_dispensador_1.A
+AD <= AD_w.DB_MAX_OUTPUT_PORT_TYPE
+GP_led <= GP.DB_MAX_OUTPUT_PORT_TYPE
+reabastecer_led <= reabastecer.DB_MAX_OUTPUT_PORT_TYPE
+PG_Out <= PG.DB_MAX_OUTPUT_PORT_TYPE
+CH_Out <= CH.DB_MAX_OUTPUT_PORT_TYPE
+RO_Out <= RO.DB_MAX_OUTPUT_PORT_TYPE
+display_colune[0] <= colune_decoder:colune_decoder_1.display_colune
+display_colune[1] <= colune_decoder:colune_decoder_1.display_colune
+display_colune[2] <= colune_decoder:colune_decoder_1.display_colune
+display_colune[3] <= colune_decoder:colune_decoder_1.display_colune
+display_data[0] <= display_decoder:display_decoder_1.digitOut
+display_data[1] <= display_decoder:display_decoder_1.digitOut
+display_data[2] <= display_decoder:display_decoder_1.digitOut
+display_data[3] <= display_decoder:display_decoder_1.digitOut
+display_data[4] <= display_decoder:display_decoder_1.digitOut
+display_data[5] <= display_decoder:display_decoder_1.digitOut
+display_data[6] <= display_decoder:display_decoder_1.digitOut
 
 
 |automacao|debouncer:debouncer_start
